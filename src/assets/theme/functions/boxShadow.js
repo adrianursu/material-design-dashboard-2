@@ -30,5 +30,4 @@ function boxShadow(offset = [], radius = [], color, opacity, inset = "") {
     opacity
   )}`;
 }
-
 export default boxShadow;

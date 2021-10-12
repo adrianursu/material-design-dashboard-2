@@ -55,7 +55,7 @@ function ReportsBarChart({ color, title, description, chart, items }) {
         {useMemo(
           () => (
             <MDBox
-              backgroundColor={color}
+              backgroundColor="error"
               borderRadius="lg"
               py={2}
               pr={0.5}
@@ -77,7 +77,7 @@ function ReportsBarChart({ color, title, description, chart, items }) {
               {description}
             </MDTypography>
           </MDBox>
-          <MDBox py={1} px={0.5}>
+          <MDBox>
             <Grid container spacing={2}>
               {renderItems}
             </Grid>

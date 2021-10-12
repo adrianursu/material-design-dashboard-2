@@ -25,40 +25,40 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, direction }) {
+function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon }) {
   return (
-    <Card>
-      <MDBox backgroundColor={backgroundColor} backgroundGradient>
+    <Card className="overflow-visible">
+      <MDBox backgroundColor={backgroundColor} backgroundGradient borderRadius="xl">
         <MDBox p={2}>
           <Grid container alignItems="center">
-            {direction === "left" ? (
-              <Grid item>
-                <MDBox
-                  backgroundColor={backgroundColor === "white" ? icon.color : "white"}
-                  width="3rem"
-                  height="3rem"
-                  borderRadius="md"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  color={backgroundColor === "white" ? "white" : "dark"}
-                  boxShadow="md"
-                  backgroundGradient
-                >
-                  <Icon fontSize="small" color="inherit">
-                    {icon.component}
-                  </Icon>
-                </MDBox>
-              </Grid>
-            ) : null}
+            <Grid item>
+              <MDBox
+                backgroundColor={backgroundColor === "white" ? icon.color : "white"}
+                width="4rem"
+                height="4rem"
+                borderRadius="md"
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                color={backgroundColor === "white" ? "white" : "dark"}
+                boxShadow="md"
+                backgroundGradient
+                mt={-7.5}
+              >
+                <Icon fontSize="medium" color="inherit">
+                  {icon.component}
+                </Icon>
+              </MDBox>
+            </Grid>
+
             <Grid item xs={8}>
-              <MDBox ml={direction === "left" ? 2 : 0}>
+              <MDBox style={{ float: "right", lineHeight: "0.5" }}>
                 <MDTypography
                   variant="button"
                   textColor={backgroundColor === "white" ? "text" : "white"}
                   opacity={backgroundColor === "white" ? 1 : 0.7}
                   textTransform="capitalize"
-                  fontWeight={title.fontWeight}
+                  fontWeight="medium"
                 >
                   {title.text}
                 </MDTypography>
@@ -74,27 +74,6 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, d
                 </MDTypography>
               </MDBox>
             </Grid>
-            {direction === "right" ? (
-              <Grid item xs={4}>
-                <MDBox
-                  backgroundColor={backgroundColor === "white" ? icon.color : "white"}
-                  width="3rem"
-                  height="3rem"
-                  marginLeft="auto"
-                  borderRadius="md"
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  color={backgroundColor === "white" ? "white" : "dark"}
-                  boxShadow="md"
-                  backgroundGradient
-                >
-                  <Icon fontSize="small" color="inherit">
-                    {icon.component}
-                  </Icon>
-                </MDBox>
-              </Grid>
-            ) : null}
           </Grid>
         </MDBox>
       </MDBox>
@@ -113,7 +92,6 @@ MiniStatisticsCard.defaultProps = {
     color: "success",
     text: "",
   },
-  direction: "right",
 };
 
 // Typechecking props for the MiniStatisticsCard
@@ -150,7 +128,6 @@ MiniStatisticsCard.propTypes = {
     color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
     component: PropTypes.node.isRequired,
   }).isRequired,
-  direction: PropTypes.oneOf(["right", "left"]),
 };
 
 export default MiniStatisticsCard;

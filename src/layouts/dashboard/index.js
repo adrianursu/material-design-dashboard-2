@@ -101,19 +101,33 @@ function Dashboard() {
         </MDBox>
         <MDBox mb={3}>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={5}>
+            <Grid item xs={12} lg={4}>
               <ReportsBarChart
                 title="active users"
                 description={
                   <>
-                    (<strong>+23%</strong>) than last week
+                    <strong>+23%</strong> than last week
                   </>
                 }
                 chart={chart}
                 items={items}
               />
             </Grid>
-            <Grid item xs={12} lg={7}>
+            <Grid item xs={12} lg={4}>
+              <ReportsBarChart
+                title="active users"
+                description={
+                  <MDTypography variant="button" textColor="text">
+                    <MDTypography variant="button" textColor="success">
+                      +23%
+                    </MDTypography>
+                    &nbsp;than previous week
+                  </MDTypography>
+                }
+                chart={chart}
+              />
+            </Grid>
+            <Grid item xs={12} lg={4}>
               <GradientLineChart
                 title="Sales Overview"
                 description={
@@ -129,7 +143,7 @@ function Dashboard() {
                     </MDTypography>
                   </MDBox>
                 }
-                height="20.25rem"
+                height="12rem"
                 chart={gradientLineChartData}
               />
             </Grid>
