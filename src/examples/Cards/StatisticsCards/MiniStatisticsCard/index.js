@@ -58,7 +58,7 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon })
                   textColor={backgroundColor === "white" ? "text" : "white"}
                   opacity={backgroundColor === "white" ? 1 : 0.7}
                   textTransform="capitalize"
-                  fontWeight="medium"
+                  fontWeight="regular"
                 >
                   {title.text}
                 </MDTypography>

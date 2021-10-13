@@ -23,7 +23,7 @@ export default {
     },
     {
       label: "Websites",
-      color: "dark",
+      color: "warning",
       data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
     },
   ],

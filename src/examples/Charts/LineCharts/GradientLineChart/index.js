@@ -37,7 +37,7 @@ import configs from "examples/Charts/LineCharts/GradientLineChart/configs";
 // Material Design 2 Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
-function GradientLineChart({ title, description, height, chart }) {
+function GradientLineChart({ title, description, height, chart, bgColor }) {
   const chartRef = useRef(null);
   const [chartData, setChartData] = useState({});
   const { data, options } = chartData;
@@ -58,33 +58,42 @@ function GradientLineChart({ title, description, height, chart }) {
   }, [chart]);
 
   const renderChart = (
-    <MDBox p={2}>
-      {title || description ? (
-        <MDBox px={description ? 1 : 0} pt={description ? 1 : 0}>
-          {title && (
-            <MDBox mb={1}>
-              <MDTypography variant="h6">{title}</MDTypography>
-            </MDBox>
-          )}
-          <MDBox mb={2}>
-            <MDTypography variant="button" fontWeight="regular" textColor="text">
-              {description}
-            </MDTypography>
-          </MDBox>
-        </MDBox>
-      ) : null}
+    <MDBox padding="1rem" mt={-5}>
       {useMemo(
         () => (
-          <div ref={chartRef} style={{ height }}>
-            <Line data={data} options={options} />
-          </div>
+          <MDBox
+            backgroundColor={bgColor}
+            borderRadius="lg"
+            py={2}
+            pr={0.5}
+            mb={2}
+            height="12.5rem"
+            backgroundGradient
+          >
+            <div ref={chartRef} style={{ height }}>
+              <Line data={data} options={options} />
+            </div>
+          </MDBox>
         ),
         [chartData, height]
       )}
+
+      <MDBox px={1}>
+        <MDTypography variant="h6" textTransform="capitalize">
+          {title}
+        </MDTypography>
+        <MDTypography variant="button" textColor="text" fontWeight="regular">
+          {description}
+        </MDTypography>
+      </MDBox>
     </MDBox>
   );
 
-  return title || description ? <Card>{renderChart}</Card> : renderChart;
+  return title || description ? (
+    <Card className="overflow-visible">{renderChart}</Card>
+  ) : (
+    renderChart
+  );
 }
 
 // Setting default values for the props of GradientLineChart
@@ -92,6 +101,7 @@ GradientLineChart.defaultProps = {
   title: "",
   description: "",
   height: "19.125rem",
+  bgColor: "dark",
 };
 
 // Typechecking props for the GradientLineChart
@@ -100,6 +110,7 @@ GradientLineChart.propTypes = {
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
+  bgColor: PropTypes.oneOfType(PropTypes.string),
 };
 
 export default GradientLineChart;

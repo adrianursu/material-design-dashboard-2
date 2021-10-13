@@ -33,8 +33,6 @@ import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 import typography from "assets/theme/base/typography";
 
 // Dashboard layout components
-import BuildByDevelopers from "layouts/dashboard/components/BuildByDevelopers";
-import WorkWithTheRockets from "layouts/dashboard/components/WorkWithTheRockets";
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
 
@@ -49,9 +47,9 @@ function Dashboard() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox py={3}>
+      <MDBox py={5}>
         <MDBox mb={3}>
-          <Grid container spacing={3}>
+          <Grid container spacing={3} py={1.2}>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "today's money" }}
@@ -89,40 +87,35 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
-        <MDBox mb={3}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={7}>
-              <BuildByDevelopers />
-            </Grid>
-            <Grid item xs={12} lg={5}>
-              <WorkWithTheRockets />
-            </Grid>
-          </Grid>
-        </MDBox>
-        <MDBox mb={3}>
+        <MDBox mb={3} pt={1.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <ReportsBarChart
                 title="active users"
                 description={
                   <>
-                    <strong>+23%</strong> than last week
+                    <MDTypography variant="button" textColor="success">
+                      +23%
+                    </MDTypography>
+                    &nbsp;than previous week
                   </>
                 }
                 chart={chart}
                 items={items}
+                bgColor="success"
               />
             </Grid>
             <Grid item xs={12} lg={4}>
               <ReportsBarChart
                 title="active users"
+                color="dark"
                 description={
-                  <MDTypography variant="button" textColor="text">
+                  <>
                     <MDTypography variant="button" textColor="success">
                       +23%
                     </MDTypography>
                     &nbsp;than previous week
-                  </MDTypography>
+                  </>
                 }
                 chart={chart}
               />
@@ -135,16 +128,17 @@ function Dashboard() {
                     <MDBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
                       <Icon className="font-bold">arrow_upward</Icon>
                     </MDBox>
-                    <MDTypography variant="button" textColor="text" fontWeight="medium">
-                      4% more{" "}
+                    <MDTypography variant="button" textColor="success" fontWeight="medium">
+                      4%{" "}
                       <MDTypography variant="button" textColor="text" fontWeight="regular">
-                        in 2021
+                        more in 2021
                       </MDTypography>
                     </MDTypography>
                   </MDBox>
                 }
-                height="12rem"
+                height="12.5rem"
                 chart={gradientLineChartData}
+                bgColor="error"
               />
             </Grid>
           </Grid>

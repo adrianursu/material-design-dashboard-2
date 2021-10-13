@@ -23,65 +23,46 @@ import { Bar } from "react-chartjs-2";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Grid from "@mui/material/Grid";
 
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 // Material Design 2 Dashboard PRO React example components
-import BarReportsChartItem from "examples/Charts/BarCharts/ReportsBarChart/ReportsBarChartItem";
 
 // ReportsBarChart configurations
 import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
 
-function ReportsBarChart({ color, title, description, chart, items }) {
+function ReportsBarChart({ title, description, chart, bgColor }) {
   const { data, options } = configs(chart.labels, chart.datasets);
 
-  const renderItems = items.map(({ icon, label, progress }) => (
-    <Grid item xs={6} sm={3} key={label}>
-      <BarReportsChartItem
-        color={color}
-        icon={{ color: icon.color, component: icon.component }}
-        label={label}
-        progress={{ content: progress.content, percentage: progress.percentage }}
-      />
-    </Grid>
-  ));
-
   return (
-    <Card>
+    <Card className="overflow-visible">
       <MDBox padding="1rem">
         {useMemo(
           () => (
             <MDBox
-              backgroundColor="error"
+              backgroundColor={bgColor}
               borderRadius="lg"
               py={2}
               pr={0.5}
-              mb={3}
+              mb={2}
               height="12.5rem"
               backgroundGradient
+              mt={-5}
             >
               <Bar data={data} options={options} />
             </MDBox>
           ),
           [chart]
         )}
-        <MDBox px={1}>
-          <MDBox mb={2}>
-            <MDTypography variant="h6" textTransform="capitalize">
-              {title}
-            </MDTypography>
-            <MDTypography variant="button" textColor="text" fontWeight="regular">
-              {description}
-            </MDTypography>
-          </MDBox>
-          <MDBox>
-            <Grid container spacing={2}>
-              {renderItems}
-            </Grid>
-          </MDBox>
+        <MDBox px={1} lineHeight={0}>
+          <MDTypography variant="h6" textTransform="capitalize">
+            {title}
+          </MDTypography>
+          <MDTypography variant="button" textColor="text" fontWeight="regular">
+            {description}
+          </MDTypography>
         </MDBox>
       </MDBox>
     </Card>
@@ -90,18 +71,16 @@ function ReportsBarChart({ color, title, description, chart, items }) {
 
 // Setting default values for the props of ReportsBarChart
 ReportsBarChart.defaultProps = {
-  color: "dark",
   description: "",
-  items: [],
+  bgColor: "dark",
 };
 
 // Typechecking props for the ReportsBarChart
 ReportsBarChart.propTypes = {
-  color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
-  items: PropTypes.arrayOf(PropTypes.object),
+  bgColor: PropTypes.oneOfType([PropTypes.string]),
 };
 
 export default ReportsBarChart;
