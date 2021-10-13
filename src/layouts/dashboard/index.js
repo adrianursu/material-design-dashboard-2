@@ -108,7 +108,7 @@ function Dashboard() {
             <Grid item xs={12} lg={4}>
               <ReportsBarChart
                 title="active users"
-                color="dark"
+                bgColor="secondary"
                 description={
                   <>
                     <MDTypography variant="button" textColor="success">
@@ -138,7 +138,7 @@ function Dashboard() {
                 }
                 height="12.5rem"
                 chart={gradientLineChartData}
-                bgColor="error"
+                bgColor="dark"
               />
             </Grid>
           </Grid>
