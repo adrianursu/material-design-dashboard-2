@@ -15,8 +15,6 @@ import logoXD from "assets/images/small-logos/logo-xd.svg";
 import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
 import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoJira from "assets/images/small-logos/logo-jira.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
 import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
@@ -42,7 +40,7 @@ export default function data() {
 
     rows: [
       {
-        companies: [logoXD, "Soft UI XD Version"],
+        companies: [logoXD, "Material Design 2 XD Version"],
         members: (
           <MDBox display="flex" py={1}>
             {avatars([
@@ -126,45 +124,6 @@ export default function data() {
         completion: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" gradient />
-          </MDBox>
-        ),
-      },
-      {
-        companies: [logoJira, "Add the New Pricing Page"],
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([[team4, "Jessica Doe"]])}
-          </MDBox>
-        ),
-        budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
-            $500
-          </MDTypography>
-        ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={25} color="info" gradient />
-          </MDBox>
-        ),
-      },
-      {
-        companies: [logoInvesion, "Redesign New Online Shop"],
-        members: (
-          <MDBox display="flex" py={1}>
-            {avatars([
-              [team1, "Ryan Tompson"],
-              [team4, "Jessica Doe"],
-            ])}
-          </MDBox>
-        ),
-        budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
-            $2,000
-          </MDTypography>
-        ),
-        completion: (
-          <MDBox width="8rem" textAlign="left">
-            <MDProgress value={40} color="info" gradient />
           </MDBox>
         ),
       },

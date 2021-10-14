@@ -34,7 +34,7 @@ import typography from "assets/theme/base/typography";
 
 // Dashboard layout components
 import Projects from "layouts/dashboard/components/Projects";
-import OrderOverview from "layouts/dashboard/components/OrderOverview";
+// import OrderOverview from "layouts/dashboard/components/OrderOverview";
 
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
@@ -48,8 +48,18 @@ function Dashboard() {
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox py={5}>
+        <Grid container>
+          <Grid item xs={12}>
+            <Projects
+              icon={{
+                color: "secondary",
+                component: "language",
+              }}
+            />
+          </Grid>
+        </Grid>
         <MDBox mb={3}>
-          <Grid container spacing={3} py={1.2}>
+          <Grid container spacing={3} py={1.2} pt={5.5}>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
                 title={{ text: "today's money" }}
@@ -87,7 +97,7 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
-        <MDBox mb={3} pt={1.5}>
+        <MDBox mb={3} pt={2.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <ReportsBarChart
@@ -143,14 +153,6 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={8}>
-            <Projects />
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <OrderOverview />
-          </Grid>
-        </Grid>
       </MDBox>
       <Footer />
     </DashboardLayout>

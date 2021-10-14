@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -23,9 +24,8 @@ import MenuItem from "@mui/material/MenuItem";
 
 // Material Design 2 Dashboard React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 
-// Soft UI Dashboard Materail-UI example components
+// Material Design 2 Dashboard Materail-UI example components
 import Table from "examples/Table";
 
 // Custom styles for the Projects
@@ -34,7 +34,7 @@ import styles from "layouts/dashboard/components/Projects/styles";
 // Data
 import data from "layouts/dashboard/components/Projects/data";
 
-function Projects() {
+function Projects({ icon, backgroundColor }) {
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
   const classes = styles();
@@ -64,17 +64,25 @@ function Projects() {
   );
 
   return (
-    <Card>
-      <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
+    <Card className="overflow-visible">
+      <MDBox display="flex" justifyContent="space-between" alignItems="center" p={2}>
         <MDBox>
-          <MDTypography variant="h6" gutterBottom>
-            Projects
-          </MDTypography>
-          <MDBox display="flex" alignItems="center" lineHeight={0}>
-            <Icon className="font-bold text-info">done</Icon>
-            <MDTypography variant="button" fontWeight="regular" textColor="text">
-              &nbsp;<strong>30 done</strong> this month
-            </MDTypography>
+          <MDBox
+            backgroundColor={backgroundColor === "white" ? icon.color : "white"}
+            width="4rem"
+            height="4rem"
+            borderRadius="md"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            color={backgroundColor === "white" ? "white" : "dark"}
+            boxShadow="md"
+            backgroundGradient
+            mt={-5.5}
+          >
+            <Icon fontSize="medium" color="inherit">
+              {icon.component}
+            </Icon>
           </MDBox>
         </MDBox>
         <MDBox color="text" px={2}>
@@ -90,5 +98,26 @@ function Projects() {
     </Card>
   );
 }
+
+Projects.defaultProps = {
+  backgroundColor: "white",
+};
+
+Projects.propTypes = {
+  backgroundColor: PropTypes.oneOf([
+    "white",
+    "primary",
+    "secondary",
+    "info",
+    "success",
+    "warning",
+    "error",
+    "dark",
+  ]),
+  icon: PropTypes.shape({
+    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
+    component: PropTypes.node.isRequired,
+  }).isRequired,
+};
 
 export default Projects;
