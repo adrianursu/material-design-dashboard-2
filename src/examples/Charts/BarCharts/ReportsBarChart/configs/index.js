@@ -48,12 +48,13 @@ function configs(labels, datasets) {
           grid: {
             drawBorder: false,
             display: false,
-            drawOnChartArea: false,
+            drawOnChartArea: true,
             drawTicks: false,
+            borderDash: [5, 5],
           },
           ticks: {
             suggestedMin: 0,
-            suggestedMax: 500,
+            suggestedMax: 600,
             beginAtZero: true,
             padding: 15,
             font: {
@@ -69,8 +70,9 @@ function configs(labels, datasets) {
           grid: {
             drawBorder: false,
             display: false,
-            drawOnChartArea: false,
-            drawTicks: false,
+            drawOnChartArea: true,
+            drawTicks: true,
+            borderDash: [5, 5],
           },
           ticks: {
             display: false,

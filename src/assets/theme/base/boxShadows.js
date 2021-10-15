@@ -41,7 +41,7 @@ export default {
     0.06
   )}`,
   xl: boxShadow([0, 23], [45, -11], black.light, 0.25),
-  xxl: boxShadow([0, 20], [27, 0], black.main, 0.05),
+  xxl: boxShadow([0, 4], [6, -1], black.main, 0.1),
   inset: boxShadow([0, 1], [2, 0], black.main, 0.075, "inset"),
   navbarBoxShadow: `${boxShadow([0, 0], [1, 1], white.main, 0.9, "inset")}, ${boxShadow(
     [0, 20],

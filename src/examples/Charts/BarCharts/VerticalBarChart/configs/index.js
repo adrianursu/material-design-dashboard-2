@@ -53,10 +53,11 @@ function configs(labels, datasets) {
         },
         x: {
           grid: {
-            drawBorder: false,
-            display: false,
+            drawBorder: true,
+            display: true,
             drawOnChartArea: true,
             drawTicks: true,
+            borderDash: [5, 5],
           },
           ticks: {
             display: true,

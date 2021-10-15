@@ -60,7 +60,7 @@ function configs(labels, datasets) {
             drawBorder: false,
             display: false,
             drawOnChartArea: false,
-            drawTicks: false,
+            drawTicks: true,
             borderDash: [5, 5],
           },
           ticks: {
