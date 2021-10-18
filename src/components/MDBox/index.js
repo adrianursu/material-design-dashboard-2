@@ -36,12 +36,20 @@ const MDBox = forwardRef(
       opacity,
       borderRadius,
       boxShadow,
+      coloredShadow,
       customClass,
       ...rest
     },
     ref
   ) => {
-    const classes = styles({ backgroundColor, color, opacity, borderRadius, boxShadow });
+    const classes = styles({
+      backgroundColor,
+      color,
+      opacity,
+      borderRadius,
+      boxShadow,
+      coloredShadow,
+    });
 
     return (
       <Box
@@ -64,6 +72,7 @@ MDBox.defaultProps = {
   borderRadius: "none",
   boxShadow: "none",
   customClass: "",
+  coloredShadow: "",
 };
 
 // Typechecking props for the MDBox
@@ -75,6 +84,7 @@ MDBox.propTypes = {
   borderRadius: PropTypes.string,
   boxShadow: PropTypes.string,
   customClass: PropTypes.string,
+  coloredShadow: PropTypes.string,
 };
 
 export default MDBox;

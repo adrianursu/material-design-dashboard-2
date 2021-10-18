@@ -179,7 +179,7 @@ function Sidenav({ routes, ...rest }) {
             target="_blank"
             rel="noreferrer"
             variant="gradient"
-            buttonColor="info"
+            buttonColor="dark"
             fullWidth
           >
             upgrade to pro

@@ -42,7 +42,7 @@ import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData"
 
 function Dashboard() {
   const { size } = typography;
-  const { chart, items } = reportsBarChartData;
+  const { chart } = reportsBarChartData;
 
   return (
     <DashboardLayout>
@@ -111,7 +111,6 @@ function Dashboard() {
                   </>
                 }
                 chart={chart}
-                items={items}
                 bgColor="success"
               />
             </Grid>

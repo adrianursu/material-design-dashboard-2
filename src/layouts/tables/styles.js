@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard React
+* Material Design Dashboard 2 React - v2.0.0
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,31 +16,15 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(({ functions, borders, palette }) => {
-  const { white } = palette;
-  const { pxToRem } = functions;
-  const { borderWidth, borderColor } = borders;
+export default makeStyles(({ borders }) => {
+  const { borderColor } = borders;
 
   return {
-    projects_table: {
+    tables_table: {
       "& .MuiTableRow-root:not(:last-child)": {
         "& td": {
-          borderBottom: `1px solid ${borderColor}`,
+          borderBottom: `0.5px solid ${borderColor}`,
         },
-      },
-    },
-
-    projects_tableAvatar: {
-      border: `${borderWidth[2]} solid ${white.main}`,
-      cursor: "pointer",
-      position: "relative",
-
-      "&:not(:first-child)": {
-        marginLeft: pxToRem(-12),
-      },
-
-      "&:hover, &:focus": {
-        zIndex: "10",
       },
     },
   };

@@ -63,8 +63,8 @@ function reducer(state, action) {
 function MaterialDesignControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
-    transparentSidenav: true,
-    sidenavColor: "info",
+    transparentSidenav: false,
+    sidenavColor: "dark",
     transparentNavbar: true,
     fixedNavbar: true,
     openConfigurator: false,

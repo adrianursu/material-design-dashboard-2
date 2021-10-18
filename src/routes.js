@@ -37,8 +37,8 @@ Coded by www.creative-tim.com
 
 // Material Design 2 PRO React layouts
 import Dashboard from "layouts/dashboard";
-// import Tables from "layouts/tables";
-// import Billing from "layouts/billing";
+import Tables from "layouts/tables";
+import Typography from "layouts/typography";
 // import VirtualReality from "layouts/virtual-reality";
 // import RTL from "layouts/rtl";
 // import Profile from "layouts/profile";
@@ -47,9 +47,9 @@ import Dashboard from "layouts/dashboard";
 
 // Material Design 2 Dashboard PRO React icons
 import Shop from "examples/Icons/Shop";
-// import Office from "examples/Icons/Office";
+import Office from "examples/Icons/Office";
 // import Settings from "examples/Icons/Settings";
-// import Document from "examples/Icons/Document";
+import Document from "examples/Icons/Document";
 // import SpaceShip from "examples/Icons/SpaceShip";
 // import CustomerSupport from "examples/Icons/CustomerSupport";
 // import CreditCard from "examples/Icons/CreditCard";
@@ -65,24 +65,24 @@ const routes = [
     component: Dashboard,
     noCollapse: true,
   },
-  // {
-  //   type: "collapse",
-  //   name: "Tables",
-  //   key: "tables",
-  //   route: "/tables",
-  //   icon: <Office size="12px" />,
-  //   component: Tables,
-  //   noCollapse: true,
-  // },
-  // {
-  //   type: "collapse",
-  //   name: "Billing",
-  //   key: "billing",
-  //   route: "/billing",
-  //   icon: <CreditCard size="12px" />,
-  //   component: Billing,
-  //   noCollapse: true,
-  // },
+  {
+    type: "collapse",
+    name: "Tables",
+    key: "tables",
+    route: "/tables",
+    icon: <Office size="12px" />,
+    component: Tables,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Typography",
+    key: "typography",
+    route: "/typography",
+    icon: <Document size="12px" />,
+    component: Typography,
+    noCollapse: true,
+  },
   // {
   //   type: "collapse",
   //   name: "Virtual Reality",

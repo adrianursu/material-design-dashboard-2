@@ -34,6 +34,8 @@ import styles from "layouts/dashboard/components/Projects/styles";
 // Data
 import data from "layouts/dashboard/components/Projects/data";
 
+import boxShadows from "assets/theme/base/boxShadows";
+
 function Projects({ icon, backgroundColor }) {
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
@@ -76,7 +78,7 @@ function Projects({ icon, backgroundColor }) {
             justifyContent="center"
             alignItems="center"
             color={backgroundColor === "white" ? "white" : "dark"}
-            boxShadow="md"
+            style={{ boxShadow: boxShadows.coloredShadows.primary }}
             backgroundGradient
             mt={-5.5}
           >
