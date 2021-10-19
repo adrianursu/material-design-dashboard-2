@@ -45,32 +45,32 @@ export default {
   },
 
   primary: {
-    main: "#cb0c9f",
+    main: "#e91e63",
     focus: "#ad0a87",
   },
 
   secondary: {
-    main: "#8392ab",
+    main: "#7b809a",
     focus: "#96a2b8",
   },
 
   info: {
-    main: "#17c1e8",
+    main: "#1A73E8",
     focus: "#3acaeb",
   },
 
   success: {
-    main: "#82d616",
+    main: "#4CAF50",
     focus: "#95dc39",
   },
 
   warning: {
-    main: "#fbcf33",
+    main: "#fb8c00",
     focus: "#fcd652",
   },
 
   error: {
-    main: "#ea0606",
+    main: "#F44335",
     focus: "#c70505",
   },
 
@@ -97,43 +97,43 @@ export default {
 
   gradients: {
     primary: {
-      main: "#7928ca",
-      state: "#ff0080",
+      main: "#EC407A",
+      state: "#D81B60",
     },
 
     secondary: {
-      main: "#627594",
-      state: "#a8b8d8",
+      main: "#747b8a",
+      state: "#495361",
     },
 
     info: {
-      main: "#2152ff",
-      state: "#21d4fd",
+      main: "#49a3f1",
+      state: "#1A73E8",
     },
 
     success: {
-      main: "#17ad37",
-      state: "#98ec2d",
+      main: "#66BB6A",
+      state: "#43A047",
     },
 
     warning: {
-      main: "#f53939",
-      state: "#fbcf33",
+      main: "#FFA726",
+      state: "#FB8C00",
     },
 
     error: {
-      main: "#ea0606",
-      state: "#ff667c",
+      main: "#EF5350",
+      state: "#E53935",
     },
 
     light: {
-      main: "#ced4da",
-      state: "#ebeff4",
+      main: "#EBEFF4",
+      state: "#CED4DA",
     },
 
     dark: {
-      main: "#141727",
-      state: "#3a416f",
+      main: "#42424a",
+      state: "#191919",
     },
   },
 
