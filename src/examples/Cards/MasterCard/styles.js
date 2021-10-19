@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 // Images
-import curved14 from "assets/images/curved-images/curved14.jpg";
+import patternTree from "assets/images/illustrations/pattern-tree.svg";
 import pxToRem from "assets/theme/functions/pxToRem";
 
 export default makeStyles(({ functions, palette, boxShadows }) => {
@@ -31,7 +31,7 @@ export default makeStyles(({ functions, palette, boxShadows }) => {
         `${linearGradient(
           rgba(gradients[color].main, 0.8),
           rgba(gradients[color].state, 0.8)
-        )}, url(${curved14})`,
+        )}, url(${patternTree})`,
       boxShadow: xl,
     },
 

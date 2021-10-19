@@ -52,7 +52,12 @@ export default {
         </MDTypography>
       ),
       status: (
-        <MDTypography variant="caption" textColor="text" fontWeight="medium">
+        <MDTypography
+          variant="caption"
+          textColor="text"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
           working
         </MDTypography>
       ),
@@ -67,7 +72,12 @@ export default {
         </MDTypography>
       ),
       status: (
-        <MDTypography variant="caption" textColor="text" fontWeight="medium">
+        <MDTypography
+          variant="caption"
+          textColor="text"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
           done
         </MDTypography>
       ),
@@ -82,8 +92,13 @@ export default {
         </MDTypography>
       ),
       status: (
-        <MDTypography variant="caption" textColor="text" fontWeight="medium">
-          canceled
+        <MDTypography
+          variant="caption"
+          textColor="text"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
+          cancelled
         </MDTypography>
       ),
       completion: <Completion value={30} color="error" />,
@@ -97,8 +112,13 @@ export default {
         </MDTypography>
       ),
       status: (
-        <MDTypography variant="caption" textColor="text" fontWeight="medium">
-          canceled
+        <MDTypography
+          variant="caption"
+          textColor="text"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
+          cancelled
         </MDTypography>
       ),
       completion: <Completion value={0} color="error" />,
@@ -112,7 +132,12 @@ export default {
         </MDTypography>
       ),
       status: (
-        <MDTypography variant="caption" textColor="text" fontWeight="medium">
+        <MDTypography
+          variant="caption"
+          textColor="text"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
           working
         </MDTypography>
       ),
@@ -127,7 +152,12 @@ export default {
         </MDTypography>
       ),
       status: (
-        <MDTypography variant="caption" textColor="text" fontWeight="medium">
+        <MDTypography
+          variant="caption"
+          textColor="text"
+          fontWeight="medium"
+          textTransform="capitalize"
+        >
           done
         </MDTypography>
       ),

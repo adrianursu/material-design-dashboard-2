@@ -25,6 +25,8 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+import boxShadows from "assets/theme/base/boxShadows";
+
 function DefaultInfoCard({ color, icon, title, description, value }) {
   return (
     <Card>
@@ -37,7 +39,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           color="white"
           width="4rem"
           height="4rem"
-          boxShadow="regular"
+          style={{ boxShadow: boxShadows.coloredShadows.error }}
           borderRadius="lg"
           backgroundGradient
         >
@@ -66,7 +68,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
 
 // Setting default values for the props of DefaultInfoCard
 DefaultInfoCard.defaultProps = {
-  color: "info",
+  color: "error",
   value: "",
   description: "",
 };

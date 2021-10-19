@@ -86,7 +86,7 @@ function MasterCard({ color, number, holder, expires }) {
             </MDBox>
           </MDBox>
           <MDBox display="flex" justifyContent="flex-end" width="20%">
-            <MDBox component="img" src={masterCardLogo} alt="master card" width="60%" mt={1} />
+            <MDBox component="img" src={masterCardLogo} alt="master card" width="60%" mt={2} />
           </MDBox>
         </MDBox>
       </MDBox>

@@ -31,10 +31,15 @@ function Author({ image, name, email }) {
 function Function({ job, org }) {
   return (
     <MDBox display="flex" flexDirection="column">
-      <MDTypography variant="caption" fontWeight="medium" textColor="text">
+      <MDTypography
+        variant="caption"
+        fontWeight="medium"
+        textColor="text"
+        textTransform="capitalize"
+      >
         {job}
       </MDTypography>
-      <MDTypography variant="caption" textColor="secondary">
+      <MDTypography variant="caption" textColor="secondary" textTransform="capitalize">
         {org}
       </MDTypography>
     </MDBox>
@@ -77,9 +82,7 @@ export default {
     {
       author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
       function: <Function job="Programator" org="Developer" />,
-      status: (
-        <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
-      ),
+      status: <MDBadge variant="gradient" badgeContent="offline" color="dark" size="extra-small" />,
       employed: (
         <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
           11/01/19
@@ -155,13 +158,7 @@ export default {
         </MDTypography>
       ),
       action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
+        <MDTypography component="a" href="#" variant="caption" textColor="dark" fontWeight="medium">
           Edit
         </MDTypography>
       ),
@@ -169,9 +166,7 @@ export default {
     {
       author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
       function: <Function job="Programtor" org="Developer" />,
-      status: (
-        <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
-      ),
+      status: <MDBadge variant="gradient" badgeContent="offline" color="dark" size="extra-small" />,
       employed: (
         <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
           14/09/20
