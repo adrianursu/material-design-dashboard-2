@@ -37,7 +37,10 @@ import configs from "examples/Charts/LineCharts/GradientLineChart/configs";
 // Material Design 2 Dashboard PRO React base styles
 import colors from "assets/theme/base/colors";
 
-function GradientLineChart({ title, description, height, chart, bgColor }) {
+// Import boxShadows theme
+import boxShadows from "assets/theme/base/boxShadows";
+
+function GradientLineChart({ title, description, height, chart, bgColor, boxShadow }) {
   const chartRef = useRef(null);
   const [chartData, setChartData] = useState({});
   const { data, options } = chartData;
@@ -69,6 +72,7 @@ function GradientLineChart({ title, description, height, chart, bgColor }) {
             mb={2}
             height="12.5rem"
             backgroundGradient
+            style={{ boxShadow: `${boxShadow}` }}
           >
             <div ref={chartRef} style={{ height }}>
               <Line data={data} options={options} />
@@ -102,6 +106,7 @@ GradientLineChart.defaultProps = {
   description: "",
   height: "19.125rem",
   bgColor: "dark",
+  boxShadow: boxShadows.coloredShadows.primary,
 };
 
 // Typechecking props for the GradientLineChart
@@ -111,6 +116,7 @@ GradientLineChart.propTypes = {
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   chart: PropTypes.objectOf(PropTypes.array).isRequired,
   bgColor: PropTypes.oneOfType(PropTypes.string),
+  boxShadow: PropTypes.node,
 };
 
 export default GradientLineChart;

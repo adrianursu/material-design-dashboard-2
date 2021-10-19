@@ -78,7 +78,7 @@ function Projects({ icon, backgroundColor }) {
             justifyContent="center"
             alignItems="center"
             color={backgroundColor === "white" ? "white" : "dark"}
-            style={{ boxShadow: boxShadows.coloredShadows.primary }}
+            style={{ boxShadow: boxShadows.coloredShadows.secondary }}
             backgroundGradient
             mt={-5.5}
           >

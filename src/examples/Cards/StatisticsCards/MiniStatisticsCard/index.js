@@ -25,7 +25,10 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon }) {
+// Import boxShadow properties
+import boxShadows from "assets/theme/base/boxShadows";
+
+function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, boxShadow }) {
   return (
     <Card className="overflow-visible">
       <MDBox backgroundColor={backgroundColor} backgroundGradient borderRadius="xl">
@@ -41,9 +44,9 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon })
                 justifyContent="center"
                 alignItems="center"
                 color={backgroundColor === "white" ? "white" : "dark"}
-                boxShadow="md"
                 backgroundGradient
                 mt={-7.5}
+                style={{ boxShadow: `${boxShadow}` }}
               >
                 <Icon fontSize="medium" color="inherit">
                   {icon.component}
@@ -92,6 +95,7 @@ MiniStatisticsCard.defaultProps = {
     color: "success",
     text: "",
   },
+  boxShadow: boxShadows.coloredShadows.primary,
 };
 
 // Typechecking props for the MiniStatisticsCard
@@ -128,6 +132,7 @@ MiniStatisticsCard.propTypes = {
     color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
     component: PropTypes.node.isRequired,
   }).isRequired,
+  boxShadow: PropTypes.node,
 };
 
 export default MiniStatisticsCard;

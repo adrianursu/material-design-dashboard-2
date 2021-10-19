@@ -40,6 +40,8 @@ import Projects from "layouts/dashboard/components/Projects";
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
 
+import boxShadows from "assets/theme/base/boxShadows";
+
 function Dashboard() {
   const { size } = typography;
   const { chart } = reportsBarChartData;
@@ -66,6 +68,7 @@ function Dashboard() {
                 count="$53,000"
                 percentage={{ color: "success", text: "+55%" }}
                 icon={{ color: "info", component: "paid" }}
+                boxShadow={boxShadows.coloredShadows.info}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -74,6 +77,7 @@ function Dashboard() {
                 count="2,300"
                 percentage={{ color: "success", text: "+3%" }}
                 icon={{ color: "success", component: "public" }}
+                boxShadow={boxShadows.coloredShadows.success}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -82,6 +86,7 @@ function Dashboard() {
                 count="+3,462"
                 percentage={{ color: "error", text: "-2%" }}
                 icon={{ color: "warning", component: "emoji_events" }}
+                boxShadow={boxShadows.coloredShadows.warning}
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -93,6 +98,7 @@ function Dashboard() {
                   color: "error",
                   component: "shopping_cart",
                 }}
+                boxShadow={boxShadows.coloredShadows.error}
               />
             </Grid>
           </Grid>
@@ -112,6 +118,7 @@ function Dashboard() {
                 }
                 chart={chart}
                 bgColor="success"
+                boxShadow={boxShadows.coloredShadows.success}
               />
             </Grid>
             <Grid item xs={12} lg={4}>
@@ -127,10 +134,12 @@ function Dashboard() {
                   </>
                 }
                 chart={chart}
+                boxShadow={boxShadows.coloredShadows.secondary}
               />
             </Grid>
             <Grid item xs={12} lg={4}>
               <GradientLineChart
+                boxShadow={boxShadows.coloredShadows.dark}
                 title="Sales Overview"
                 description={
                   <MDBox display="flex" alignItems="center">

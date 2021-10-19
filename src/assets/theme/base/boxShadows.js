@@ -23,7 +23,8 @@ import colors from "assets/theme/base/colors";
 
 import boxShadow from "assets/theme/functions/boxShadow";
 
-const { black, white, info, inputColors, tabs, primary } = colors;
+const { black, white, inputColors, tabs, primary, secondary, info, success, warning, error, dark } =
+  colors;
 
 export default {
   xs: boxShadow([0, 2], [9, -5], black.main, 0.15),
@@ -80,6 +81,42 @@ export default {
       [0, 7],
       [10, -5],
       primary.main,
+      0.4
+    )}`,
+    secondary: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+      [0, 7],
+      [10, -5],
+      secondary.main,
+      0.4
+    )}`,
+    info: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+      [0, 7],
+      [10, -5],
+      info.main,
+      0.4
+    )}`,
+    success: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+      [0, 7],
+      [10, -5],
+      success.main,
+      0.4
+    )}`,
+    warning: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+      [0, 7],
+      [10, -5],
+      warning.main,
+      0.4
+    )}`,
+    error: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+      [0, 7],
+      [10, -5],
+      error.main,
+      0.4
+    )}`,
+    dark: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+      [0, 7],
+      [10, -5],
+      dark.main,
       0.4
     )}`,
   },

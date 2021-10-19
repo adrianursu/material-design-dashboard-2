@@ -33,7 +33,10 @@ import MDTypography from "components/MDTypography";
 // ReportsBarChart configurations
 import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
 
-function ReportsBarChart({ title, description, chart, bgColor }) {
+// boxShadow theme
+import boxShadows from "assets/theme/base/boxShadows";
+
+function ReportsBarChart({ title, description, chart, bgColor, boxShadow }) {
   const { data, options } = configs(chart.labels, chart.datasets);
 
   return (
@@ -50,6 +53,7 @@ function ReportsBarChart({ title, description, chart, bgColor }) {
               height="12.5rem"
               backgroundGradient
               mt={-5}
+              style={{ boxShadow: `${boxShadow}` }}
             >
               <Bar data={data} options={options} />
             </MDBox>
@@ -73,6 +77,7 @@ function ReportsBarChart({ title, description, chart, bgColor }) {
 ReportsBarChart.defaultProps = {
   description: "",
   bgColor: "dark",
+  boxShadow: boxShadows.coloredShadows.primary,
 };
 
 // Typechecking props for the ReportsBarChart
@@ -81,6 +86,7 @@ ReportsBarChart.propTypes = {
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
   bgColor: PropTypes.oneOfType([PropTypes.string]),
+  boxShadow: PropTypes.node,
 };
 
 export default ReportsBarChart;

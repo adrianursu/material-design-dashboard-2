@@ -29,7 +29,7 @@ function Typography() {
       <MDBox py={5}>
         <Card className="overflow-visible">
           <MDBox display="flex" justifyContent="center" alignItems="center" p={2}>
-            <CardHeader icon={{ color: "secondary", component: "assignment" }} />
+            <CardHeader icon="assignment" backgroundColor="primary" />
           </MDBox>
           <MDTypography variant="h1" fontWeight="regular" textColor="text">
             This is a h1
