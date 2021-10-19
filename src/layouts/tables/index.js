@@ -33,6 +33,7 @@ import styles from "layouts/tables/styles";
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
+import boxShadows from "assets/theme/base/boxShadows";
 
 function Tables() {
   const classes = styles();
@@ -45,8 +46,12 @@ function Tables() {
       <MDBox py={3}>
         <MDBox mb={6}>
           <Card className="overflow-visible">
-            <MDBox display="flex" justifyContent="space-between" alignItems="center" p={2}>
-              <CardHeader icon="language" backgroundColor="light" />
+            <MDBox display="flex" alignItems="center" p={2}>
+              <CardHeader
+                icon="group"
+                backgroundColor="warning"
+                boxShadow={boxShadows.coloredShadows.warning}
+              />
             </MDBox>
             <MDBox customClass={classes.tables_table} backgroundColor="transparent">
               <Table columns={columns} rows={rows} />
@@ -54,8 +59,12 @@ function Tables() {
           </Card>
         </MDBox>
         <Card className="overflow-visible">
-          <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
-            <CardHeader icon="language" backgroundColor="dark" />
+          <MDBox display="flex" alignItems="center" p={3}>
+            <CardHeader
+              icon="workspaces"
+              backgroundColor="dark"
+              boxShadow={boxShadows.coloredShadows.info}
+            />
           </MDBox>
           <MDBox customClass={classes.tables_table}>
             <Table columns={prCols} rows={prRows} />

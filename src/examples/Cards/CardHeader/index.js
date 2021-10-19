@@ -1,9 +1,11 @@
 import MDBox from "components/MDBox";
 import Icon from "@mui/material/Icon";
 
+import boxShadows from "assets/theme/base/boxShadows";
+
 import PropTypes from "prop-types";
 
-function CardHeader({ icon, backgroundColor }) {
+function CardHeader({ icon, backgroundColor, boxShadow }) {
   return (
     <MDBox
       backgroundColor={backgroundColor}
@@ -17,6 +19,7 @@ function CardHeader({ icon, backgroundColor }) {
       backgroundGradient
       mt={-5.5}
       px={3}
+      style={{ boxShadow: `${boxShadow}` }}
     >
       <Icon fontSize="medium" color="inherit">
         {icon}
@@ -27,6 +30,7 @@ function CardHeader({ icon, backgroundColor }) {
 
 CardHeader.defaultProps = {
   backgroundColor: "primary",
+  boxShadow: boxShadows.coloredShadows.primary,
 };
 
 CardHeader.propTypes = {
@@ -41,6 +45,7 @@ CardHeader.propTypes = {
     "dark",
   ]),
   icon: PropTypes.string.isRequired,
+  boxShadow: PropTypes.node,
 };
 
 export default CardHeader;
