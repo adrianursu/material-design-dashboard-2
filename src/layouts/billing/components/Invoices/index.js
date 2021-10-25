@@ -31,7 +31,7 @@ function Invoices() {
         <MDTypography variant="h6" fontWeight="medium">
           Invoices
         </MDTypography>
-        <MDButton variant="outlined" buttonColor="info" size="small">
+        <MDButton variant="outlined" buttonColor="error" size="small">
           view all
         </MDButton>
       </MDBox>
