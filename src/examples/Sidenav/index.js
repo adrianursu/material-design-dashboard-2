@@ -163,7 +163,7 @@ function Sidenav({ routes, ...rest }) {
           />
           <MDBox customClass={classes.sidenav_logoLabel}>
             <MDTypography component="h6" variant="button" fontWeight="medium">
-              Material Design Dashboard
+              Material Dashboard
             </MDTypography>
           </MDBox>
         </NavLink>
