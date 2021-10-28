@@ -30,7 +30,6 @@ import Icon from "@mui/material/Icon";
 
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 import MDInput from "components/MDInput";
 
 // Material Design 2 Dashboard PRO React example components
@@ -142,23 +141,12 @@ function DashboardNavbar({ absolute, light, isMini }) {
         {isMini ? null : (
           <MDBox customClass={classes.navbar_row}>
             <MDBox pr={1}>
-              <MDInput
-                placeholder="Type here..."
-                withIcon={{ icon: "search", direction: "left" }}
-                customClass={classes.navbar_input}
-              />
+              <MDInput placeholder="Search here" customClass={classes.navbar_input} />
             </MDBox>
             <MDBox color={light ? "white" : "inherit"} customClass={classes.navbar_section_desktop}>
               <Link to="/authentication/sign-in/basic">
                 <IconButton className={classes.navbar_icon_button}>
                   <Icon className={light ? "text-white" : "text-dark"}>account_circle</Icon>
-                  <MDTypography
-                    variant="button"
-                    fontWeight="medium"
-                    textColor={light ? "white" : "dark"}
-                  >
-                    Sign in
-                  </MDTypography>
                 </IconButton>
               </Link>
               <IconButton

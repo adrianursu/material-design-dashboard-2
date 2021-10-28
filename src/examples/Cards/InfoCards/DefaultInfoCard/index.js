@@ -39,7 +39,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
           color="white"
           width="4rem"
           height="4rem"
-          style={{ boxShadow: boxShadows.coloredShadows.error }}
+          style={{ boxShadow: boxShadows.coloredShadows.primary }}
           borderRadius="lg"
           backgroundGradient
         >
@@ -68,7 +68,7 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
 
 // Setting default values for the props of DefaultInfoCard
 DefaultInfoCard.defaultProps = {
-  color: "error",
+  color: "primary",
   value: "",
   description: "",
 };

@@ -44,7 +44,7 @@ function ProfilesList({ title, profiles }) {
       </MDBox>
       <MDBox ml="auto">
         {action.type === "internal" ? (
-          <MDButton component={Link} to={action.route} variant="text" buttonColor="info">
+          <MDButton component={Link} to={action.route} variant="text" buttonColor="primary">
             {action.label}
           </MDButton>
         ) : (
