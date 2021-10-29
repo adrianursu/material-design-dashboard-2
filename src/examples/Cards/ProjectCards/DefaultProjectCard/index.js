@@ -87,7 +87,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           )}
         </MDBox>
         <MDBox mb={3} lineHeight={0}>
-          <MDTypography variant="button" fontWeight="regular" textColor="text">
+          <MDTypography variant="button" fontWeight="light" textColor="text">
             {description}
           </MDTypography>
         </MDBox>

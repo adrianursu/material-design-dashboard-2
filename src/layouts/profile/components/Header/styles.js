@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 // Images
-import curved0 from "assets/images/curved-images/curved0.jpg";
+import profileOverview from "assets/images/profile-overview.jpg";
 
 export default makeStyles(({ palette, functions, borders, boxShadows }) => {
   const { gradients, white } = palette;
@@ -28,9 +28,9 @@ export default makeStyles(({ palette, functions, borders, boxShadows }) => {
   return {
     profileHeader_background: {
       backgroundImage: `${linearGradient(
-        rgba(gradients.info.main, 0.6),
-        rgba(gradients.info.state, 0.6)
-      )}, url(${curved0})`,
+        rgba(gradients.primary.main, 0.6),
+        rgba(gradients.primary.state, 0.6)
+      )}, url(${profileOverview})`,
       backgroundSize: "cover",
       backgroundPosition: "50%",
       display: "flex",
@@ -38,16 +38,17 @@ export default makeStyles(({ palette, functions, borders, boxShadows }) => {
       position: "relative",
       overflow: "hidden",
       minHeight: pxToRem(300),
-      borderRadius: borderRadius.xl,
+      borderRadius: borderRadius.lg,
     },
 
     profileHeader_profile: {
       backdropFilter: `saturate(200%) blur(${pxToRem(30)})`,
-      backgroundColor: rgba(white.main, 0.8),
+      backgroundColor: rgba(white.main, 1),
       boxShadow: navbarBoxShadow,
       margin: `${pxToRem(-64)} ${pxToRem(24)} 0`,
       padding: pxToRem(16),
       position: "relative",
+      borderRadius: borderRadius.lg,
     },
   };
 });

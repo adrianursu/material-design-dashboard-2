@@ -75,7 +75,7 @@ function VirtualReality() {
                   src={team1}
                   alt="Profile Picture"
                   size="lg"
-                  variant="rounded"
+                  variant="square"
                   customClass="cursor-pointer"
                 />
               </Tooltip>

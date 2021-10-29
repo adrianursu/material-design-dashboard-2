@@ -64,7 +64,7 @@ function ProfilesList({ title, profiles }) {
   ));
 
   return (
-    <Card className="h-100">
+    <Card className="h-100" style={{ boxShadow: "none" }}>
       <MDBox pt={2} px={2}>
         <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}

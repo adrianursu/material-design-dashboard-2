@@ -60,7 +60,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
       <MDTypography variant="button" fontWeight="bold" textTransform="capitalize">
         {label}: &nbsp;
       </MDTypography>
-      <MDTypography variant="button" fontWeight="regular" textColor="text">
+      <MDTypography variant="button" fontWeight="light" textColor="text">
         &nbsp;{values[key]}
       </MDTypography>
     </MDBox>
@@ -85,7 +85,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   ));
 
   return (
-    <Card className="h-100">
+    <Card className="h-100" style={{ boxShadow: "none" }}>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
         <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
           {title}
@@ -98,7 +98,7 @@ function ProfileInfoCard({ title, description, info, social, action }) {
       </MDBox>
       <MDBox p={2}>
         <MDBox mb={2} lineHeight={1.25}>
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
+          <MDTypography variant="button" textColor="text" fontWeight="light">
             {description}
           </MDTypography>
         </MDBox>
