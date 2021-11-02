@@ -35,13 +35,14 @@ import styles from "layouts/dashboard/components/Projects/styles";
 import data from "layouts/dashboard/components/Projects/data";
 
 import boxShadows from "assets/theme/base/boxShadows";
+import MDTypography from "components/MDTypography";
 
-function Projects({ icon, backgroundColor }) {
+function Projects({ icon, backgroundColor, title }) {
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
   const classes = styles();
 
-  const openMenu = ({ currentTarget }) => setMenu(currentTarget);
+  // const openMenu = ({ currentTarget }) => setMenu(currentTarget);
   const closeMenu = () => setMenu(null);
 
   const renderMenu = (
@@ -67,7 +68,7 @@ function Projects({ icon, backgroundColor }) {
 
   return (
     <Card className="overflow-visible">
-      <MDBox display="flex" justifyContent="space-between" alignItems="center" p={2}>
+      <MDBox display="flex" alignItems="center" p={2}>
         <MDBox>
           <MDBox
             backgroundColor={backgroundColor === "white" ? icon.color : "white"}
@@ -78,7 +79,7 @@ function Projects({ icon, backgroundColor }) {
             justifyContent="center"
             alignItems="center"
             color={backgroundColor === "white" ? "white" : "dark"}
-            style={{ boxShadow: boxShadows.coloredShadows.secondary }}
+            style={{ boxShadow: boxShadows.coloredShadows.success }}
             backgroundGradient
             mt={-5.5}
           >
@@ -87,10 +88,10 @@ function Projects({ icon, backgroundColor }) {
             </Icon>
           </MDBox>
         </MDBox>
-        <MDBox color="text" px={2}>
-          <Icon className="cursor-pointer font-bold" fontSize="small" onClick={openMenu}>
-            more_vert
-          </Icon>
+        <MDBox px={2} mb={2}>
+          <MDTypography variant="h6" fontWeight="bold">
+            {title}
+          </MDTypography>
         </MDBox>
         {renderMenu}
       </MDBox>
@@ -103,6 +104,7 @@ function Projects({ icon, backgroundColor }) {
 
 Projects.defaultProps = {
   backgroundColor: "white",
+  title: "",
 };
 
 Projects.propTypes = {
@@ -116,6 +118,7 @@ Projects.propTypes = {
     "error",
     "dark",
   ]),
+  title: PropTypes.string,
   icon: PropTypes.shape({
     color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
     component: PropTypes.node.isRequired,

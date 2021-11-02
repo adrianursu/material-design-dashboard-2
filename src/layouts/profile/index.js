@@ -26,7 +26,7 @@ import PlatformSettings from "layouts/profile/components/PlatformSettings";
 import profilesListData from "layouts/profile/data/profilesListData";
 
 import Grid from "@mui/material/Grid";
-
+import Divider from "@mui/material/Divider";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import MDBox from "components/MDBox";
 import Header from "./components/Header";
@@ -44,9 +44,15 @@ function Overview() {
               <Grid item xs={12} md={6} xl={4}>
                 <PlatformSettings />
               </Grid>
+              <MDBox height={400}>
+                <Divider orientation="vertical" />
+              </MDBox>
               <Grid item xs={12} md={6} xl={4}>
                 <ProfileInformation />
               </Grid>
+              <MDBox height={400}>
+                <Divider orientation="vertical" />
+              </MDBox>
               <Grid item xs={12} xl={4}>
                 <ProfilesList title="conversations" profiles={profilesListData} />
               </Grid>

@@ -54,9 +54,10 @@ function Dashboard() {
           <Grid item xs={12}>
             <Projects
               icon={{
-                color: "secondary",
+                color: "success",
                 component: "language",
               }}
+              title="Sales by Country"
             />
           </Grid>
         </Grid>

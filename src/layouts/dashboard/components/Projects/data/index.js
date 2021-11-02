@@ -32,16 +32,16 @@ export default function data() {
 
   return {
     columns: [
-      { name: "companies", align: "left" },
-      { name: "members", align: "left" },
-      { name: "budget", align: "center" },
-      { name: "completion", align: "center" },
+      { name: "countries", align: "left" },
+      { name: "sales", align: "left" },
+      { name: "value", align: "center" },
+      { name: "bounce", align: "center" },
     ],
 
     rows: [
       {
-        companies: [logoXD, "Material Design 2 XD Version"],
-        members: (
+        countries: [logoXD, "Material Design 2 XD Version"],
+        sales: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
@@ -51,20 +51,20 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        budget: (
+        value: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             $14,000
           </MDTypography>
         ),
-        completion: (
+        bounce: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={60} color="info" gradient />
           </MDBox>
         ),
       },
       {
-        companies: [logoAtlassian, "Add Progress Track"],
-        members: (
+        countries: [logoAtlassian, "Add Progress Track"],
+        sales: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team2, "Romina Hadid"],
@@ -72,20 +72,20 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        budget: (
+        value: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             $3,000
           </MDTypography>
         ),
-        completion: (
+        bounce: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={10} color="info" gradient />
           </MDBox>
         ),
       },
       {
-        companies: [logoSlack, "Fix Platform Errors"],
-        members: (
+        countries: [logoSlack, "Fix Platform Errors"],
+        sales: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
@@ -93,20 +93,20 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        budget: (
+        value: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             Not set
           </MDTypography>
         ),
-        completion: (
+        bounce: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" gradient />
           </MDBox>
         ),
       },
       {
-        companies: [logoSpotify, "Launch our Mobile App"],
-        members: (
+        countries: [logoSpotify, "Launch our Mobile App"],
+        sales: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team4, "Jessica Doe"],
@@ -116,12 +116,12 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        budget: (
+        value: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             $20,500
           </MDTypography>
         ),
-        completion: (
+        bounce: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" gradient />
           </MDBox>
