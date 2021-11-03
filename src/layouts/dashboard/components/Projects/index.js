@@ -25,8 +25,8 @@ import MenuItem from "@mui/material/MenuItem";
 // Material Design 2 Dashboard React components
 import MDBox from "components/MDBox";
 
-// Material Design 2 Dashboard Materail-UI example components
-import Table from "examples/Table";
+// Material Design 2 Dashboard Material-UI example components
+import Table from "examples/Tables/Table";
 
 // Custom styles for the Projects
 import styles from "layouts/dashboard/components/Projects/styles";

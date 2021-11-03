@@ -33,14 +33,16 @@ import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
 import typography from "assets/theme/base/typography";
 
 // Dashboard layout components
-import Projects from "layouts/dashboard/components/Projects";
+// import Projects from "layouts/dashboard/components/Projects";
 // import OrderOverview from "layouts/dashboard/components/OrderOverview";
+import SalesTable from "examples/Tables/SalesTable";
+
+import boxShadows from "assets/theme/base/boxShadows";
 
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
-
-import boxShadows from "assets/theme/base/boxShadows";
+import salesTableData from "./data/salesTableData";
 
 function Dashboard() {
   const { size } = typography;
@@ -52,13 +54,13 @@ function Dashboard() {
       <MDBox py={5}>
         <Grid container>
           <Grid item xs={12}>
-            <Projects
-              icon={{
-                color: "success",
-                component: "language",
-              }}
-              title="Sales by Country"
-            />
+            <MDBox mb={3} position="relative">
+              <SalesTable
+                title="Sales by Country"
+                rows={salesTableData}
+                icon={{ color: "success", component: "language" }}
+              />
+            </MDBox>
           </Grid>
         </Grid>
         <MDBox mb={3}>

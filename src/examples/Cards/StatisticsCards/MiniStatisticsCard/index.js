@@ -27,6 +27,7 @@ import MDTypography from "components/MDTypography";
 
 // Import boxShadow properties
 import boxShadows from "assets/theme/base/boxShadows";
+import { Divider } from "@mui/material";
 
 function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, boxShadow }) {
   return (
@@ -71,13 +72,14 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, b
                   textColor={backgroundColor === "white" ? "dark" : "white"}
                 >
                   {count}{" "}
-                  <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
-                    {percentage.text}
-                  </MDTypography>
                 </MDTypography>
               </MDBox>
             </Grid>
           </Grid>
+          <Divider style={{ margin: "0.5rem 0" }} />
+          <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
+            {percentage.text}
+          </MDTypography>
         </MDBox>
       </MDBox>
     </Card>
