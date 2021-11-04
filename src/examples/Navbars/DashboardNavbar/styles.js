@@ -111,7 +111,7 @@ export default makeStyles(
         padding: `0 ${pxToRem(6)}`,
 
         "& .material-icons, .material-icons-round": {
-          fontSize: `${size.regular} !important`,
+          fontSize: `${size.xl} !important`,
           color: secondary.main,
         },
 
