@@ -13,13 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @mui material components
-import Card from "@mui/material/Card";
-
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
-// import MDTypography from "components/MDTypography";
-import CardHeader from "examples/Cards/CardHeader";
 
 // Material Design Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -31,13 +26,12 @@ import Table from "examples/Tables/Table";
 import styles from "layouts/tables/styles";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
+import userTableData from "layouts/tables/data/userTableData";
 import projectsTableData from "layouts/tables/data/projectsTableData";
-import boxShadows from "assets/theme/base/boxShadows";
 
 function Tables() {
   const classes = styles();
-  const { columns, rows } = authorsTableData;
+  const { columns, rows } = userTableData;
   const { columns: prCols, rows: prRows } = projectsTableData;
 
   return (
@@ -45,31 +39,13 @@ function Tables() {
       <DashboardNavbar />
       <MDBox py={3}>
         <MDBox mb={6}>
-          <Card className="overflow-visible">
-            <MDBox display="flex" alignItems="center" p={2}>
-              <CardHeader
-                icon="group"
-                backgroundColor="warning"
-                boxShadow={boxShadows.coloredShadows.warning}
-              />
-            </MDBox>
-            <MDBox customClass={classes.tables_table} backgroundColor="transparent">
-              <Table columns={columns} rows={rows} />
-            </MDBox>
-          </Card>
+          <MDBox customClass={classes.tables_table} backgroundColor="transparent">
+            <Table columns={columns} rows={rows} />
+          </MDBox>
         </MDBox>
-        <Card className="overflow-visible">
-          <MDBox display="flex" alignItems="center" p={3}>
-            <CardHeader
-              icon="workspaces"
-              backgroundColor="dark"
-              boxShadow={boxShadows.coloredShadows.info}
-            />
-          </MDBox>
-          <MDBox customClass={classes.tables_table}>
-            <Table columns={prCols} rows={prRows} />
-          </MDBox>
-        </Card>
+        <MDBox customClass={classes.tables_table}>
+          <Table columns={prCols} rows={prRows} />
+        </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>

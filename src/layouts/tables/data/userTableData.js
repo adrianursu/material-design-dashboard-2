@@ -6,50 +6,45 @@ import MDAvatar from "components/MDAvatar";
 import MDBadge from "components/MDBadge";
 
 // Images
+import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
 import team4 from "assets/images/team-4.jpg";
+import team5 from "assets/images/team-5.jpg";
 
-function Author({ image, name, email }) {
+function User({ image, name, count }) {
   return (
     <MDBox display="flex" alignItems="center" px={1} py={0.5}>
       <MDBox mr={2}>
-        <MDAvatar src={image} alt={name} size="sm" variant="rounded" />
+        <MDAvatar src={image} alt={name} size="md" variant="rounded" />
       </MDBox>
       <MDBox display="flex" flexDirection="column">
         <MDTypography variant="button" fontWeight="medium">
           {name}
         </MDTypography>
-        <MDTypography variant="caption" textColor="secondary">
-          {email}
+        <MDTypography fontWeight="normal" textColor="secondary" variant="body">
+          <MDTypography variant="button" textColor="success" fontWeight="bold">
+            {count}
+          </MDTypography>
+          &nbsp;orders
         </MDTypography>
       </MDBox>
     </MDBox>
   );
 }
 
-function Function({ job, org }) {
+function Value({ value }) {
   return (
-    <MDBox display="flex" flexDirection="column">
-      <MDTypography
-        variant="caption"
-        fontWeight="medium"
-        textColor="text"
-        textTransform="capitalize"
-      >
-        {job}
-      </MDTypography>
-      <MDTypography variant="caption" textColor="secondary" textTransform="capitalize">
-        {org}
-      </MDTypography>
-    </MDBox>
+    <MDTypography variant="caption" fontWeight="medium" textColor="secondary">
+      {value}
+    </MDTypography>
   );
 }
 
 export default {
   columns: [
-    { name: "author", align: "left" },
-    { name: "function", align: "left" },
+    { name: "user", align: "left" },
+    { name: "value", align: "left" },
     { name: "status", align: "center" },
     { name: "employed", align: "center" },
     { name: "action", align: "center" },
@@ -57,8 +52,8 @@ export default {
 
   rows: [
     {
-      author: <Author image={team2} name="John Michael" email="john@creative-tim.com" />,
-      function: <Function job="Manager" org="Organization" />,
+      user: <User image={team1} name="Alice Vingent" count="8.232" />,
+      value: <Value value="$130.992" />,
       status: (
         <MDBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
       ),
@@ -80,8 +75,8 @@ export default {
       ),
     },
     {
-      author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
-      function: <Function job="Programator" org="Developer" />,
+      user: <User image={team2} name="John Alura" count="12.821" />,
+      value: <Value value="$80.250" />,
       status: <MDBadge variant="gradient" badgeContent="offline" color="dark" size="extra-small" />,
       employed: (
         <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
@@ -101,8 +96,8 @@ export default {
       ),
     },
     {
-      author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
-      function: <Function job="Executive" org="Projects" />,
+      user: <User image={team4} name="Laurent Perrier" count="2.241" />,
+      value: <Value value="$40.600" />,
       status: (
         <MDBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
       ),
@@ -124,8 +119,13 @@ export default {
       ),
     },
     {
-      author: <Author image={team3} name="Michael Levi" email="michael@creative-tim.com" />,
-      function: <Function job="Programator" org="Developer" />,
+      user: <User image={team3} name="Michael Levi" count="5.921" />,
+      value: (
+        <Value
+          value="	
+      $91.300"
+        />
+      ),
       status: (
         <MDBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
       ),
@@ -147,8 +147,8 @@ export default {
       ),
     },
     {
-      author: <Author image={team2} name="Richard Gran" email="richard@creative-tim.com" />,
-      function: <Function job="Manager" org="Executive" />,
+      user: <User image={team5} name="Richard Gran" count="921" />,
+      value: <Value value="$140.925" />,
       status: (
         <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
       ),
@@ -159,27 +159,6 @@ export default {
       ),
       action: (
         <MDTypography component="a" href="#" variant="caption" textColor="dark" fontWeight="medium">
-          Edit
-        </MDTypography>
-      ),
-    },
-    {
-      author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
-      function: <Function job="Programtor" org="Developer" />,
-      status: <MDBadge variant="gradient" badgeContent="offline" color="dark" size="extra-small" />,
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          14/09/20
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
           Edit
         </MDTypography>
       ),

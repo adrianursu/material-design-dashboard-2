@@ -36,7 +36,7 @@ const MDProgress = forwardRef(({ color, value, gradient, noLabel, ...rest }, ref
   return (
     <>
       {!noLabel && (
-        <MDTypography variant="button" fontWeight="medium" textColor="text">
+        <MDTypography variant="caption" fontWeight="regular" textColor="text">
           {value}%
         </MDTypography>
       )}

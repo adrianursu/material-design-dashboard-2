@@ -26,8 +26,8 @@ const { light } = colors;
 export default {
   styleOverrides: {
     root: {
-      height: pxToRem(3),
-      borderRadius: borderRadius.md,
+      height: pxToRem(6),
+      borderRadius: borderRadius.sm,
       overflow: "visible",
       position: "relative",
     },
@@ -41,11 +41,10 @@ export default {
     },
 
     bar: {
-      height: pxToRem(6),
       borderRadius: borderRadius.sm,
       position: "absolute",
-      transform: `translate(0, ${pxToRem(-1.5)}) !important`,
-      transition: "width 0.6s ease !important",
+      transform: `translate(0, ${pxToRem(0)}) !important`,
+      transition: "width 0.6s ease-out !important",
     },
   },
 };

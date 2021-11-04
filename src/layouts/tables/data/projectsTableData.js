@@ -45,7 +45,7 @@ export default {
 
   rows: [
     {
-      project: [logoSpotify, "Spotift"],
+      project: [logoSpotify, "Spotify"],
       budget: (
         <MDTypography variant="button" textColor="text" fontWeight="medium">
           $2,500
@@ -61,7 +61,7 @@ export default {
           working
         </MDTypography>
       ),
-      completion: <Completion value={60} color="info" />,
+      completion: <Completion value={60} color="primary" />,
       action,
     },
     {
