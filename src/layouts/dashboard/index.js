@@ -81,7 +81,7 @@ function Dashboard() {
                 count="2,300"
                 percentage={{ color: "success", text: "+3%" }}
                 icon={{ color: "primary", component: "leaderboard" }}
-                boxShadow={boxShadows.coloredShadows.success}
+                boxShadow={boxShadows.coloredShadows.primary}
                 description=" than last month"
               />
             </Grid>
