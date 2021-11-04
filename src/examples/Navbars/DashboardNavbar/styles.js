@@ -18,7 +18,7 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(
   ({ palette, boxShadows, functions, transitions, breakpoints, borders, typography }) => {
-    const { dark, white, text, transparent } = palette;
+    const { dark, white, text, transparent, secondary } = palette;
     const { navbarBoxShadow } = boxShadows;
     const { rgba, pxToRem } = functions;
     const { borderRadius } = borders;
@@ -112,6 +112,7 @@ export default makeStyles(
 
         "& .material-icons, .material-icons-round": {
           fontSize: `${size.regular} !important`,
+          color: secondary.main,
         },
 
         "& .MuiTypography-root": {

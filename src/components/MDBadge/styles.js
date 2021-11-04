@@ -59,7 +59,7 @@ export default makeStyles(({ palette, typography, borders, functions }) => {
 
           return borderRadiusValue;
         },
-        border: ({ border }) => (border ? `${borderWidth[3]} solid ${white.main}` : "none"),
+        border: ({ border }) => (border ? `${borderWidth[1]} solid ${white.main}` : "none"),
       },
     },
 

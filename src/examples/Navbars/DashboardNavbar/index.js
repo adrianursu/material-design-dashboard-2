@@ -31,6 +31,7 @@ import Icon from "@mui/material/Icon";
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
 import MDInput from "components/MDInput";
+import MDBadge from "components/MDBadge";
 
 // Material Design 2 Dashboard PRO React example components
 import Breadcrumbs from "examples/Breadcrumbs";
@@ -146,7 +147,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
             <MDBox color={light ? "white" : "inherit"} customClass={classes.navbar_section_desktop}>
               <Link to="/authentication/sign-in/basic">
                 <IconButton className={classes.navbar_icon_button}>
-                  <Icon className={light ? "text-white" : "text-dark"}>account_circle</Icon>
+                  <Icon className={light}>account_circle</Icon>
                 </IconButton>
               </Link>
               <IconButton
@@ -172,7 +173,9 @@ function DashboardNavbar({ absolute, light, isMini }) {
                 variant="contained"
                 onClick={handleOpenMenu}
               >
-                <Icon>notifications</Icon>
+                <MDBadge badgeContent={11} color="error" size="extra-small" circular border>
+                  <Icon>notifications</Icon>
+                </MDBadge>
               </IconButton>
               {renderMenu()}
             </MDBox>
