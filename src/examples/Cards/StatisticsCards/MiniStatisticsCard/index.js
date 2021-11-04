@@ -91,11 +91,11 @@ function MiniStatisticsCard({
               </MDBox>
             </Grid>
           </Grid>
-          <Divider style={{ margin: "0.5rem 0" }} />
-          <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
-            {percentage.text}
-          </MDTypography>
-          <MDTypography variant="button" fontWeight="regular" textColor="text">
+          <Divider />
+          <MDTypography variant="body2" fontWeight="light" textColor="text">
+            <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
+              {percentage.text}
+            </MDTypography>
             {description}
           </MDTypography>
         </MDBox>
