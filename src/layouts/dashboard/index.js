@@ -67,11 +67,12 @@ function Dashboard() {
           <Grid container spacing={3} py={1.2} pt={5.5}>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "today's money" }}
-                count="$53,000"
+                title={{ text: "bookings" }}
+                count="281"
                 percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "info", component: "paid" }}
-                boxShadow={boxShadows.coloredShadows.info}
+                icon={{ color: "dark", component: "weekend" }}
+                boxShadow={boxShadows.coloredShadows.dark}
+                description=" than last week"
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
@@ -79,29 +80,31 @@ function Dashboard() {
                 title={{ text: "today's users" }}
                 count="2,300"
                 percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "success", component: "public" }}
+                icon={{ color: "primary", component: "leaderboard" }}
                 boxShadow={boxShadows.coloredShadows.success}
+                description=" than last month"
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "new clients" }}
-                count="+3,462"
-                percentage={{ color: "error", text: "-2%" }}
-                icon={{ color: "warning", component: "emoji_events" }}
-                boxShadow={boxShadows.coloredShadows.warning}
+                title={{ text: "Revenue" }}
+                count="34K"
+                percentage={{ color: "success", text: "+1%" }}
+                icon={{ color: "success", component: "store" }}
+                boxShadow={boxShadows.coloredShadows.success}
+                description=" than yesterday"
               />
             </Grid>
             <Grid item xs={12} sm={6} xl={3}>
               <MiniStatisticsCard
-                title={{ text: "sales" }}
-                count="$103,430"
-                percentage={{ color: "success", text: "+5%" }}
+                title={{ text: "followers" }}
+                count="+91"
                 icon={{
-                  color: "error",
-                  component: "shopping_cart",
+                  color: "info",
+                  component: "person_add",
                 }}
-                boxShadow={boxShadows.coloredShadows.error}
+                boxShadow={boxShadows.coloredShadows.info}
+                description="Just updated"
               />
             </Grid>
           </Grid>

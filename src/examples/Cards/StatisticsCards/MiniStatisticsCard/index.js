@@ -29,7 +29,15 @@ import MDTypography from "components/MDTypography";
 import boxShadows from "assets/theme/base/boxShadows";
 import { Divider } from "@mui/material";
 
-function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, boxShadow }) {
+function MiniStatisticsCard({
+  backgroundColor,
+  title,
+  count,
+  percentage,
+  icon,
+  boxShadow,
+  description,
+}) {
   return (
     <Card className="overflow-visible">
       <MDBox backgroundColor={backgroundColor} backgroundGradient borderRadius="xl">
@@ -56,18 +64,25 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, b
             </Grid>
 
             <Grid item xs={8}>
-              <MDBox style={{ float: "right", lineHeight: "0.5" }}>
+              <MDBox
+                display="flex"
+                flexDirection="column"
+                alignItems="flex-end"
+                style={{
+                  lineHeight: "0.5",
+                }}
+              >
                 <MDTypography
                   variant="button"
                   textColor={backgroundColor === "white" ? "text" : "white"}
                   opacity={backgroundColor === "white" ? 1 : 0.7}
                   textTransform="capitalize"
-                  fontWeight="regular"
+                  fontWeight="light"
                 >
                   {title.text}
                 </MDTypography>
                 <MDTypography
-                  variant="h5"
+                  variant="h4"
                   fontWeight="bold"
                   textColor={backgroundColor === "white" ? "dark" : "white"}
                 >
@@ -76,9 +91,12 @@ function MiniStatisticsCard({ backgroundColor, title, count, percentage, icon, b
               </MDBox>
             </Grid>
           </Grid>
-          <Divider style={{ margin: "0.5rem 0" }} />
+          <Divider style={{ margin: "0.7rem 0" }} />
           <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
             {percentage.text}
+          </MDTypography>
+          <MDTypography variant="button" fontWeight="regular" textColor="text">
+            {description}
           </MDTypography>
         </MDBox>
       </MDBox>
@@ -98,6 +116,7 @@ MiniStatisticsCard.defaultProps = {
     text: "",
   },
   boxShadow: boxShadows.coloredShadows.primary,
+  description: "",
 };
 
 // Typechecking props for the MiniStatisticsCard
@@ -135,6 +154,7 @@ MiniStatisticsCard.propTypes = {
     component: PropTypes.node.isRequired,
   }).isRequired,
   boxShadow: PropTypes.node,
+  description: PropTypes.string,
 };
 
 export default MiniStatisticsCard;
