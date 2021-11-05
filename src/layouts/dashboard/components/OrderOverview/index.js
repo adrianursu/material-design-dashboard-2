@@ -31,7 +31,7 @@ function OrdersOverview() {
         <MDTypography variant="h6" fontWeight="medium">
           Orders overview
         </MDTypography>
-        <MDBox mt={1} mb={2}>
+        <MDBox mt={1} mb={3.2}>
           <MDTypography variant="button" textColor="text" fontWeight="regular">
             <MDTypography display="inline" variant="body2" verticalAlign="middle">
               <Icon className="font-bold text-success">arrow_upward</Icon>

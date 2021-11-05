@@ -15,6 +15,8 @@ import logoXD from "assets/images/small-logos/logo-xd.svg";
 import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
 import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import logoInvesion from "assets/images/small-logos/logo-invision.svg";
+import logoJira from "assets/images/small-logos/logo-jira.svg";
 import team1 from "assets/images/team-1.jpg";
 import team2 from "assets/images/team-2.jpg";
 import team3 from "assets/images/team-3.jpg";
@@ -32,16 +34,16 @@ export default function data() {
 
   return {
     columns: [
-      { name: "countries", align: "left" },
-      { name: "sales", align: "left" },
-      { name: "value", align: "center" },
-      { name: "bounce", align: "center" },
+      { name: "companies", align: "left" },
+      { name: "members", align: "left" },
+      { name: "budget", align: "center" },
+      { name: "completion", align: "center" },
     ],
 
     rows: [
       {
-        countries: [logoXD, "Material Design 2 XD Version"],
-        sales: (
+        companies: [logoXD, "Material Design 2 XD Version"],
+        members: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
@@ -51,20 +53,20 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        value: (
+        budget: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             $14,000
           </MDTypography>
         ),
-        bounce: (
+        completion: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={60} color="info" gradient />
           </MDBox>
         ),
       },
       {
-        countries: [logoAtlassian, "Add Progress Track"],
-        sales: (
+        companies: [logoAtlassian, "Add Progress Track"],
+        members: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team2, "Romina Hadid"],
@@ -72,20 +74,20 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        value: (
+        budget: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             $3,000
           </MDTypography>
         ),
-        bounce: (
+        completion: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={10} color="info" gradient />
           </MDBox>
         ),
       },
       {
-        countries: [logoSlack, "Fix Platform Errors"],
-        sales: (
+        companies: [logoSlack, "Fix Platform Errors"],
+        members: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team1, "Ryan Tompson"],
@@ -93,20 +95,20 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        value: (
+        budget: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             Not set
           </MDTypography>
         ),
-        bounce: (
+        completion: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" gradient />
           </MDBox>
         ),
       },
       {
-        countries: [logoSpotify, "Launch our Mobile App"],
-        sales: (
+        companies: [logoSpotify, "Launch our Mobile App"],
+        members: (
           <MDBox display="flex" py={1}>
             {avatars([
               [team4, "Jessica Doe"],
@@ -116,14 +118,53 @@ export default function data() {
             ])}
           </MDBox>
         ),
-        value: (
+        budget: (
           <MDTypography variant="caption" textColor="text" fontWeight="medium">
             $20,500
           </MDTypography>
         ),
-        bounce: (
+        completion: (
           <MDBox width="8rem" textAlign="left">
             <MDProgress value={100} color="success" gradient />
+          </MDBox>
+        ),
+      },
+      {
+        companies: [logoInvesion, "Redesign New Online Shop"],
+        members: (
+          <MDBox display="flex" py={1}>
+            {avatars([
+              [team1, "Ryan Tompson"],
+              [team4, "Jessica Doe"],
+            ])}
+          </MDBox>
+        ),
+        budget: (
+          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+            $2,000
+          </MDTypography>
+        ),
+        completion: (
+          <MDBox width="8rem" textAlign="left">
+            <MDProgress value={40} color="info" gradient />
+          </MDBox>
+        ),
+      },
+      {
+        companies: [logoJira, "Add the New Pricing Page"],
+        members: (
+          <MDBox display="flex" py={1}>
+            {avatars([[team4, "Jessica Doe"]])}
+          </MDBox>
+        ),
+        budget: (
+          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+            $500
+          </MDTypography>
+        ),
+        completion: (
+          <MDBox width="8rem" textAlign="left">
+            <MDProgress value={25} color="info" gradient />
           </MDBox>
         ),
       },

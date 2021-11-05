@@ -14,7 +14,6 @@ Coded by www.creative-tim.com
 */
 
 import { useState } from "react";
-import PropTypes from "prop-types";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -34,15 +33,14 @@ import styles from "layouts/dashboard/components/Projects/styles";
 // Data
 import data from "layouts/dashboard/components/Projects/data";
 
-import boxShadows from "assets/theme/base/boxShadows";
 import MDTypography from "components/MDTypography";
 
-function Projects({ icon, backgroundColor, title }) {
+function Projects() {
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
   const classes = styles();
 
-  // const openMenu = ({ currentTarget }) => setMenu(currentTarget);
+  const openMenu = ({ currentTarget }) => setMenu(currentTarget);
   const closeMenu = () => setMenu(null);
 
   const renderMenu = (
@@ -67,31 +65,23 @@ function Projects({ icon, backgroundColor, title }) {
   );
 
   return (
-    <Card className="overflow-visible">
-      <MDBox display="flex" alignItems="center" p={2}>
+    <Card>
+      <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <MDBox>
-          <MDBox
-            backgroundColor={backgroundColor === "white" ? icon.color : "white"}
-            width="4rem"
-            height="4rem"
-            borderRadius="md"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            color={backgroundColor === "white" ? "white" : "dark"}
-            style={{ boxShadow: boxShadows.coloredShadows.success }}
-            backgroundGradient
-            mt={-5.5}
-          >
-            <Icon fontSize="medium" color="inherit">
-              {icon.component}
-            </Icon>
+          <MDTypography variant="h6" gutterBottom>
+            Projects
+          </MDTypography>
+          <MDBox display="flex" alignItems="center" lineHeight={0}>
+            <Icon className="font-bold text-info">done</Icon>
+            <MDTypography variant="button" fontWeight="regular" textColor="text">
+              &nbsp;<strong>30 done</strong> this month
+            </MDTypography>
           </MDBox>
         </MDBox>
-        <MDBox px={2} mb={2}>
-          <MDTypography variant="h6" fontWeight="bold">
-            {title}
-          </MDTypography>
+        <MDBox color="text" px={2}>
+          <Icon className="cursor-pointer font-bold" fontSize="small" onClick={openMenu}>
+            more_vert
+          </Icon>
         </MDBox>
         {renderMenu}
       </MDBox>
@@ -101,28 +91,5 @@ function Projects({ icon, backgroundColor, title }) {
     </Card>
   );
 }
-
-Projects.defaultProps = {
-  backgroundColor: "white",
-  title: "",
-};
-
-Projects.propTypes = {
-  backgroundColor: PropTypes.oneOf([
-    "white",
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
-  ]),
-  title: PropTypes.string,
-  icon: PropTypes.shape({
-    color: PropTypes.oneOf(["primary", "secondary", "info", "success", "warning", "error", "dark"]),
-    component: PropTypes.node.isRequired,
-  }).isRequired,
-};
 
 export default Projects;

@@ -28,8 +28,8 @@ import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCar
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 
 // Dashboard layout components
-// import Projects from "layouts/dashboard/components/Projects";
-// import OrderOverview from "layouts/dashboard/components/OrderOverview";
+import Projects from "layouts/dashboard/components/Projects";
+import OrderOverview from "layouts/dashboard/components/OrderOverview";
 import SalesTable from "examples/Tables/SalesTable";
 
 import boxShadows from "assets/theme/base/boxShadows";
@@ -105,7 +105,7 @@ function Dashboard() {
         <MDBox mb={3} pt={1.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
-              <MDBox mb={3}>
+              <MDBox mb={1}>
                 <ReportsBarChart
                   title="website views"
                   description={
@@ -121,7 +121,7 @@ function Dashboard() {
               </MDBox>
             </Grid>
             <Grid item xs={12} lg={4}>
-              <MDBox mb={3}>
+              <MDBox mb={1}>
                 <ReportsLineChart
                   title="Daily Sales"
                   bgColor="success"
@@ -140,7 +140,7 @@ function Dashboard() {
               </MDBox>
             </Grid>
             <Grid item xs={12} lg={4}>
-              <MDBox mb={3}>
+              <MDBox mb={1}>
                 <ReportsLineChart
                   title="completed tasks"
                   bgColor="dark"
@@ -157,6 +157,18 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
+        <Grid container spacing={3}>
+          <Grid item xs={12} md={6} lg={8}>
+            <MDBox mb={5}>
+              <Projects />
+            </MDBox>
+          </Grid>
+          <Grid item xs={12} md={6} lg={4}>
+            <MDBox mb={5}>
+              <OrderOverview />
+            </MDBox>
+          </Grid>
+        </Grid>
         <Grid container>
           <Grid item xs={12}>
             <MDBox mb={3} position="relative">
