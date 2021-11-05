@@ -26,7 +26,7 @@ const { light } = colors;
 export default {
   styleOverrides: {
     root: {
-      height: pxToRem(6),
+      height: pxToRem(3),
       borderRadius: borderRadius.sm,
       overflow: "visible",
       position: "relative",
