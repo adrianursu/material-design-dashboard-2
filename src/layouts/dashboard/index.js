@@ -15,7 +15,6 @@ Coded by www.creative-tim.com
 
 // @mui material components
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
 
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
@@ -27,10 +26,6 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import MiniStatisticsCard from "examples/Cards/StatisticsCards/MiniStatisticsCard";
 import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
-import GradientLineChart from "examples/Charts/LineCharts/GradientLineChart";
-
-// Material Design 2 Dashboard PRO React base styles
-import typography from "assets/theme/base/typography";
 
 // Dashboard layout components
 // import Projects from "layouts/dashboard/components/Projects";
@@ -41,17 +36,127 @@ import boxShadows from "assets/theme/base/boxShadows";
 
 // Data
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
-import gradientLineChartData from "layouts/dashboard/data/gradientLineChartData";
+import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
+import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
 import salesTableData from "./data/salesTableData";
 
 function Dashboard() {
-  const { size } = typography;
   const { chart } = reportsBarChartData;
+  const { chart1: lineChart } = reportsLineChartData;
 
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox py={5}>
+        <MDBox mb={3}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6} xl={3}>
+              <MDBox mb={2}>
+                <MiniStatisticsCard
+                  title={{ text: "bookings" }}
+                  count="53k"
+                  percentage={{ color: "success", text: "+55%" }}
+                  icon={{ color: "dark", component: "weekend" }}
+                  boxShadow={boxShadows.coloredShadows.dark}
+                  description=" than last week"
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} sm={6} xl={3}>
+              <MDBox mb={2}>
+                <MiniStatisticsCard
+                  title={{ text: "today's users" }}
+                  count="2,300"
+                  percentage={{ color: "success", text: "+3%" }}
+                  icon={{ color: "primary", component: "leaderboard" }}
+                  boxShadow={boxShadows.coloredShadows.primary}
+                  description=" than last month"
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} sm={6} xl={3}>
+              <MDBox mb={2}>
+                <MiniStatisticsCard
+                  title={{ text: "Revenue" }}
+                  count="34K"
+                  percentage={{ color: "success", text: "+1%" }}
+                  icon={{ color: "success", component: "store" }}
+                  boxShadow={boxShadows.coloredShadows.success}
+                  description=" than yesterday"
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} sm={6} xl={3}>
+              <MDBox mb={2}>
+                <MiniStatisticsCard
+                  title={{ text: "followers" }}
+                  count="+91"
+                  icon={{
+                    color: "info",
+                    component: "person_add",
+                  }}
+                  boxShadow={boxShadows.coloredShadows.info}
+                  description="Just updated"
+                />
+              </MDBox>
+            </Grid>
+          </Grid>
+        </MDBox>
+        <MDBox mb={3} pt={1.5}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} lg={4}>
+              <MDBox mb={3}>
+                <ReportsBarChart
+                  title="website views"
+                  description={
+                    <MDTypography variant="subtitle3" fontWeight="light">
+                      Last Campaign Performance
+                    </MDTypography>
+                  }
+                  chart={chart}
+                  bgColor="primary"
+                  boxShadow={boxShadows.coloredShadows.primary}
+                  subtitle="campaign sent 2 days ago"
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} lg={4}>
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  title="Daily Sales"
+                  bgColor="success"
+                  description={
+                    <MDTypography variant="subtitle3" fontWeight="light">
+                      <MDTypography variant="button" textColor="secondary" fontWeight="bold">
+                        (+15%)
+                      </MDTypography>
+                      &nbsp;increase in today sales.
+                    </MDTypography>
+                  }
+                  chart={lineChart}
+                  boxShadow={boxShadows.coloredShadows.success}
+                  subtitle="updated 4min ago"
+                />
+              </MDBox>
+            </Grid>
+            <Grid item xs={12} lg={4}>
+              <MDBox mb={3}>
+                <ReportsLineChart
+                  title="completed tasks"
+                  bgColor="dark"
+                  description={
+                    <MDTypography variant="subtitle3" fontWeight="light">
+                      Last Campaign Performance
+                    </MDTypography>
+                  }
+                  chart={lineChart}
+                  boxShadow={boxShadows.coloredShadows.dark}
+                  subtitle="just updated"
+                />
+              </MDBox>
+            </Grid>
+          </Grid>
+        </MDBox>
         <Grid container>
           <Grid item xs={12}>
             <MDBox mb={3} position="relative">
@@ -63,110 +168,6 @@ function Dashboard() {
             </MDBox>
           </Grid>
         </Grid>
-        <MDBox mb={3}>
-          <Grid container spacing={3} py={1.2} pt={5.5}>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "bookings" }}
-                count="281"
-                percentage={{ color: "success", text: "+55%" }}
-                icon={{ color: "dark", component: "weekend" }}
-                boxShadow={boxShadows.coloredShadows.dark}
-                description=" than last week"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "today's users" }}
-                count="2,300"
-                percentage={{ color: "success", text: "+3%" }}
-                icon={{ color: "primary", component: "leaderboard" }}
-                boxShadow={boxShadows.coloredShadows.primary}
-                description=" than last month"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "Revenue" }}
-                count="34K"
-                percentage={{ color: "success", text: "+1%" }}
-                icon={{ color: "success", component: "store" }}
-                boxShadow={boxShadows.coloredShadows.success}
-                description=" than yesterday"
-              />
-            </Grid>
-            <Grid item xs={12} sm={6} xl={3}>
-              <MiniStatisticsCard
-                title={{ text: "followers" }}
-                count="+91"
-                icon={{
-                  color: "info",
-                  component: "person_add",
-                }}
-                boxShadow={boxShadows.coloredShadows.info}
-                description="Just updated"
-              />
-            </Grid>
-          </Grid>
-        </MDBox>
-        <MDBox mb={3} pt={2.5}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} lg={4}>
-              <ReportsBarChart
-                title="active users"
-                description={
-                  <>
-                    <MDTypography variant="button" textColor="success">
-                      +23%
-                    </MDTypography>
-                    &nbsp;than previous week
-                  </>
-                }
-                chart={chart}
-                bgColor="success"
-                boxShadow={boxShadows.coloredShadows.success}
-              />
-            </Grid>
-            <Grid item xs={12} lg={4}>
-              <ReportsBarChart
-                title="active users"
-                bgColor="secondary"
-                description={
-                  <>
-                    <MDTypography variant="button" textColor="success">
-                      +23%
-                    </MDTypography>
-                    &nbsp;than previous week
-                  </>
-                }
-                chart={chart}
-                boxShadow={boxShadows.coloredShadows.secondary}
-              />
-            </Grid>
-            <Grid item xs={12} lg={4}>
-              <GradientLineChart
-                boxShadow={boxShadows.coloredShadows.dark}
-                title="Sales Overview"
-                description={
-                  <MDBox display="flex" alignItems="center">
-                    <MDBox fontSize={size.lg} color="success" mb={0.3} mr={0.5} lineHeight={0}>
-                      <Icon className="font-bold">arrow_upward</Icon>
-                    </MDBox>
-                    <MDTypography variant="button" textColor="success" fontWeight="medium">
-                      4%{" "}
-                      <MDTypography variant="button" textColor="text" fontWeight="regular">
-                        more in 2021
-                      </MDTypography>
-                    </MDTypography>
-                  </MDBox>
-                }
-                height="12.5rem"
-                chart={gradientLineChartData}
-                bgColor="dark"
-              />
-            </Grid>
-          </Grid>
-        </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>

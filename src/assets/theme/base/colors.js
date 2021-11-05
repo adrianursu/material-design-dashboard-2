@@ -134,6 +134,7 @@ export default {
     dark: {
       main: "#42424a",
       state: "#191919",
+      sidenav: "linear-gradient(195deg, #42424a 0%, #191919 100%)",
     },
   },
 

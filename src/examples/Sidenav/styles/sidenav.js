@@ -16,13 +16,16 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
+import logoDark from "assets/images/logo-ct.png";
+import logoWhite from "assets/images/logo-ct-white.png";
+
 export default makeStyles(
   ({ palette, typography, boxShadows, transitions, breakpoints, functions }) => {
     const sidebarWidth = 250;
-    const { white, transparent } = palette;
+    const { white, transparent, dark } = palette;
     const { fontWeightMedium } = typography;
     const { xxl } = boxShadows;
-    const { pxToRem } = functions;
+    const { pxToRem, linearGradient } = functions;
 
     return {
       sidenav: {
@@ -30,8 +33,26 @@ export default makeStyles(
         border: "none",
 
         [breakpoints.up("xl")]: {
-          backgroundColor: ({ transparentSidenav }) =>
-            transparentSidenav ? transparent.main : white.main,
+          backgroundColor: ({ transparentSidenav, darkSidenav }) => {
+            let finalValue;
+            if (transparentSidenav) {
+              finalValue = transparent.main;
+            } else if (darkSidenav) {
+              finalValue = dark.main;
+            } else {
+              finalValue = white.main;
+            }
+            return finalValue;
+          },
+          backgroundImage: ({ darkSidenav }) => {
+            let finalBackGroundImageValue;
+            if (darkSidenav) {
+              finalBackGroundImageValue = linearGradient(195, dark.main, dark.state);
+            } else {
+              finalBackGroundImageValue = white.main;
+            }
+            return finalBackGroundImageValue;
+          },
           boxShadow: ({ transparentSidenav }) => (transparentSidenav ? "none" : xxl),
           marginBottom: ({ transparentSidenav }) => (transparentSidenav ? 0 : "inherit"),
           left: "0",
@@ -50,6 +71,15 @@ export default makeStyles(
       },
 
       sidenav_logo: {
+        background: ({ darkSidenav }) => {
+          let finalLogoColor;
+          if (darkSidenav) {
+            finalLogoColor = logoWhite;
+          } else {
+            finalLogoColor = logoDark;
+          }
+          return finalLogoColor;
+        },
         width: pxToRem(32),
       },
 
@@ -61,6 +91,15 @@ export default makeStyles(
           easing: transitions.easing.easeInOut,
           duration: transitions.duration.standard,
         }),
+        color: ({ darkSidenav }) => {
+          let titleColor;
+          if (darkSidenav) {
+            titleColor = white.main;
+          } else {
+            titleColor = dark.main;
+          }
+          return titleColor;
+        },
 
         [breakpoints.up("xl")]: {
           opacity: ({ miniSidenav }) => (miniSidenav ? 0 : 1),

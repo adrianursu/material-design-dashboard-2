@@ -19,11 +19,10 @@ import { useMemo } from "react";
 import PropTypes from "prop-types";
 
 // react-chartjs-2 components
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Divider from "@mui/material/Divider";
 import TimeIcon from "@mui/icons-material/AccessTime";
 
 // Material Design 2 Dashboard PRO React components
@@ -33,12 +32,13 @@ import MDTypography from "components/MDTypography";
 // Material Design 2 Dashboard PRO React example components
 
 // ReportsBarChart configurations
-import configs from "examples/Charts/BarCharts/ReportsBarChart/configs";
+import configs from "examples/Charts/LineCharts/ReportsLineChart/configs";
 
 // boxShadow theme
 import boxShadows from "assets/theme/base/boxShadows";
+import { Divider } from "@mui/material";
 
-function ReportsBarChart({ title, description, chart, bgColor, boxShadow, subtitle }) {
+function ReportsLineChart({ title, description, chart, bgColor, boxShadow, subtitle }) {
   const { data, options } = configs(chart.labels, chart.datasets);
 
   return (
@@ -57,7 +57,7 @@ function ReportsBarChart({ title, description, chart, bgColor, boxShadow, subtit
               mt={-5}
               style={{ boxShadow: `${boxShadow}` }}
             >
-              <Bar data={data} options={options} />
+              <Line data={data} options={options} />
             </MDBox>
           ),
           [chart]
@@ -83,7 +83,7 @@ function ReportsBarChart({ title, description, chart, bgColor, boxShadow, subtit
 }
 
 // Setting default values for the props of ReportsBarChart
-ReportsBarChart.defaultProps = {
+ReportsLineChart.defaultProps = {
   description: "",
   bgColor: "dark",
   boxShadow: boxShadows.coloredShadows.primary,
@@ -91,7 +91,7 @@ ReportsBarChart.defaultProps = {
 };
 
 // Typechecking props for the ReportsBarChart
-ReportsBarChart.propTypes = {
+ReportsLineChart.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
@@ -100,4 +100,4 @@ ReportsBarChart.propTypes = {
   subtitle: PropTypes.string,
 };
 
-export default ReportsBarChart;
+export default ReportsLineChart;

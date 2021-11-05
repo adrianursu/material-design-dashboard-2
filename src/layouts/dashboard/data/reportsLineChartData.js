@@ -14,8 +14,18 @@ Coded by www.creative-tim.com
 */
 
 export default {
-  chart: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    datasets: { label: "Sales", data: [450, 200, 100, 220, 500, 100, 400, 230, 500] },
+  chart1: {
+    labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    datasets: {
+      label: "Mobile apps",
+      data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+    },
+    chart2: {
+      labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      datasets: {
+        label: "Mobile apps",
+        data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+      },
+    },
   },
 };

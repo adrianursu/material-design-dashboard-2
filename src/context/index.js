@@ -35,6 +35,9 @@ function reducer(state, action) {
     case "TRANSPARENT_SIDENAV": {
       return { ...state, transparentSidenav: action.value };
     }
+    case "DARK_SIDENAV": {
+      return { ...state, darkSidenav: action.value };
+    }
     case "SIDENAV_COLOR": {
       return { ...state, sidenavColor: action.value };
     }
@@ -64,6 +67,7 @@ function MaterialDesignControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
     transparentSidenav: false,
+    darkSidenav: false,
     sidenavColor: "primary",
     transparentNavbar: true,
     fixedNavbar: true,
