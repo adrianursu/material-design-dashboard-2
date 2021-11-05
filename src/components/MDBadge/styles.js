@@ -54,7 +54,7 @@ export default makeStyles(({ palette, typography, borders, functions }) => {
           if (circular) {
             borderRadiusValue = borderRadius.section;
           } else {
-            borderRadiusValue = size === "extra-small" ? borderRadius.sm : borderRadius.md;
+            borderRadiusValue = size === "extra-small" ? borderRadius.md : borderRadius.md;
           }
 
           return borderRadiusValue;

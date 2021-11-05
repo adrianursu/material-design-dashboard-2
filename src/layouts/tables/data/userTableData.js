@@ -150,7 +150,13 @@ export default {
       user: <User image={team5} name="Richard Gran" count="921" />,
       value: <Value value="$140.925" />,
       status: (
-        <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
+        <MDBadge
+          variant="gradient"
+          badgeContent="offline"
+          color="secondary"
+          size="extra-small"
+          borderRadius="xs"
+        />
       ),
       employed: (
         <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
