@@ -47,7 +47,7 @@ function Dashboard() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox py={5}>
+      <MDBox py={2}>
         <MDBox mb={3}>
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6} xl={3}>
@@ -135,7 +135,7 @@ function Dashboard() {
                   }
                   chart={lineChart}
                   boxShadow={boxShadows.coloredShadows.success}
-                  subtitle="updated 4min ago"
+                  subtitle="updated 4 min ago"
                 />
               </MDBox>
             </Grid>
