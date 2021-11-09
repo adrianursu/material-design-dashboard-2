@@ -27,9 +27,6 @@ import Button from "@mui/material/Button";
 // Custom styles for MDButton
 import styles from "components/MDButton/styles";
 
-// Import boxShadows
-import boxShadows from "assets/theme/base/boxShadows";
-
 const MDButton = forwardRef(
   (
     { buttonColor, variant, size, circular, boxShadow, iconOnly, children, customClass, ...rest },
@@ -63,7 +60,7 @@ MDButton.defaultProps = {
   circular: false,
   iconOnly: false,
   customClass: "",
-  boxShadow: boxShadows.coloredShadows.primary,
+  boxShadow: "",
 };
 
 // Typechecking props for the MDButton
