@@ -29,7 +29,7 @@ export default makeStyles(({ palette, typography, borders, functions, transition
       alignItems: "center",
       minHeight: pxToRem(60),
       backgroundImage: ({ color }) =>
-        linearGradient(alertColors[color].main, alertColors[color].state),
+        linearGradient(alertColors[color].main, alertColors[color].state, 195),
       color: white.main,
       position: "relative",
       padding: pxToRem(16),

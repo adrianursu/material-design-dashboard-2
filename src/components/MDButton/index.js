@@ -27,8 +27,14 @@ import Button from "@mui/material/Button";
 // Custom styles for MDButton
 import styles from "components/MDButton/styles";
 
+// Import boxShadows
+import boxShadows from "assets/theme/base/boxShadows";
+
 const MDButton = forwardRef(
-  ({ buttonColor, variant, size, circular, iconOnly, children, customClass, ...rest }, ref) => {
+  (
+    { buttonColor, variant, size, circular, boxShadow, iconOnly, children, customClass, ...rest },
+    ref
+  ) => {
     const classes = styles({ buttonColor, variant, size, iconOnly });
     return (
       <Button
@@ -37,6 +43,7 @@ const MDButton = forwardRef(
         color="primary"
         variant={variant === "gradient" ? "contained" : variant}
         size={size}
+        style={{ boxShadow: `${boxShadow}` }}
         className={clsx(classes[variant], customClass, {
           [classes.circular]: circular,
           [classes.iconOnly]: iconOnly,
@@ -56,6 +63,7 @@ MDButton.defaultProps = {
   circular: false,
   iconOnly: false,
   customClass: "",
+  boxShadow: boxShadows.coloredShadows.primary,
 };
 
 // Typechecking props for the MDButton
@@ -77,6 +85,7 @@ MDButton.propTypes = {
   iconOnly: PropTypes.bool,
   children: PropTypes.node.isRequired,
   customClass: PropTypes.string,
+  boxShadow: PropTypes.node,
 };
 
 export default MDButton;

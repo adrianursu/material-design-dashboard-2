@@ -134,7 +134,6 @@ export default {
     dark: {
       main: "#42424a",
       state: "#191919",
-      sidenav: "linear-gradient(195deg, #42424a 0%, #191919 100%)",
     },
   },
 
@@ -202,50 +201,50 @@ export default {
 
   alertColors: {
     primary: {
-      main: "#7928ca",
-      state: "#d6006c",
-      border: "#efb6e2",
+      main: "#ec407a",
+      state: "#d81b60",
+      border: "#f8bcd0",
     },
 
     secondary: {
-      main: "#627594",
-      state: "#8ca1cb",
-      border: "#dadee6",
+      main: "#747b8a",
+      state: "#495361",
+      border: "#d7d9e1",
     },
 
     info: {
-      main: "#2152ff",
-      state: "#02c6f3",
-      border: "#b9ecf8",
+      main: "#49a3f1",
+      state: "#1a73e8",
+      border: "#bad5f8",
     },
 
     success: {
-      main: "#17ad37",
-      state: "#84dc14",
-      border: "#daf3b9",
+      main: "#66bb6a",
+      state: "#43A047",
+      border: "#c9e7cb",
     },
 
     warning: {
-      main: "#f53939",
-      state: "#fac60b",
-      border: "#fef1c2",
+      main: "#ffa726",
+      state: "#fb8c00",
+      border: "#feddb3",
     },
 
     error: {
-      main: "#ea0606",
-      state: "#ff3d59",
-      border: "#f9b4b4",
+      main: "#ef5350",
+      state: "#e53935",
+      border: "#fcc7c2",
     },
 
     light: {
-      main: "#ced4da",
-      state: "#d1dae6",
-      border: "#f8f9fa",
+      main: "#ebeff4",
+      state: "#ced4da",
+      border: "#fbfbfc",
     },
 
     dark: {
-      main: "#141727",
-      state: "#2c3154",
+      main: "#42424a",
+      state: "#191919",
       border: "#c2c8d1",
     },
   },
