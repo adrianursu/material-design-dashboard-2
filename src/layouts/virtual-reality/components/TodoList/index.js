@@ -78,7 +78,7 @@ function TodoList() {
       <MDBox backgroundColor="grey-100" mt="auto">
         <Tooltip title="Show More" placement="top" className="cursor-pointer">
           <MDBox textAlign="center" py={0.5} lineHeight={0}>
-            <Icon className="font-bold text-info" fontSize="medium">
+            <Icon className="font-bold text-primary" fontSize="medium">
               keyboard_arrow_down
             </Icon>
           </MDBox>

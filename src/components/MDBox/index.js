@@ -69,7 +69,7 @@ MDBox.defaultProps = {
   backgroundGradient: false,
   color: "dark",
   opacity: 1,
-  borderRadius: "section",
+  borderRadius: "none",
   boxShadow: "none",
   customClass: "",
   coloredShadow: "",

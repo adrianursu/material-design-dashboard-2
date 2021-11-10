@@ -33,10 +33,10 @@ function MediaPlayer() {
     <Card className={classes.mediaPlayer}>
       <MDBox p={3} position="relative" lineHeight={0}>
         <MDTypography variant="h5" textColor="white" fontWeight="medium">
-          Some Kind Of Blues
+          Night Jazz
         </MDTypography>
         <MDTypography variant="button" textColor="white" fontWeight="regular">
-          Deftones
+          Gary Coleman
         </MDTypography>
         <MDBox display="flex" mt={6} pt={1}>
           <MDBox display="flex" alignItems="center" justifyContent="center">

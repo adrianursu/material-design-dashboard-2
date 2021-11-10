@@ -26,7 +26,6 @@ import MDButton from "components/MDButton";
 
 // Material Design Dashboard 2 React base styles
 import typography from "assets/theme/base/typography";
-import colors from "assets/theme/base/colors";
 
 // VR dashboards components
 import BaseLayout from "layouts/virtual-reality/components/BaseLayout";
@@ -47,7 +46,6 @@ import sunCloud from "assets/images/small-logos/icon-sun-cloud.png";
 
 function VirtualReality() {
   const { d1, h2, fontWeightMedium } = typography;
-  const { white } = colors;
   const classes = styles();
 
   return (
@@ -75,7 +73,7 @@ function VirtualReality() {
                   src={team1}
                   alt="Profile Picture"
                   size="lg"
-                  variant="square"
+                  variant="rounded"
                   customClass="cursor-pointer"
                 />
               </Tooltip>
@@ -83,20 +81,20 @@ function VirtualReality() {
               <MDBox my={{ xs: 0, md: 2 }} mx={{ xs: 2, md: 0 }}>
                 <Tooltip title="Home" placement="right">
                   <MDButton size="large" iconOnly customClass="text-dark radius-lg">
-                    <Icon className="material-icons-round">home</Icon>
+                    <Icon className="material-icons-round text-black">home</Icon>
                   </MDButton>
                 </Tooltip>
               </MDBox>
               <MDBox mb={{ xs: 0, md: 2 }} mr={{ xs: 2, md: 0 }}>
                 <Tooltip title="Search" placement="right">
                   <MDButton size="large" iconOnly customClass="text-dark radius-lg">
-                    <Icon className="material-icons-round">search</Icon>
+                    <Icon className="material-icons-round text-black">search</Icon>
                   </MDButton>
                 </Tooltip>
               </MDBox>
               <Tooltip title="Minimize" placement="right">
                 <MDButton size="large" iconOnly customClass="text-dark radius-lg">
-                  <Icon className="material-icons-round">more_horiz</Icon>
+                  <Icon className="material-icons-round text-black">more_horiz</Icon>
                 </MDButton>
               </Tooltip>
             </MDBox>
@@ -114,11 +112,16 @@ function VirtualReality() {
                   fontSize={{ xs: h2.fontSize, lg: d1.fontSize }}
                   fontWeight={fontWeightMedium}
                   lineHeight={1}
-                  textColor={white}
+                  color="white"
                 >
                   28&deg;C
                 </MDBox>
-                <MDTypography variant="h6" fontWeight="medium" textTransform="uppercase">
+                <MDTypography
+                  variant="h6"
+                  fontWeight="medium"
+                  textTransform="uppercase"
+                  textColor="white"
+                >
                   cloudy
                 </MDTypography>
               </MDBox>
