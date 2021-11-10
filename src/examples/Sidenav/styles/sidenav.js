@@ -22,7 +22,7 @@ import logoWhite from "assets/images/logo-ct-white.png";
 export default makeStyles(
   ({ palette, typography, boxShadows, transitions, breakpoints, functions }) => {
     const sidebarWidth = 250;
-    const { white, transparent, dark } = palette;
+    const { white, transparent, dark, gradients } = palette;
     const { fontWeightMedium } = typography;
     const { xxl } = boxShadows;
     const { pxToRem, linearGradient } = functions;
@@ -33,26 +33,18 @@ export default makeStyles(
         border: "none",
 
         [breakpoints.up("xl")]: {
-          backgroundColor: ({ transparentSidenav, darkSidenav }) => {
+          backgroundImage: ({ transparentSidenav, darkSidenav }) => {
             let finalValue;
             if (transparentSidenav) {
               finalValue = transparent.main;
             } else if (darkSidenav) {
-              finalValue = dark.main;
+              finalValue = linearGradient(gradients.dark.main, gradients.dark.state);
             } else {
               finalValue = white.main;
             }
             return finalValue;
           },
-          backgroundImage: ({ darkSidenav }) => {
-            let finalBackGroundImageValue;
-            if (darkSidenav) {
-              finalBackGroundImageValue = linearGradient(195, dark.main, dark.state);
-            } else {
-              finalBackGroundImageValue = white.main;
-            }
-            return finalBackGroundImageValue;
-          },
+
           boxShadow: ({ transparentSidenav }) => (transparentSidenav ? "none" : xxl),
           marginBottom: ({ transparentSidenav }) => (transparentSidenav ? 0 : "inherit"),
           left: "0",

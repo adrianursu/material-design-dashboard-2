@@ -65,14 +65,11 @@ export default makeStyles(
       configurator_sidenav_types: {
         display: "flex",
         marginTop: pxToRem(16),
+        justifyContent: "space-between",
 
         "& .MuiButton-root": {
           height: pxToRem(42),
           boxShadow: buttonBoxShadow.main,
-
-          "&:first-child": {
-            marginRight: pxToRem(8),
-          },
 
           "&:hover, &:focus": {
             opacity: 1,

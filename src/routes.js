@@ -47,14 +47,20 @@ import Profile from "layouts/profile";
 // import SignUp from "layouts/authentication/sign-up";
 
 // Material Design 2 Dashboard PRO React icons
-import Shop from "examples/Icons/Shop";
-import Office from "examples/Icons/Office";
-import Settings from "examples/Icons/Settings";
+// import Shop from "examples/Icons/Shop";
+// import Office from "examples/Icons/Office";
+// import Settings from "examples/Icons/Settings";
 // import Document from "examples/Icons/Document";
 // import SpaceShip from "examples/Icons/SpaceShip";
-import CustomerSupport from "examples/Icons/CustomerSupport";
-import CreditCard from "examples/Icons/CreditCard";
-import Cube from "examples/Icons/Cube";
+// import CustomerSupport from "examples/Icons/CustomerSupport";
+// import CreditCard from "examples/Icons/CreditCard";
+// import Cube from "examples/Icons/Cube";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import TableViewIcon from "@mui/icons-material/TableView";
+import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import ViewInArIcon from "@mui/icons-material/ViewInAr";
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import PersonIcon from "@mui/icons-material/Person";
 
 const routes = [
   {
@@ -62,7 +68,7 @@ const routes = [
     name: "Dashboard",
     key: "dashboard",
     route: "/dashboard",
-    icon: <Shop size="12px" />,
+    icon: <DashboardIcon fontSize="small" />,
     component: Dashboard,
     noCollapse: true,
   },
@@ -71,7 +77,7 @@ const routes = [
     name: "Tables",
     key: "tables",
     route: "/tables",
-    icon: <Office size="12px" />,
+    icon: <TableViewIcon fontSize="small" />,
     component: Tables,
     noCollapse: true,
   },
@@ -80,7 +86,7 @@ const routes = [
     name: "Billing",
     key: "billing",
     route: "/billing",
-    icon: <CreditCard size="12px" />,
+    icon: <ReceiptLongIcon fontSize="small" />,
     component: Billing,
     noCollapse: true,
   },
@@ -89,7 +95,7 @@ const routes = [
     name: "Virtual Reality",
     key: "virtual-reality",
     route: "/virtual-reality",
-    icon: <Cube size="12px" />,
+    icon: <ViewInArIcon fontSize="small" />,
     component: VirtualReality,
     noCollapse: true,
   },
@@ -98,7 +104,7 @@ const routes = [
     name: "Notifications",
     key: "notifications",
     route: "/notifications",
-    icon: <Settings size="12px" />,
+    icon: <NotificationsIcon fontSize="small" />,
     component: Notifications,
     noCollapse: true,
   },
@@ -117,7 +123,7 @@ const routes = [
     name: "Profile",
     key: "profile",
     route: "/profile",
-    icon: <CustomerSupport size="12px" />,
+    icon: <PersonIcon fontSize="small" />,
     component: Profile,
     noCollapse: true,
   },

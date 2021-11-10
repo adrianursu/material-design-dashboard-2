@@ -46,7 +46,8 @@ import { useMaterialDesignController } from "context";
 
 function Configurator() {
   const [controller, dispatch] = useMaterialDesignController();
-  const { openConfigurator, transparentSidenav, fixedNavbar, sidenavColor } = controller;
+  const { openConfigurator, transparentSidenav, fixedNavbar, sidenavColor, darkSidenav } =
+    controller;
   const [disabled, setDisabled] = useState(false);
   const classes = styles({ sidenavColor });
   const sidenavColors = ["primary", "dark", "info", "success", "warning", "error"];
@@ -82,6 +83,10 @@ function Configurator() {
 
   const handleFixedNavbar = () => {
     dispatch({ type: "FIXED_NAVBAR", value: !fixedNavbar });
+  };
+
+  const handleDarkSidenav = () => {
+    dispatch({ type: "DARK_SIDENAV", value: false });
   };
 
   return (
@@ -144,20 +149,26 @@ function Configurator() {
 
           <MDBox customClass={classes.configurator_sidenav_types}>
             <MDButton
-              buttonColor="info"
+              buttonColor="dark"
+              variant={darkSidenav ? "gradient" : "outlined"}
+              onClick={handleDarkSidenav}
+              disabled={disabled}
+            >
+              Dark
+            </MDButton>
+            <MDButton
+              buttonColor="dark"
               variant={transparentSidenav ? "gradient" : "outlined"}
               onClick={handleTransparentSidenav}
               disabled={disabled}
-              fullWidth
             >
               Transparent
             </MDButton>
             <MDButton
-              buttonColor="info"
+              buttonColor="dark"
               variant={transparentSidenav ? "outlined" : "gradient"}
               onClick={handleWhiteSidenav}
               disabled={disabled}
-              fullWidth
             >
               White
             </MDButton>

@@ -21,18 +21,19 @@ import patternTree from "assets/images/illustrations/pattern-tree.svg";
 import pxToRem from "assets/theme/functions/pxToRem";
 
 export default makeStyles(({ functions, palette, boxShadows }) => {
-  const { linearGradient, rgba } = functions;
+  const { linearGradient } = functions;
   const { gradients } = palette;
-  const { xl } = boxShadows;
+  const { sm } = boxShadows;
 
   return {
     masterCard: {
       background: ({ color }) =>
         `${linearGradient(
-          rgba(gradients[color].main, 0.8),
-          rgba(gradients[color].state, 0.8)
+          gradients[color].main,
+          gradients[color].state,
+          195
         )}, url(${patternTree})`,
-      boxShadow: xl,
+      boxShadow: sm,
     },
 
     masterCard_number: {

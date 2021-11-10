@@ -18,20 +18,24 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(
   ({ palette, transitions, breakpoints, typography, boxShadows, borders, functions }) => {
-    const { dark, white, info, text, gradients, light, transparent } = palette;
+    const { dark, white, transparent, gradients } = palette;
     const { fontWeightRegular, fontWeightMedium, size } = typography;
-    const { regular, xxl } = boxShadows;
+    const { xxl } = boxShadows;
     const { borderRadius } = borders;
-    const { pxToRem } = functions;
+    const { pxToRem, linearGradient } = functions;
 
     return {
       collapse_item: {
-        background: ({ active }) => (active ? white.main : transparent.main),
-        color: ({ active }) => (active ? dark.main : text.main),
+        backgroundImage: ({ active, sidenavColor }) =>
+          active
+            ? linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state)
+            : transparent.main,
+        color: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
+
         display: "flex",
         alignItems: "center",
         width: "100%",
-        padding: `${pxToRem(10.8)} ${pxToRem(12.8)} ${pxToRem(10.8)} ${pxToRem(16)}`,
+        padding: `${pxToRem(12)} ${pxToRem(16)}`,
         margin: `0 ${pxToRem(16)}`,
         borderRadius: borderRadius.md,
         cursor: "pointer",
@@ -54,53 +58,29 @@ export default makeStyles(
       },
 
       collapse_iconBox: {
-        background: ({ active, sidenavColor }) => {
-          if (active) {
-            return sidenavColor === "default" ? info.main : palette[sidenavColor].main;
-          }
-
-          return light.main;
-        },
-        minWidth: pxToRem(32),
-        minHeight: pxToRem(32),
+        background: "transparent",
+        minWidth: pxToRem(20),
+        minHeight: pxToRem(20),
         borderRadius: borderRadius.md,
         display: "grid",
         placeItems: "center",
-        boxShadow: regular,
         transition: transitions.create("margin", {
           easing: transitions.easing.easeInOut,
           duration: transitions.duration.standard,
         }),
 
-        [breakpoints.up("xl")]: {
-          background: ({ active, transparentSidenav, sidenavColor }) => {
-            let background;
-
-            if (!active) {
-              background = transparentSidenav ? white.main : light.main;
-            } else if (sidenavColor === "default") {
-              background = info.main;
-            } else if (sidenavColor === "warning") {
-              background = gradients.warning.main;
-            } else {
-              background = palette[sidenavColor].main;
-            }
-
-            return background;
-          },
-        },
-
         "& svg, svg g": {
-          fill: ({ active }) => (active ? white.main : gradients.dark.state),
+          fill: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
         },
       },
 
       collapse_icon: {
-        color: ({ active }) => (active ? white.main : gradients.dark.state),
+        color: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
       },
 
       collapse_text: {
-        marginLeft: pxToRem(12.8),
+        marginLeft: pxToRem(6),
+        color: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
 
         [breakpoints.up("xl")]: {
           opacity: ({ miniSidenav, transparentSidenav }) =>
@@ -108,7 +88,7 @@ export default makeStyles(
           maxWidth: ({ miniSidenav, transparentSidenav }) =>
             miniSidenav || (miniSidenav && transparentSidenav) ? 0 : "100%",
           marginLeft: ({ miniSidenav, transparentSidenav }) =>
-            miniSidenav || (miniSidenav && transparentSidenav) ? 0 : pxToRem(12.8),
+            miniSidenav || (miniSidenav && transparentSidenav) ? 0 : pxToRem(6),
           transition: transitions.create(["opacity", "margin"], {
             easing: transitions.easing.easeInOut,
             duration: transitions.duration.standard,

@@ -34,7 +34,7 @@ import { useMaterialDesignController } from "context";
 
 function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...rest }) {
   const [controller] = useMaterialDesignController();
-  const { miniSidenav, transparentSidenav, sidenavColor } = controller;
+  const { miniSidenav, transparentSidenav, sidenavColor, darkSidenav } = controller;
 
   const classes = styles({
     active,
@@ -43,6 +43,7 @@ function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...re
     miniSidenav,
     transparentSidenav,
     sidenavColor,
+    darkSidenav,
   });
 
   return (

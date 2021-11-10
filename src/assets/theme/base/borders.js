@@ -42,7 +42,7 @@ export default {
   borderRadius: {
     xs: pxToRem(2),
     sm: pxToRem(4),
-    md: pxToRem(8),
+    md: pxToRem(6),
     lg: pxToRem(12),
     xl: pxToRem(16),
     xxl: pxToRem(24),
