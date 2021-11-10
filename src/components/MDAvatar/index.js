@@ -34,9 +34,9 @@ const MDAvatar = forwardRef(({ backgroundColor, size, boxShadow, customClass, ..
     <Avatar
       ref={ref}
       {...rest}
-      className={clsx(classes.MDAvatar, customClass, {
+      className={clsx(classes.mdAvatar, customClass, {
         [classes[`mdAvatar_${size}`]]: size,
-        [classes.MDAvatar_boxShadow]: boxShadow !== "none",
+        [classes.mdAvatar_boxShadow]: boxShadow !== "none",
       })}
     />
   );

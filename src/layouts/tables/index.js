@@ -13,6 +13,9 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+// Material UI Components
+import Card from "@mui/material/Card";
+
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
@@ -21,6 +24,7 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 import Table from "examples/Tables/Table";
+import TableHeader from "layouts/tables/components/TableHeader";
 
 // Custom styles for the Tables
 import styles from "layouts/tables/styles";
@@ -39,13 +43,23 @@ function Tables() {
       <DashboardNavbar />
       <MDBox py={3}>
         <MDBox mb={6}>
-          <MDBox customClass={classes.tables_table} backgroundColor="transparent">
-            <Table columns={columns} rows={rows} />
+          <Card className="overflow-visible">
+            <MDBox display="flex" justifyContent="space-between" alignItems="center" p={2}>
+              <TableHeader text="authors table" backgroundColor="primary" />
+            </MDBox>
+            <MDBox customClass={classes.tables_table} backgroundColor="transparent">
+              <Table columns={columns} rows={rows} />
+            </MDBox>
+          </Card>
+        </MDBox>
+        <Card className="overflow-visible">
+          <MDBox display="flex" justifyContent="space-between" alignItems="center" p={2}>
+            <TableHeader text="projects table" backgroundColor="primary" />
           </MDBox>
-        </MDBox>
-        <MDBox customClass={classes.tables_table}>
-          <Table columns={prCols} rows={prRows} />
-        </MDBox>
+          <MDBox customClass={classes.tables_table}>
+            <Table columns={prCols} rows={prRows} />
+          </MDBox>
+        </Card>
       </MDBox>
       <Footer />
     </DashboardLayout>

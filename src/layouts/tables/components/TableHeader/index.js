@@ -1,16 +1,16 @@
 import MDBox from "components/MDBox";
-import Icon from "@mui/material/Icon";
 
 import boxShadows from "assets/theme/base/boxShadows";
 
 import PropTypes from "prop-types";
+import MDTypography from "components/MDTypography";
 
-function CardHeader({ icon, backgroundColor, boxShadow }) {
+function TableHeader({ text, backgroundColor, boxShadow }) {
   return (
     <MDBox
       backgroundColor={backgroundColor}
       width="100%"
-      height="4rem"
+      height="4.5rem"
       borderRadius="md"
       display="flex"
       alignItems="center"
@@ -18,22 +18,23 @@ function CardHeader({ icon, backgroundColor, boxShadow }) {
       boxShadow="md"
       backgroundGradient
       mt={-5.5}
-      px={3}
+      px={2}
       style={{ boxShadow: `${boxShadow}` }}
     >
-      <Icon fontSize="medium" color="inherit">
-        {icon}
-      </Icon>
+      <MDTypography variant="body2" fontWeight="bold" textColor="white" textTransform="capitalize">
+        {text}
+      </MDTypography>
     </MDBox>
   );
 }
 
-CardHeader.defaultProps = {
+TableHeader.defaultProps = {
   backgroundColor: "primary",
   boxShadow: boxShadows.coloredShadows.primary,
+  text: "",
 };
 
-CardHeader.propTypes = {
+TableHeader.propTypes = {
   backgroundColor: PropTypes.oneOf([
     "white",
     "primary",
@@ -44,8 +45,8 @@ CardHeader.propTypes = {
     "error",
     "dark",
   ]),
-  icon: PropTypes.string.isRequired,
+  text: PropTypes.string,
   boxShadow: PropTypes.node,
 };
 
-export default CardHeader;
+export default TableHeader;

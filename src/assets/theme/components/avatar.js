@@ -25,7 +25,7 @@ export default {
     },
 
     rounded: {
-      borderRadius: borderRadius.section,
+      borderRadius: borderRadius.lg,
     },
 
     img: {
