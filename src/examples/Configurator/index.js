@@ -109,7 +109,7 @@ function Configurator() {
       >
         <MDBox>
           <MDTypography variant="h5">Material UI Configurator</MDTypography>
-          <MDTypography variant="body2" textColor="text">
+          <MDTypography variant="body2" textColor="text" fontWeight="light">
             See our dashboard options.
           </MDTypography>
         </MDBox>
@@ -143,7 +143,7 @@ function Configurator() {
 
         <MDBox mt={3}>
           <MDTypography variant="h6">Sidenav Type</MDTypography>
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
+          <MDTypography variant="button" textColor="text" fontWeight="light">
             Choose between 2 different sidenav types.
           </MDTypography>
 
@@ -183,19 +183,6 @@ function Configurator() {
         <Divider />
 
         <MDBox mt={3} mb={2}>
-          <MDBox mb={2}>
-            <MDButton
-              component={Link}
-              href="https://www.creative-tim.com/product/Material-ui-dashboard-react"
-              target="_blank"
-              rel="noreferrer"
-              buttonColor="dark"
-              variant="gradient"
-              fullWidth
-            >
-              free download
-            </MDButton>
-          </MDBox>
           <MDButton
             component={Link}
             href="https://www.creative-tim.com/learning-lab/react/quick-start/Material-ui-dashboard"
