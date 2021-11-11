@@ -14,16 +14,11 @@ Coded by www.creative-tim.com
 */
 
 // Material UI Dashboard PRO helper functions
-import pxToRem from "assets/theme/functions/pxToRem";
+// import pxToRem from "assets/theme/functions/pxToRem";
 
 export default {
   styleOverrides: {
-    input: {
-      padding: `${pxToRem(10)} ${pxToRem(12)}`,
-    },
-
-    inputSizeSmall: {
-      height: pxToRem(14),
-    },
+    root: { fontSize: "14px" },
+    focused: { transform: "translate(14px, -7px) scale(0.9)", maxWidth: "calc(100% - 24px)" },
   },
 };

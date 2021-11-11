@@ -41,7 +41,6 @@ import cardMedia from "assets/theme/components/card/cardMedia";
 import cardContent from "assets/theme/components/card/cardContent";
 import button from "assets/theme/components/button";
 import iconButton from "assets/theme/components/iconButton";
-import inputBase from "assets/theme/components/form/inputBase";
 import menu from "assets/theme/components/menu";
 import menuItem from "assets/theme/components/menu/menuItem";
 import switchButton from "assets/theme/components/form/switchButton";
@@ -69,6 +68,7 @@ import checkbox from "assets/theme/components/form/checkbox";
 import radio from "assets/theme/components/form/radio";
 import autocomplete from "assets/theme/components/form/autocomplete";
 import input from "assets/theme/components/form/input";
+import inputLabel from "assets/theme/components/form/inputLabel";
 import container from "assets/theme/components/container";
 import popover from "assets/theme/components/popover";
 import buttonBase from "assets/theme/components/buttonBase";
@@ -106,7 +106,6 @@ export default createTheme({
     MuiCardContent: { ...cardContent },
     MuiButton: { ...button },
     MuiIconButton: { ...iconButton },
-    MuiInputBase: { ...inputBase },
     MuiMenu: { ...menu },
     MuiMenuItem: { ...menuItem },
     MuiSwitch: { ...switchButton },
@@ -136,6 +135,7 @@ export default createTheme({
     MuiInput: { ...input },
     MuiOutlinedInput: { ...input },
     MuiFilledInput: { ...input },
+    MuiInputLabel: { ...inputLabel },
     MuiPopover: { ...popover },
     MuiButtonBase: { ...buttonBase },
     MuiIcon: { ...icon },

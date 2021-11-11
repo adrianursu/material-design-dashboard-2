@@ -42,7 +42,8 @@ import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import styles from "examples/Sidenav/styles/sidenav";
 
 // Images
-import MaterialDesignLogo from "assets/images/logo-ct.png";
+import logoDark from "assets/images/logo-ct.png";
+import logoWhite from "assets/images/logo-ct-white.png";
 
 // Material Design 2 Dashboard PRO React context
 import { useMaterialDesignController } from "context";
@@ -156,12 +157,17 @@ function Sidenav({ routes, ...rest }) {
         <NavLink to="/">
           <MDBox
             component="img"
-            src={MaterialDesignLogo}
+            src={darkSidenav ? logoWhite : logoDark}
             alt="Material UI Logo"
             customClass={classes.sidenav_logo}
           />
           <MDBox customClass={classes.sidenav_logoLabel}>
-            <MDTypography component="h6" variant="button" fontWeight="medium">
+            <MDTypography
+              component="h6"
+              variant="button"
+              fontWeight="medium"
+              textColor={darkSidenav ? "white" : "dark"}
+            >
               Material Dashboard 2
             </MDTypography>
           </MDBox>

@@ -16,16 +16,15 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(({ palette, boxShadows, functions, typography, borders }) => {
-  const { inputColors, grey, light, white, dark, transparent } = palette;
-  const { inputBoxShadow } = boxShadows;
-  const { pxToRem, boxShadow } = functions;
+export default makeStyles(({ palette, functions, typography, borders }) => {
+  const { inputColors, grey, light, dark, transparent } = palette;
+  const { pxToRem } = functions;
   const { size: fontSize, fontWeightBold } = typography;
-  const { borderRadius, borderWidth } = borders;
+  const { borderRadius } = borders;
 
   return {
     mdInput: {
-      backgroundColor: ({ disabled }) => (disabled ? grey[200] : white.main),
+      backgroundColor: ({ disabled }) => (disabled ? grey[200] : transparent.main),
     },
 
     mdInput_small: {
@@ -38,19 +37,6 @@ export default makeStyles(({ palette, boxShadows, functions, typography, borders
     },
 
     mdInput_focused: {
-      borderColor: ({ error, success }) => {
-        let borderColorValue;
-
-        if (error) {
-          borderColorValue = inputColors.error;
-        } else if (success) {
-          borderColorValue = inputColors.success;
-        } else {
-          borderColorValue = inputColors.borderColor.focus;
-        }
-
-        return borderColorValue;
-      },
       paddingLeft: ({ direction, withIcon }) => {
         let paddingLeftValue;
 
@@ -82,18 +68,6 @@ export default makeStyles(({ palette, boxShadows, functions, typography, borders
         return paddingRightValue;
       },
       outline: 0,
-      boxShadow: ({ error, success }) => {
-        let boxShadowValue;
-        if (error) {
-          boxShadowValue = inputBoxShadow.error;
-        } else if (success) {
-          boxShadowValue = inputBoxShadow.success;
-        } else {
-          boxShadowValue = boxShadow([0, 0], [0, 2], inputColors.boxShadow, 1);
-        }
-
-        return boxShadowValue;
-      },
     },
 
     mdInput_disabled: {
@@ -122,31 +96,6 @@ export default makeStyles(({ palette, boxShadows, functions, typography, borders
 
     mdInput_multiline: {
       padding: `${pxToRem(10)} ${pxToRem(12)}`,
-    },
-
-    mdInputIcon: {
-      display: "flex",
-      alignItems: "center",
-      backgroundColor: ({ disabled }) => (disabled ? grey[200] : white.main),
-      border: `${borderWidth[1]} solid`,
-      borderRadius: borderRadius.md,
-      borderColor: ({ error, success }) => {
-        let borderColor;
-
-        if (error) {
-          borderColor = inputColors.error;
-        } else if (success) {
-          borderColor = inputColors.success;
-        } else {
-          borderColor = inputColors.borderColor.main;
-        }
-
-        return borderColor;
-      },
-
-      "& .MuiInputBase-input": {
-        height: pxToRem(20),
-      },
     },
 
     mdInputIcon_right: {

@@ -22,8 +22,8 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 // @mui material components
-import InputBase from "@mui/material/InputBase";
 import Icon from "@mui/material/Icon";
+import TextField from "@mui/material/TextField";
 
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
@@ -49,7 +49,7 @@ const MDInput = forwardRef(
               {withIcon.icon}
             </Icon>
           </MDBox>
-          <InputBase
+          <TextField
             {...rest}
             className={clsx(classes.mdInput, classes.mdInputIcon_input, {
               [classes.mdInput_error]: error,
@@ -68,7 +68,7 @@ const MDInput = forwardRef(
     } else if (withIcon.icon && withIcon.direction === "right") {
       template = (
         <MDBox customClass={clsx(classes.mdInputIcon, customClass)}>
-          <InputBase
+          <TextField
             {...rest}
             className={clsx(classes.mdInput, classes.mdInputIcon_input, {
               [classes.mdInput_error]: error,
@@ -91,7 +91,7 @@ const MDInput = forwardRef(
       );
     } else {
       template = (
-        <InputBase
+        <TextField
           {...rest}
           className={clsx(classes.mdInput, customClass, {
             [classes.mdInput_error]: error,
