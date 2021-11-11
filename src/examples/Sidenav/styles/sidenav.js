@@ -16,9 +16,6 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-import logoDark from "assets/images/logo-ct.png";
-import logoWhite from "assets/images/logo-ct-white.png";
-
 export default makeStyles(
   ({ palette, typography, boxShadows, transitions, breakpoints, functions }) => {
     const sidebarWidth = 250;
@@ -65,15 +62,6 @@ export default makeStyles(
       },
 
       sidenav_logo: {
-        background: ({ darkSidenav }) => {
-          let finalLogoColor;
-          if (darkSidenav) {
-            finalLogoColor = logoWhite;
-          } else {
-            finalLogoColor = logoDark;
-          }
-          return finalLogoColor;
-        },
         width: pxToRem(32),
       },
 

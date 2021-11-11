@@ -32,7 +32,7 @@ export default makeStyles(
         alignItems: "center",
         width: "100%",
         padding: `${pxToRem(12)} ${pxToRem(16)}`,
-        margin: `0 ${pxToRem(16)} ${pxToRem(2)}`,
+        margin: `0 ${pxToRem(16)} ${pxToRem(6)}`,
         borderRadius: borderRadius.md,
         cursor: "pointer",
         userSelect: "none",
