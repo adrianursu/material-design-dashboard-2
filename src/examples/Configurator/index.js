@@ -75,10 +75,12 @@ function Configurator() {
 
   const handleTransparentSidenav = () => {
     dispatch({ type: "TRANSPARENT_SIDENAV", value: true });
+    dispatch({ type: "DARK_SIDENAV", value: false });
   };
 
   const handleWhiteSidenav = () => {
     dispatch({ type: "TRANSPARENT_SIDENAV", value: false });
+    dispatch({ type: "DARK_SIDENAV", value: false });
   };
 
   const handleFixedNavbar = () => {
@@ -86,7 +88,8 @@ function Configurator() {
   };
 
   const handleDarkSidenav = () => {
-    dispatch({ type: "DARK_SIDENAV", value: false });
+    dispatch({ type: "DARK_SIDENAV", value: true });
+    dispatch({ type: "TRANSPARENT_SIDENAV", value: false });
   };
 
   return (

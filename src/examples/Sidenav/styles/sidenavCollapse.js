@@ -18,25 +18,21 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(
   ({ palette, transitions, breakpoints, typography, boxShadows, borders, functions }) => {
-    const { dark, white, transparent, gradients } = palette;
+    const { dark, white } = palette;
     const { fontWeightRegular, fontWeightMedium, size } = typography;
     const { xxl } = boxShadows;
     const { borderRadius } = borders;
-    const { pxToRem, linearGradient } = functions;
+    const { pxToRem, rgba } = functions;
 
     return {
       collapse_item: {
-        backgroundImage: ({ active, sidenavColor }) =>
-          active
-            ? linearGradient(gradients[sidenavColor].main, gradients[sidenavColor].state)
-            : transparent.main,
         color: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
 
         display: "flex",
         alignItems: "center",
         width: "100%",
         padding: `${pxToRem(12)} ${pxToRem(16)}`,
-        margin: `0 ${pxToRem(16)}`,
+        margin: `0 ${pxToRem(16)} ${pxToRem(2)}`,
         borderRadius: borderRadius.md,
         cursor: "pointer",
         userSelect: "none",
@@ -54,6 +50,9 @@ export default makeStyles(
             easing: transitions.easing.easeInOut,
             duration: transitions.duration.shorter,
           }),
+        },
+        "&:hover": {
+          backgroundColor: rgba(white.main, 0.1),
         },
       },
 

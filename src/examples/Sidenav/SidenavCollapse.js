@@ -49,7 +49,12 @@ function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...re
   return (
     <>
       <ListItem component="li">
-        <MDBox {...rest} customClass={classes.collapse_item}>
+        <MDBox
+          {...rest}
+          customClass={classes.collapse_item}
+          backgroundColor={active && sidenavColor}
+          backgroundGradient={active}
+        >
           <ListItemIcon className={classes.collapse_iconBox}>
             {typeof icon === "string" ? (
               <Icon className={classes.collapse_icon}>{icon}</Icon>
