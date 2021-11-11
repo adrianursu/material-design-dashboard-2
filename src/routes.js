@@ -41,7 +41,7 @@ import Tables from "layouts/tables";
 import Billing from "layouts/billing";
 import VirtualReality from "layouts/virtual-reality";
 import Notifications from "layouts/notifications";
-// import RTL from "layouts/rtl";
+import RTL from "layouts/rtl";
 import Profile from "layouts/profile";
 // import SignIn from "layouts/authentication/sign-in";
 // import SignUp from "layouts/authentication/sign-up";
@@ -61,6 +61,7 @@ import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
+import FormatTextdirectionRToLIcon from "@mui/icons-material/FormatTextdirectionRToL";
 
 const routes = [
   {
@@ -101,6 +102,15 @@ const routes = [
   },
   {
     type: "collapse",
+    name: "RTL",
+    key: "RTL",
+    route: "/rtl",
+    icon: <FormatTextdirectionRToLIcon fontSize="small" />,
+    component: RTL,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
     name: "Notifications",
     key: "notifications",
     route: "/notifications",
@@ -108,15 +118,6 @@ const routes = [
     component: Notifications,
     noCollapse: true,
   },
-  // {
-  //   type: "collapse",
-  //   name: "RTL",
-  //   key: "rtl",
-  //   route: "/rtl",
-  //   icon: <Settings size="12px" />,
-  //   component: RTL,
-  //   noCollapse: true,
-  // },
   { type: "title", title: "Account Pages", key: "account-pages" },
   {
     type: "collapse",

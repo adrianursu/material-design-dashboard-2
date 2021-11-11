@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React
+* Material Design 2 Dashboard React
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -16,25 +16,31 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(({ functions }) => {
+export default makeStyles(({ functions, borders, palette }) => {
+  const { white } = palette;
   const { pxToRem } = functions;
+  const { borderWidth, borderColor } = borders;
 
   return {
-    buildByDevelopers_button: {
-      marginTop: "auto",
-      marginRight: "auto",
-      display: "inline-flex",
-      alignItems: "center",
-      cursor: "pointer",
+    projects_table: {
+      "& .MuiTableRow-root:not(:last-child)": {
+        "& td": {
+          borderBottom: `1px solid ${borderColor}`,
+        },
+      },
+    },
 
-      "& .material-icons-round": {
-        fontSize: "1.125rem",
-        transform: `translate(${pxToRem(2)}, ${pxToRem(-1)})`,
-        transition: "transform 0.2s cubic-bezier(0.34,1.61,0.7,1.3)",
+    projects_tableAvatar: {
+      border: `${borderWidth[2]} solid ${white.main}`,
+      cursor: "pointer",
+      position: "relative",
+
+      "&:not(:first-child)": {
+        marginLeft: pxToRem(-12),
       },
 
-      "&:hover .material-icons-round, &:focus  .material-icons-round": {
-        transform: `translate(${pxToRem(6)}, ${pxToRem(-1)})`,
+      "&:hover, &:focus": {
+        zIndex: "10",
       },
     },
   };
