@@ -32,7 +32,6 @@ import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 // RTL layout components
 import Projects from "layouts/rtl/components/Projects";
 import OrderOverview from "layouts/rtl/components/OrderOverview";
-import SalesTable from "examples/Tables/SalesTable";
 
 import boxShadows from "assets/theme/base/boxShadows";
 
@@ -43,7 +42,6 @@ import { useMaterialDesignController } from "context";
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
-import salesTableData from "./data/salesTableData";
 
 function RTL() {
   const [, dispatch] = useMaterialDesignController();
@@ -179,17 +177,6 @@ function RTL() {
           <Grid item xs={12} md={6} lg={4}>
             <MDBox mb={5}>
               <OrderOverview />
-            </MDBox>
-          </Grid>
-        </Grid>
-        <Grid container>
-          <Grid item xs={12}>
-            <MDBox mb={3} position="relative">
-              <SalesTable
-                title="Sales by Country"
-                rows={salesTableData}
-                icon={{ color: "success", component: "language" }}
-              />
             </MDBox>
           </Grid>
         </Grid>
