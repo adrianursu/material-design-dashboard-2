@@ -70,7 +70,7 @@ function MaterialDesignControllerProvider({ children }) {
     darkSidenav: false,
     sidenavColor: "primary",
     transparentNavbar: true,
-    fixedNavbar: true,
+    fixedNavbar: false,
     openConfigurator: false,
     direction: "ltr",
     layout: "dashboard",

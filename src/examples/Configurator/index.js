@@ -127,9 +127,11 @@ function Configurator() {
 
       <Divider />
 
-      <MDBox pt={1.25} pb={3} px={3}>
+      <MDBox pt={0.2} pb={3} px={3}>
         <MDBox>
-          <MDTypography variant="h6">Sidenav Colors</MDTypography>
+          <MDTypography variant="h6" textTransform="capitalize">
+            sidebar colors
+          </MDTypography>
 
           <MDBox my={0.5}>
             {sidenavColors.map((color) => (
@@ -144,10 +146,12 @@ function Configurator() {
           </MDBox>
         </MDBox>
 
-        <MDBox mt={3}>
-          <MDTypography variant="h6">Sidenav Type</MDTypography>
+        <MDBox mt={2}>
+          <MDTypography variant="h6" style={{ marginBottom: "0px" }}>
+            Sidenav Type
+          </MDTypography>
           <MDTypography variant="button" textColor="text" fontWeight="light">
-            Choose between 2 different sidenav types.
+            Choose between 3 different sidenav types.
           </MDTypography>
 
           <MDBox customClass={classes.configurator_sidenav_types}>
@@ -159,14 +163,16 @@ function Configurator() {
             >
               Dark
             </MDButton>
-            <MDButton
-              buttonColor="dark"
-              variant={transparentSidenav ? "gradient" : "outlined"}
-              onClick={handleTransparentSidenav}
-              disabled={disabled}
-            >
-              Transparent
-            </MDButton>
+            <MDBox mx={1}>
+              <MDButton
+                buttonColor="dark"
+                variant={transparentSidenav ? "gradient" : "outlined"}
+                onClick={handleTransparentSidenav}
+                disabled={disabled}
+              >
+                Transparent
+              </MDButton>
+            </MDBox>
             <MDButton
               buttonColor="dark"
               variant={transparentSidenav ? "outlined" : "gradient"}
@@ -177,13 +183,17 @@ function Configurator() {
             </MDButton>
           </MDBox>
         </MDBox>
-        <MDBox mt={3} mb={2}>
+        <MDBox mt={3} mb={2} display="flex" justifyContent="space-between">
           <MDTypography variant="h6">Navbar Fixed</MDTypography>
-
-          <Switch checked={fixedNavbar} onChange={handleFixedNavbar} />
+          <Switch unchecked={fixedNavbar} onChange={handleFixedNavbar} />
         </MDBox>
 
         <Divider />
+
+        <MDBox mt={0} mb={2} display="flex" justifyContent="space-between">
+          <MDTypography variant="h6">Light / Dark</MDTypography>
+          <Switch unchecked={fixedNavbar} onChange={handleFixedNavbar} />
+        </MDBox>
 
         <MDBox mt={3} mb={2}>
           <MDButton

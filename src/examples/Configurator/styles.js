@@ -33,6 +33,7 @@ export default makeStyles(
         borderRadius: 0,
         boxShadow: lg,
         overflowY: "auto",
+        backgroundColor: "white",
       },
 
       configurator_close_icon: {
@@ -66,6 +67,7 @@ export default makeStyles(
         display: "flex",
         marginTop: pxToRem(16),
         justifyContent: "space-between",
+        padding: "0 3px",
 
         "& .MuiButton-root": {
           height: pxToRem(42),
