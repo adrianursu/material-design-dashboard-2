@@ -62,7 +62,7 @@ function Notifications() {
     <MDSnackbar
       type="success"
       icon="check"
-      title="Material Design Dashboard"
+      title="Material Dashboard 2"
       content="Hello, world! This is a notification message"
       dateTime="11 mins ago"
       open={successSB}
@@ -74,7 +74,7 @@ function Notifications() {
   const renderInfoSB = (
     <MDSnackbar
       icon="notifications"
-      title="Material Design Dashboard"
+      title="Material Dashboard 2"
       content="Hello, world! This is a notification message"
       dateTime="11 mins ago"
       open={infoSB}
@@ -87,7 +87,7 @@ function Notifications() {
     <MDSnackbar
       type="warning"
       icon="star"
-      title="Material Design Dashboard"
+      title="Material Dashboard 2"
       content="Hello, world! This is a notification message"
       dateTime="11 mins ago"
       open={warningSB}
@@ -100,7 +100,7 @@ function Notifications() {
     <MDSnackbar
       type="error"
       icon="warning"
-      title="Material Design Dashboard"
+      title="Material Dashboard 2"
       content="Hello, world! This is a notification message"
       dateTime="11 mins ago"
       open={errorSB}

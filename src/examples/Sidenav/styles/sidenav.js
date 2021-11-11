@@ -65,6 +65,11 @@ export default makeStyles(
         width: pxToRem(32),
       },
 
+      sidenav_footer: {
+        margin: `auto ${pxToRem(16)} ${pxToRem(16)}`,
+        paddingTop: pxToRem(16),
+      },
+
       sidenav_logoLabel: {
         marginLeft: pxToRem(4),
         fontWeight: fontWeightMedium,

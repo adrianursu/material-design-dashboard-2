@@ -34,6 +34,7 @@ import Link from "@mui/material/Link";
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
+import MDButton from "components/MDButton";
 
 // Material Design 2 Dashboard PRO React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
@@ -175,6 +176,21 @@ function Sidenav({ routes, ...rest }) {
       </MDBox>
       <Divider />
       <List>{renderRoutes}</List>
+      <MDBox customClass={classes.sidenav_footer}>
+        <MDBox mt={2}>
+          <MDButton
+            component="a"
+            href="https://creative-tim.com/product/soft-ui-dashboard-pro-react"
+            target="_blank"
+            rel="noreferrer"
+            variant="gradient"
+            buttonColor="primary"
+            fullWidth
+          >
+            upgrade to pro
+          </MDButton>
+        </MDBox>
+      </MDBox>
     </Drawer>
   );
 }
