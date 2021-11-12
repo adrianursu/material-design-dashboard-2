@@ -37,7 +37,7 @@ function Billing() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox mt={4}>
+      <MDBox mt={2}>
         <MDBox mb={1.5}>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={8}>
