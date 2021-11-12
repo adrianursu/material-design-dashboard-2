@@ -67,9 +67,9 @@ function MaterialDesignControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
     transparentSidenav: false,
-    darkSidenav: false,
+    darkSidenav: true,
     sidenavColor: "primary",
-    transparentNavbar: true,
+    transparentNavbar: false,
     fixedNavbar: false,
     openConfigurator: false,
     direction: "ltr",
