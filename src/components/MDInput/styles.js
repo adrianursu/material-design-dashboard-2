@@ -29,45 +29,35 @@ export default makeStyles(({ palette, functions, typography, borders }) => {
 
     mdInput_small: {
       fontSize: fontSize.xs,
-      padding: `${pxToRem(4)} ${pxToRem(12)}`,
+
+      "& input": {
+        fontSize: fontSize.xs,
+        padding: `${pxToRem(8)} ${pxToRem(12)}`,
+      },
+
+      "& .MuiInputLabel-root": {
+        fontSize: `${fontSize.xs} !important`,
+        top: "-5px",
+        left: "-2px",
+
+        "&.MuiInputLabel-shrink": {
+          transform: "translate(15px, -1px) scale(0.95)",
+        },
+      },
     },
 
     mdInput_large: {
-      padding: pxToRem(12),
-    },
-
-    mdInput_focused: {
-      paddingLeft: ({ direction, withIcon }) => {
-        let paddingLeftValue;
-
-        if (direction === "rtl" && withIcon.direction === "left") {
-          paddingLeftValue = 0;
-        } else if (direction === "rtl" && withIcon.direction === "right") {
-          paddingLeftValue = `${pxToRem(12)} !important`;
-        } else if (direction === "ltr" && withIcon.direction === "right") {
-          paddingLeftValue = 0;
-        } else if (direction === "ltr" && withIcon.direction === "left") {
-          paddingLeftValue = `${pxToRem(12)} !important`;
-        }
-
-        return paddingLeftValue;
+      "& input": {
+        padding: `${pxToRem(14)} ${pxToRem(14)}`,
       },
-      paddingRight: ({ direction, withIcon }) => {
-        let paddingRightValue;
 
-        if (direction === "rtl" && withIcon.direction === "left") {
-          paddingRightValue = `${pxToRem(12)} !important`;
-        } else if (direction === "rtl" && withIcon.direction === "right") {
-          paddingRightValue = 0;
-        } else if (direction === "ltr" && withIcon.direction === "right") {
-          paddingRightValue = `${pxToRem(12)} !important`;
-        } else if (direction === "ltr" && withIcon.direction === "left") {
-          paddingRightValue = 0;
-        }
+      "& .MuiInputLabel-root": {
+        top: "1px",
 
-        return paddingRightValue;
+        "&.MuiInputLabel-shrink": {
+          transform: "translate(12.625px, -7px) scale(0.85)",
+        },
       },
-      outline: 0,
     },
 
     mdInput_disabled: {

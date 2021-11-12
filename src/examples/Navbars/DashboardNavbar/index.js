@@ -142,7 +142,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
         {isMini ? null : (
           <MDBox customClass={classes.navbar_row}>
             <MDBox pr={1}>
-              <MDInput variant="outlined" label="Type here..." />
+              <MDInput label="Search" />
             </MDBox>
             <MDBox color={light ? "white" : "inherit"} customClass={classes.navbar_section_desktop}>
               <Link to="/authentication/sign-in/basic">
