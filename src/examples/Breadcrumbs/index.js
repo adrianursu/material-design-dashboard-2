@@ -21,7 +21,6 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import { Breadcrumbs as MuiBreadcrumbs } from "@mui/material";
-import Icon from "@mui/material/Icon";
 
 // Material Design 2 Dashboard PRO React components
 import MDBox from "components/MDBox";
@@ -30,7 +29,7 @@ import MDTypography from "components/MDTypography";
 // Custom styles for Breadcrumbs
 import styles from "examples/Breadcrumbs/styles";
 
-function Breadcrumbs({ icon, title, route, light }) {
+function Breadcrumbs({ text, title, route, light }) {
   const classes = styles({ light });
   const routes = route.slice(0, -1);
 
@@ -40,12 +39,13 @@ function Breadcrumbs({ icon, title, route, light }) {
         <Link to="/">
           <MDTypography
             component="span"
-            variant="body2"
+            variant="button"
             textColor={light ? "white" : "dark"}
             opacity={light ? 0.8 : 0.5}
             customClass="line-height-0"
+            fontWeight="regular"
           >
-            <Icon>{icon}</Icon>
+            {text}
           </MDTypography>
         </Link>
         {routes.map((el) => (
@@ -89,14 +89,15 @@ function Breadcrumbs({ icon, title, route, light }) {
 // Setting default values for the props of Breadcrumbs
 Breadcrumbs.defaultProps = {
   light: false,
+  text: "Pages",
 };
 
 // Typechecking props for the Breadcrumbs
 Breadcrumbs.propTypes = {
-  icon: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   route: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
   light: PropTypes.bool,
+  text: PropTypes.string,
 };
 
 export default Breadcrumbs;
