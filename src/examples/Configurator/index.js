@@ -175,7 +175,7 @@ function Configurator() {
             </MDBox>
             <MDButton
               buttonColor="dark"
-              variant={transparentSidenav ? "outlined" : "gradient"}
+              variant={!transparentSidenav && !darkSidenav ? "gradient" : "outlined"}
               onClick={handleWhiteSidenav}
               disabled={disabled}
             >

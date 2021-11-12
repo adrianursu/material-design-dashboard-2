@@ -17,13 +17,18 @@ Coded by www.creative-tim.com
 import pxToRem from "assets/theme/functions/pxToRem";
 
 export default {
+  defaultProps: {
+    variant: "outlined",
+  },
   styleOverrides: {
-    input: {
-      padding: `${pxToRem(10)} ${pxToRem(12)}`,
+    root: {
+      borderRadius: "6px",
+      fontSize: "14px",
     },
 
-    inputSizeSmall: {
-      height: pxToRem(14),
+    input: {
+      padding: `${pxToRem(10)} ${pxToRem(12)}`,
+      fontSize: "14px",
     },
   },
 };

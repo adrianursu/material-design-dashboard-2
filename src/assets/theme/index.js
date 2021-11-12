@@ -89,7 +89,6 @@ export default createTheme({
     pxToRem,
     rgba,
   },
-
   components: {
     MuiCssBaseline: {
       styleOverrides: {

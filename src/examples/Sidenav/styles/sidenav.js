@@ -19,7 +19,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(
   ({ palette, typography, boxShadows, transitions, breakpoints, functions }) => {
     const sidebarWidth = 250;
-    const { white, dark, gradients } = palette;
+    const { white, dark, gradients, transparent } = palette;
     const { fontWeightMedium } = typography;
     const { xxl } = boxShadows;
     const { pxToRem, linearGradient } = functions;
@@ -28,19 +28,18 @@ export default makeStyles(
       sidenav: {
         boxShadow: xxl,
         border: "none",
-        backgroundColor: ({ transparentSidenav }) => transparentSidenav && white.main,
-
         [breakpoints.up("xl")]: {
-          backgroundColor: ({ transparentSidenav }) => transparentSidenav && white.main,
-          backgroundImage: ({ transparentSidenav, darkSidenav }) => {
+          background: ({ transparentSidenav, darkSidenav }) => {
             let finalValue;
+
             if (transparentSidenav) {
-              finalValue = "none";
+              finalValue = transparent.main;
             } else if (darkSidenav) {
               finalValue = linearGradient(gradients.dark.main, gradients.dark.state);
             } else {
               finalValue = white.main;
             }
+
             return finalValue;
           },
 
