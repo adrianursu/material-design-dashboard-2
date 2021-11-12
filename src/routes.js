@@ -43,18 +43,10 @@ import VirtualReality from "layouts/virtual-reality";
 import Notifications from "layouts/notifications";
 import RTL from "layouts/rtl";
 import Profile from "layouts/profile";
-// import SignIn from "layouts/authentication/sign-in";
-// import SignUp from "layouts/authentication/sign-up";
+import SignIn from "layouts/authentication/sign-in";
+import SignUp from "layouts/authentication/sign-up";
 
-// Material Design 2 Dashboard PRO React icons
-// import Shop from "examples/Icons/Shop";
-// import Office from "examples/Icons/Office";
-// import Settings from "examples/Icons/Settings";
-// import Document from "examples/Icons/Document";
-// import SpaceShip from "examples/Icons/SpaceShip";
-// import CustomerSupport from "examples/Icons/CustomerSupport";
-// import CreditCard from "examples/Icons/CreditCard";
-// import Cube from "examples/Icons/Cube";
+// Import Icons from Material-UI
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import TableViewIcon from "@mui/icons-material/TableView";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
@@ -62,6 +54,8 @@ import ViewInArIcon from "@mui/icons-material/ViewInAr";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PersonIcon from "@mui/icons-material/Person";
 import FormatTextdirectionRToLIcon from "@mui/icons-material/FormatTextdirectionRToL";
+import LoginIcon from "@mui/icons-material/Login";
+import AssignmentIcon from "@mui/icons-material/Assignment";
 
 const routes = [
   {
@@ -128,24 +122,24 @@ const routes = [
     component: Profile,
     noCollapse: true,
   },
-  // {
-  //   type: "collapse",
-  //   name: "Sign In",
-  //   key: "sign-in",
-  //   route: "/authentication/sign-in",
-  //   icon: <Document size="12px" />,
-  //   component: SignIn,
-  //   noCollapse: true,
-  // },
-  // {
-  //   type: "collapse",
-  //   name: "Sign Up",
-  //   key: "sign-up",
-  //   route: "/authentication/sign-up",
-  //   icon: <SpaceShip size="12px" />,
-  //   component: SignUp,
-  //   noCollapse: true,
-  // },
+  {
+    type: "collapse",
+    name: "Sign In",
+    key: "sign-in",
+    route: "/authentication/sign-in",
+    icon: <LoginIcon fontSize="small" />,
+    component: SignIn,
+    noCollapse: true,
+  },
+  {
+    type: "collapse",
+    name: "Sign Up",
+    key: "sign-up",
+    route: "/authentication/sign-up",
+    icon: <AssignmentIcon fontSize="small" />,
+    component: SignUp,
+    noCollapse: true,
+  },
 ];
 
 export default routes;
