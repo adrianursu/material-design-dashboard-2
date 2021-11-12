@@ -51,7 +51,6 @@ export default makeStyles(
         display: "grid",
         alignItems: "center",
         borderRadius: borderRadius.xl,
-        paddingTop: pxToRem(8),
         paddingBottom: pxToRem(8),
         paddingRight: ({ absolute }) => (absolute ? pxToRem(8) : 0),
         paddingLeft: ({ absolute }) => (absolute ? pxToRem(16) : 0),

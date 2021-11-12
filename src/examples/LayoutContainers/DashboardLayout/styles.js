@@ -22,7 +22,7 @@ export default makeStyles(({ functions, breakpoints, transitions }) => {
   return {
     layoutContainer: {
       position: "relative",
-      padding: pxToRem(24),
+      padding: `${pxToRem(8)} ${pxToRem(24)} ${pxToRem(24)}`,
 
       [breakpoints.up("xl")]: {
         marginLeft: ({ direction, miniSidenav }) => {
