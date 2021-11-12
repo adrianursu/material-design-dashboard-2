@@ -15,7 +15,6 @@ Coded by www.creative-tim.com
 
 // Material UI Dashboard PRO helper functions
 import typography from "assets/theme/base/typography";
-// import pxToRem from "assets/theme/functions/pxToRem";
 
 const { size } = typography;
 
@@ -25,6 +24,7 @@ export default {
       fontSize: `${size.sm} !important`,
       lineHeight: 1,
       top: "-2px",
+      color: "#7b809a",
 
       "&.MuiInputLabel-shrink": {
         transform: "translate(12.5px, -3.5px) scale(0.85)",
