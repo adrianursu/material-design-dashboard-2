@@ -137,7 +137,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
     >
       <Toolbar className={classes.navbar_container}>
         <MDBox customClass={classes.navbar_row} color="inherit" mb={{ xs: 1, md: 0 }}>
-          <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
+          <Breadcrumbs title={route[route.length - 1]} route={route} light={light} />
         </MDBox>
         {isMini ? null : (
           <MDBox customClass={classes.navbar_row}>
