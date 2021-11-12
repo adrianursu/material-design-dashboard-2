@@ -36,7 +36,7 @@ function Overview() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox position="relative" mt={3}>
+      <MDBox position="relative" mt={3} mb={3}>
         <Header>
           <MDBox mt={3} mb={3}>
             <Grid container spacing={3}>
