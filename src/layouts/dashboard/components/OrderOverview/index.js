@@ -31,7 +31,7 @@ function OrdersOverview() {
         <MDTypography variant="h6" fontWeight="medium">
           Orders overview
         </MDTypography>
-        <MDBox mt={1} mb={3.2}>
+        <MDBox mb={2}>
           <MDTypography variant="button" textColor="text" fontWeight="regular">
             <MDTypography display="inline" variant="body2" verticalAlign="middle">
               <Icon className="font-bold text-success">arrow_upward</Icon>
@@ -44,7 +44,7 @@ function OrdersOverview() {
           </MDTypography>
         </MDBox>
       </MDBox>
-      <MDBox p={2}>
+      <MDBox px={2} pb={4.125} pt={2}>
         <TimelineItem
           color="success"
           icon="notifications"
