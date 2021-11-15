@@ -53,8 +53,8 @@ function Dashboard() {
             <Grid item xs={12} sm={6} xl={3}>
               <MDBox mb={2}>
                 <MiniStatisticsCard
-                  title={{ text: "bookings" }}
-                  count="53k"
+                  title={{ text: "Today's Money" }}
+                  count="$53k"
                   percentage={{ color: "success", text: "+55%" }}
                   icon={{ color: "dark", component: "weekend" }}
                   boxShadow={boxShadows.coloredShadows.dark}
@@ -77,8 +77,8 @@ function Dashboard() {
             <Grid item xs={12} sm={6} xl={3}>
               <MDBox mb={2}>
                 <MiniStatisticsCard
-                  title={{ text: "Revenue" }}
-                  count="34K"
+                  title={{ text: "New Clients" }}
+                  count="3,462"
                   percentage={{ color: "success", text: "+1%" }}
                   icon={{ color: "success", component: "store" }}
                   boxShadow={boxShadows.coloredShadows.success}
@@ -89,8 +89,8 @@ function Dashboard() {
             <Grid item xs={12} sm={6} xl={3}>
               <MDBox mb={2}>
                 <MiniStatisticsCard
-                  title={{ text: "followers" }}
-                  count="+91"
+                  title={{ text: "Sales" }}
+                  count="$103,430"
                   icon={{
                     color: "info",
                     component: "person_add",
