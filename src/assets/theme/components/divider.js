@@ -25,11 +25,7 @@ const { dark, transparent, white } = colors;
 export default {
   styleOverrides: {
     root: {
-      backgroundColor: transparent.main,
-      backgroundImage: `linear-gradient(to right, ${rgba(dark.main, 0)}, ${rgba(
-        dark.main,
-        0.5
-      )}, ${rgba(dark.main, 0)}) !important`,
+      backgroundColor: "#7b809a33",
       height: pxToRem(1),
       margin: `${pxToRem(16)} 0`,
       borderBottom: "none",
