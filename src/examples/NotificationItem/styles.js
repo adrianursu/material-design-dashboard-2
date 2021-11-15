@@ -50,11 +50,11 @@ export default makeStyles(({ palette, borders, transitions, functions }) => {
       width: pxToRem(36),
       height: pxToRem(36),
       margin: `${pxToRem(2)} ${pxToRem(16)} ${pxToRem(2)} 0`,
-      borderRadius: borderRadius.lg,
+      borderRadius: "50%",
 
       "& img": {
         width: "100%",
-        borderRadius: borderRadius.lg,
+        borderRadius: "50%",
       },
     },
 
