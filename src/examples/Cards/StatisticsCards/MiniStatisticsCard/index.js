@@ -55,7 +55,7 @@ function MiniStatisticsCard({
                 backgroundColor={backgroundColor === "white" ? icon.color : "white"}
                 width="4rem"
                 height="4rem"
-                borderRadius="lg"
+                borderRadius="xl"
                 display="flex"
                 justifyContent="center"
                 alignItems="center"
