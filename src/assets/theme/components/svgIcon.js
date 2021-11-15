@@ -27,7 +27,7 @@ export default {
     },
 
     fontSizeSmall: {
-      fontSize: `${pxToRem(20)} !important`,
+      fontSize: `${pxToRem(14)} !important`,
     },
 
     fontSizeLarge: {

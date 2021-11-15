@@ -43,18 +43,17 @@ function ReportsBarChart({ title, description, chart, bgColor, boxShadow, subtit
 
   return (
     <Card className="overflow-visible">
-      <MDBox padding="1rem">
+      <MDBox>
         {useMemo(
           () => (
             <MDBox
               backgroundColor={bgColor}
               borderRadius="lg"
-              py={2}
-              pr={0.5}
-              mb={2}
               height="12.5rem"
               backgroundGradient
-              mt={-5}
+              mt={-3}
+              mx={2}
+              mb={0}
               style={{ boxShadow: `${boxShadow}` }}
             >
               <Bar data={data} options={options} />
@@ -62,7 +61,7 @@ function ReportsBarChart({ title, description, chart, bgColor, boxShadow, subtit
           ),
           [chart]
         )}
-        <MDBox px={1} lineHeight={0}>
+        <MDBox p={3} lineHeight={0}>
           <MDTypography variant="h6" textTransform="capitalize">
             {title}
           </MDTypography>
