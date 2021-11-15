@@ -81,12 +81,17 @@ function DefaultNavbar({ transparent, light, action }) {
         px={{ xs: transparent ? 4 : 5, sm: transparent ? 2 : 5, lg: transparent ? 0 : 5 }}
       >
         <MDBox component={Link} to="/" py={transparent ? 1.5 : 0.75}>
-          <MDTypography variant="button" fontWeight="bold" textColor={light ? "white" : "dark"}>
-            Material UI Dashboard
+          <MDTypography
+            variant="button"
+            fontWeight="bold"
+            textColor={light ? "white" : "dark"}
+            textTransform="capitalize"
+          >
+            material dashboard 2
           </MDTypography>
         </MDBox>
         <MDBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>
-          <DefaultNavbarLink icon="donut_large" name="dashboard" route="/dashboard" light={light} />
+          <DefaultNavbarLink icon="pie_chart" name="dashboard" route="/dashboard" light={light} />
           <DefaultNavbarLink icon="person" name="profile" route="/profile" light={light} />
           <DefaultNavbarLink
             icon="account_circle"
