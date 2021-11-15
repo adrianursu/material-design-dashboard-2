@@ -19,7 +19,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(
   ({ palette, transitions, breakpoints, typography, boxShadows, borders, functions }) => {
     const { dark, white } = palette;
-    const { fontWeightRegular, fontWeightMedium, size } = typography;
+    const { fontWeightLight, fontWeightMedium, size } = typography;
     const { xxl } = boxShadows;
     const { borderRadius } = borders;
     const { pxToRem, rgba } = functions;
@@ -95,7 +95,7 @@ export default makeStyles(
         },
 
         "& span": {
-          fontWeight: ({ active }) => (active ? fontWeightMedium : fontWeightRegular),
+          fontWeight: ({ active }) => (active ? fontWeightMedium : fontWeightLight),
           fontSize: size.sm,
           lineHeight: 0,
         },
