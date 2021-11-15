@@ -168,13 +168,14 @@ function Sidenav({ routes, ...rest }) {
               variant="button"
               fontWeight="medium"
               textColor={darkSidenav ? "white" : "dark"}
+              style={{ marginLeft: "4px" }}
             >
               Material Dashboard 2
             </MDTypography>
           </MDBox>
         </NavLink>
       </MDBox>
-      <Divider light />
+      <Divider light style={{ margin: "0 0 8px 0" }} />
       <List>{renderRoutes}</List>
       <MDBox customClass={classes.sidenav_footer}>
         <MDBox mt={2}>

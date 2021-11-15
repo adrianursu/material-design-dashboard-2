@@ -50,7 +50,7 @@ export default makeStyles(
       },
 
       sidenav_header: {
-        padding: `${pxToRem(24)} ${pxToRem(32)} ${pxToRem(8)}`,
+        padding: `${pxToRem(24)} ${pxToRem(32)}`,
         textAlign: "center",
 
         "& a": {
