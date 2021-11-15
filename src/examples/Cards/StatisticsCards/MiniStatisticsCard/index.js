@@ -41,8 +41,15 @@ function MiniStatisticsCard({
   return (
     <Card className="overflow-visible">
       <MDBox backgroundColor={backgroundColor} backgroundGradient borderRadius="xl">
-        <MDBox p={2}>
-          <Grid container alignItems="center">
+        <MDBox>
+          <Grid
+            container
+            alignItems="center"
+            p={2}
+            pt={1}
+            display="flex"
+            justifyContent="space-between"
+          >
             <Grid item>
               <MDBox
                 backgroundColor={backgroundColor === "white" ? icon.color : "white"}
@@ -54,7 +61,7 @@ function MiniStatisticsCard({
                 alignItems="center"
                 color={backgroundColor === "white" ? "white" : "dark"}
                 backgroundGradient
-                mt={-7.5}
+                mt={-5.5}
                 style={{ boxShadow: `${boxShadow}` }}
               >
                 <Icon fontSize="medium" color="inherit">
@@ -68,9 +75,8 @@ function MiniStatisticsCard({
                 display="flex"
                 flexDirection="column"
                 alignItems="flex-end"
-                style={{
-                  lineHeight: "0.5",
-                }}
+                justifyContent="space-between"
+                pt={0.5}
               >
                 <MDTypography
                   variant="button"
@@ -91,13 +97,15 @@ function MiniStatisticsCard({
               </MDBox>
             </Grid>
           </Grid>
-          <Divider style={{ margin: "0.7rem 0" }} />
-          <MDTypography variant="body2" fontWeight="light" textColor="text">
-            <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
-              {percentage.text}
+          <Divider style={{ margin: "0" }} />
+          <MDBox p={2}>
+            <MDTypography variant="body2" fontWeight="light" textColor="text">
+              <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
+                {percentage.text}
+              </MDTypography>
+              {description}
             </MDTypography>
-            {description}
-          </MDTypography>
+          </MDBox>
         </MDBox>
       </MDBox>
     </Card>
