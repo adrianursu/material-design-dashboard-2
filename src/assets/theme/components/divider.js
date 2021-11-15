@@ -45,11 +45,7 @@ export default {
     },
 
     light: {
-      backgroundColor: transparent.main,
-      backgroundImage: `linear-gradient(to right, ${rgba(white.main, 0)}, ${rgba(
-        white.main,
-        0.5
-      )}, ${rgba(white.main, 0)}) !important`,
+      backgroundColor: "#ffffff94",
 
       "&.MuiDivider-vertical": {
         backgroundImage: `linear-gradient(to bottom, ${rgba(white.main, 0)}, ${rgba(

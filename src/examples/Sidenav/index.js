@@ -174,7 +174,7 @@ function Sidenav({ routes, ...rest }) {
           </MDBox>
         </NavLink>
       </MDBox>
-      <Divider />
+      <Divider light />
       <List>{renderRoutes}</List>
       <MDBox customClass={classes.sidenav_footer}>
         <MDBox mt={2}>
