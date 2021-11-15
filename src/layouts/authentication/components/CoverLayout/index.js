@@ -27,14 +27,14 @@ import MDTypography from "components/MDTypography";
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
-// Authentication layout components
-import Footer from "layouts/authentication/components/Footer";
-
 // Custom styles for the Baise
 import styles from "layouts/authentication/components/CoverLayout/styles";
 
 // Material Design Dashboard 2 React page layout routes
 import routes from "routes";
+
+// Authentication layout components
+import Footer from "../../../../examples/Footer/index";
 
 function CoverLayout({ color, header, title, description, image, top, children }) {
   const classes = styles({ image });
