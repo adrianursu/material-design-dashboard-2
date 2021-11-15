@@ -29,8 +29,6 @@ import TimeIcon from "@mui/icons-material/AccessTime";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Design 2 Dashboard PRO React example components
-
 // ReportsBarChart configurations
 import configs from "examples/Charts/LineCharts/ReportsLineChart/configs";
 
