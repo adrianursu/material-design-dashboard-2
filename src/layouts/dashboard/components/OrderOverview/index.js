@@ -44,7 +44,7 @@ function OrdersOverview() {
           </MDTypography>
         </MDBox>
       </MDBox>
-      <MDBox px={2} pb={4.125} pt={2}>
+      <MDBox px={2} pt={2}>
         <TimelineItem
           color="success"
           icon="notifications"
