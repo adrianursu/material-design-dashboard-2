@@ -59,7 +59,7 @@ function SignIn() {
           </MDTypography>
         </MDBox>
         <MDBox mt={4} mb={1}>
-          <MDButton variant="gradient" buttonColor="info" fullWidth>
+          <MDButton variant="gradient" buttonColor="primary" fullWidth>
             sign in
           </MDButton>
         </MDBox>
