@@ -29,7 +29,7 @@ export default {
   alignItems: "center",
   fontSize: size.xs,
   fontWeight: fontWeightBold,
-  borderRadius: borderRadius.md,
+  borderRadius: borderRadius.lg,
   padding: `${pxToRem(12)} ${pxToRem(24)}`,
   lineHeight: 1.4,
   textAlign: "center",

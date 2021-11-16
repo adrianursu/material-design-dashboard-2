@@ -31,7 +31,7 @@ import MDButton from "components/MDButton";
 import CoverLayout from "layouts/authentication/components/CoverLayout";
 
 // Images
-import curved9 from "assets/images/curved-images/curved-6.jpg";
+import signInBackground from "assets/images/sign-in-background.jpg";
 
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(true);
@@ -39,26 +39,12 @@ function SignIn() {
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
-    <CoverLayout
-      title="Welcome back"
-      description="Enter your email and password to sign in"
-      image={curved9}
-    >
+    <CoverLayout image={signInBackground}>
       <MDBox component="form" role="form">
         <MDBox mb={2}>
-          <MDBox mb={1} ml={0.5}>
-            <MDTypography component="label" variant="caption" fontWeight="bold">
-              Email
-            </MDTypography>
-          </MDBox>
           <MDInput type="email" placeholder="Email" />
         </MDBox>
         <MDBox mb={2}>
-          <MDBox mb={1} ml={0.5}>
-            <MDTypography component="label" variant="caption" fontWeight="bold">
-              Password
-            </MDTypography>
-          </MDBox>
           <MDInput type="password" placeholder="Password" />
         </MDBox>
         <MDBox display="flex" alignItems="center">

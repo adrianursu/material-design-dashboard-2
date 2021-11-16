@@ -16,28 +16,28 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(({ functions, borders }) => {
+export default makeStyles(({ functions }) => {
   const { pxToRem } = functions;
-  const { borderRadius } = borders;
+  // const { borderRadius } = borders;
 
   return {
     coverLayout: {
-      minHeight: "75vh",
+      minHeight: "100vh",
       margin: 0,
     },
 
     coverLayout_imageBox: {
-      transform: "skewX(-10deg)",
+      // transform: "skewX(-10deg)",
       height: "100%",
       overflow: "hidden",
-      marginRight: pxToRem(-128),
-      borderBottomLeftRadius: borderRadius.lg,
+      // marginRight: pxToRem(-128),
+      // borderBottomLeftRadius: borderRadius.lg,
     },
 
     coverLayout_image: {
       backgroundImage: ({ image }) => `url(${image})`,
       backgroundSize: "cover",
-      transform: "skewX(10deg)",
+      // transform: "skewX(10deg)",
       marginLeft: pxToRem(-64),
       height: "100%",
     },

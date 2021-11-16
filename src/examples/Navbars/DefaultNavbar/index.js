@@ -130,7 +130,6 @@ function DefaultNavbar({ transparent, light, action }) {
                 variant="gradient"
                 buttonColor={action.color ? action.color : "info"}
                 size="small"
-                circular
               >
                 {action.label}
               </MDButton>

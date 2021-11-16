@@ -17,11 +17,11 @@ Coded by www.creative-tim.com
 import PropTypes from "prop-types";
 
 // @mui material components
-import Grid from "@mui/material/Grid";
+// import Grid from "@mui/material/Grid";
 
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
+// import MDTypography from "components/MDTypography";
 
 // Material Design Dashboard 2 React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
@@ -36,7 +36,7 @@ import routes from "routes";
 // Authentication layout components
 import Footer from "../../../../examples/Footer/index";
 
-function CoverLayout({ color, header, title, description, image, top, children }) {
+function CoverLayout({ header, image, top, children }) {
   const classes = styles({ image });
 
   return (
@@ -50,39 +50,26 @@ function CoverLayout({ color, header, title, description, image, top, children }
           color: "dark",
         }}
       />
-      <Grid container justifyContent="center" className={classes.coverLayout}>
-        <Grid item xs={11} sm={8} md={5} xl={3}>
-          <MDBox mt={top}>
-            <MDBox pt={3} px={3}>
-              {!header ? (
-                <>
-                  <MDBox mb={1}>
-                    <MDTypography variant="h3" fontWeight="bold" textColor={color} textGradient>
-                      {title}
-                    </MDTypography>
-                  </MDBox>
-                  <MDTypography variant="body2" fontWeight="regular" textColor="text">
-                    {description}
-                  </MDTypography>
-                </>
-              ) : (
-                header
-              )}
-            </MDBox>
-            <MDBox p={3}>{children}</MDBox>
-          </MDBox>
-        </Grid>
-        <Grid item xs={12} md={5}>
-          <MDBox
-            display={{ xs: "none", md: "block" }}
-            position="relative"
-            right={{ md: "-12rem", xl: "-16rem" }}
-            customClass={classes.coverLayout_imageBox}
-          >
-            <MDBox customClass={classes.coverLayout_image} />
-          </MDBox>
-        </Grid>
-      </Grid>
+      {/* <Grid container justifyContent="center" className={classes.coverLayout}> */}
+      {/* <Grid item xs={11} sm={8} md={5} xl={3}> */}
+      <MDBox mt={top} display="flex" alignItems="center" justifyContent="center">
+        <MDBox pt={3} px={3}>
+          {!header ? <></> : header}
+        </MDBox>
+        <MDBox p={3}>{children}</MDBox>
+      </MDBox>
+      {/* </Grid> */}
+      {/* <Grid item xs={12} md={5}> */}
+      <MDBox
+        display={{ xs: "none", md: "block" }}
+        position="relative"
+        right={{ md: "-12rem", xl: "-16rem" }}
+        customClass={classes.coverLayout_imageBox}
+      >
+        <MDBox customClass={classes.coverLayout_image} />
+      </MDBox>
+      {/* </Grid> */}
+      {/* </Grid> */}
       <Footer />
     </PageLayout>
   );
@@ -91,27 +78,12 @@ function CoverLayout({ color, header, title, description, image, top, children }
 // Setting default values for the props of CoverLayout
 CoverLayout.defaultProps = {
   header: "",
-  title: "",
-  description: "",
-  color: "info",
   top: 20,
 };
 
 // Typechecking props for the CoverLayout
 CoverLayout.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "error",
-    "dark",
-    "light",
-  ]),
   header: PropTypes.node,
-  title: PropTypes.string,
-  description: PropTypes.string,
   image: PropTypes.string.isRequired,
   top: PropTypes.number,
   children: PropTypes.node.isRequired,
