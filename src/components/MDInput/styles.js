@@ -25,6 +25,7 @@ export default makeStyles(({ palette, functions, typography, borders }) => {
   return {
     mdInput: {
       backgroundColor: ({ disabled }) => (disabled ? grey[200] : transparent.main),
+      width: "100% !important",
     },
 
     mdInput_small: {

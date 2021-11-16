@@ -13,8 +13,13 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Materialware.
 */
 
-// Material UI Dashboard PRO helper functions
+// Material UI Dashboard helper functions
 import pxToRem from "assets/theme/functions/pxToRem";
+
+// Material UI Dashboard colors
+import colors from "assets/theme/base/colors";
+
+const { primary } = colors;
 
 export default {
   defaultProps: {
@@ -24,11 +29,21 @@ export default {
     root: {
       borderRadius: "6px",
       fontSize: "14px",
+      width: "100%",
+      "&:hover": {
+        "& .MuiOutlinedInput-notchedOutline": {
+          borderColor: "rgba(0,0,0, 0.23) !important",
+        },
+      },
+      "&.Mui-focused:hover .MuiOutlinedInput-notchedOutline": {
+        borderColor: `${primary.main} !important`,
+      },
     },
 
     input: {
       padding: `${pxToRem(10)} ${pxToRem(12)}`,
       fontSize: "14px",
+      width: "100%",
     },
   },
 };
