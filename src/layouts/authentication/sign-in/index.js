@@ -33,7 +33,7 @@ import CoverLayout from "layouts/authentication/components/CoverLayout";
 import FormHeader from "layouts/authentication/components/FormHeader";
 
 function SignIn() {
-  const [rememberMe, setRememberMe] = useState(true);
+  const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
@@ -43,10 +43,10 @@ function SignIn() {
         <FormHeader />
         <MDBox component="form" role="form" p={3}>
           <MDBox mb={2}>
-            <MDInput type="email" placeholder="Email" />
+            <MDInput type="email" label="Email" />
           </MDBox>
           <MDBox mb={2}>
-            <MDInput type="password" placeholder="Password" />
+            <MDInput type="password" label="Password" />
           </MDBox>
           <MDBox display="flex" alignItems="center">
             <Switch checked={rememberMe} onChange={handleSetRememberMe} />
@@ -55,6 +55,7 @@ function SignIn() {
               fontWeight="regular"
               onClick={handleSetRememberMe}
               customClass="cursor-pointer user-select-none"
+              textColor="secondary"
             >
               &nbsp;&nbsp;Remember me
             </MDTypography>
@@ -71,7 +72,7 @@ function SignIn() {
                 component={Link}
                 to="/authentication/sign-up"
                 variant="button"
-                textColor="info"
+                textColor="primary"
                 fontWeight="medium"
                 textGradient
               >

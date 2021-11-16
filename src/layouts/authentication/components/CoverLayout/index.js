@@ -18,6 +18,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 // import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
 
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -70,7 +71,9 @@ function CoverLayout({ header, image, top, children }) {
       </MDBox>
       {/* </Grid> */}
       {/* </Grid> */}
-      <Footer />
+      <Container>
+        <Footer />
+      </Container>
     </PageLayout>
   );
 }

@@ -14,13 +14,14 @@ function FormHeader({ text, backgroundColor, boxShadow }) {
       <MDBox
         backgroundColor={backgroundColor}
         width="100%"
-        height="4.5rem"
+        height="6.5rem"
         borderRadius="md"
         display="flex"
         alignItems="center"
         justifyContent="center"
         color={backgroundColor === "white" || backgroundColor === "light" ? "dark" : "white"}
         boxShadow="md"
+        flexDirection="column"
         backgroundGradient
         style={{ boxShadow: `${boxShadow}` }}
       >
