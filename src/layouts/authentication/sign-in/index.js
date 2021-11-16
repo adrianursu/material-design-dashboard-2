@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 
 // @mui material components
 import Switch from "@mui/material/Switch";
+import Card from "@mui/material/Card";
 
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -29,9 +30,7 @@ import MDButton from "components/MDButton";
 
 // Authentication layout components
 import CoverLayout from "layouts/authentication/components/CoverLayout";
-
-// Images
-import signInBackground from "assets/images/sign-in-background.jpg";
+import FormHeader from "layouts/authentication/components/FormHeader";
 
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(true);
@@ -39,46 +38,49 @@ function SignIn() {
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
-    <CoverLayout image={signInBackground}>
-      <MDBox component="form" role="form">
-        <MDBox mb={2}>
-          <MDInput type="email" placeholder="Email" />
-        </MDBox>
-        <MDBox mb={2}>
-          <MDInput type="password" placeholder="Password" />
-        </MDBox>
-        <MDBox display="flex" alignItems="center">
-          <Switch checked={rememberMe} onChange={handleSetRememberMe} />
-          <MDTypography
-            variant="button"
-            fontWeight="regular"
-            onClick={handleSetRememberMe}
-            customClass="cursor-pointer user-select-none"
-          >
-            &nbsp;&nbsp;Remember me
-          </MDTypography>
-        </MDBox>
-        <MDBox mt={4} mb={1}>
-          <MDButton variant="gradient" buttonColor="primary" fullWidth>
-            sign in
-          </MDButton>
-        </MDBox>
-        <MDBox mt={3} textAlign="center">
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
-            Don&apos;t have an account?{" "}
+    <CoverLayout>
+      <Card className="overflow-visible">
+        <FormHeader />
+        <MDBox component="form" role="form" p={3}>
+          <MDBox mb={2}>
+            <MDInput type="email" placeholder="Email" />
+          </MDBox>
+          <MDBox mb={2}>
+            <MDInput type="password" placeholder="Password" />
+          </MDBox>
+          <MDBox display="flex" alignItems="center">
+            <Switch checked={rememberMe} onChange={handleSetRememberMe} />
             <MDTypography
-              component={Link}
-              to="/authentication/sign-up"
               variant="button"
-              textColor="info"
-              fontWeight="medium"
-              textGradient
+              fontWeight="regular"
+              onClick={handleSetRememberMe}
+              customClass="cursor-pointer user-select-none"
             >
-              Sign up
+              &nbsp;&nbsp;Remember me
             </MDTypography>
-          </MDTypography>
+          </MDBox>
+          <MDBox mt={4} mb={1}>
+            <MDButton variant="gradient" buttonColor="primary" fullWidth>
+              sign in
+            </MDButton>
+          </MDBox>
+          <MDBox mt={3} textAlign="center">
+            <MDTypography variant="button" textColor="text" fontWeight="regular">
+              Don&apos;t have an account?{" "}
+              <MDTypography
+                component={Link}
+                to="/authentication/sign-up"
+                variant="button"
+                textColor="info"
+                fontWeight="medium"
+                textGradient
+              >
+                Sign up
+              </MDTypography>
+            </MDTypography>
+          </MDBox>
         </MDBox>
-      </MDBox>
+      </Card>
     </CoverLayout>
   );
 }

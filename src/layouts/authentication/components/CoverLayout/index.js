@@ -40,7 +40,7 @@ function CoverLayout({ header, image, top, children }) {
   const classes = styles({ image });
 
   return (
-    <PageLayout background="white">
+    <PageLayout background="light">
       <DefaultNavbar
         routes={routes}
         action={{
