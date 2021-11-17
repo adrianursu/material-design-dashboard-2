@@ -75,12 +75,8 @@ function DefaultNavbar({ transparent, light, action }) {
 
   return (
     <Container>
-      <MDBox
-        customClass={classes.defaultNavbar}
-        py={1}
-        px={{ xs: transparent ? 4 : 5, sm: transparent ? 2 : 5, lg: transparent ? 0 : 5 }}
-      >
-        <MDBox component={Link} to="/" py={transparent ? 1.5 : 0.75}>
+      <MDBox customClass={classes.defaultNavbar} py={1} px={2}>
+        <MDBox component={Link} to="/" mr={2}>
           <MDTypography
             variant="button"
             fontWeight="bold"

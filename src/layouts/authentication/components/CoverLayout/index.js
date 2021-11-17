@@ -29,7 +29,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Custom styles for the Baise
-import styles from "layouts/authentication/components/CoverLayout/styles";
+// import styles from "layouts/authentication/components/CoverLayout/styles";
 
 // Material Design Dashboard 2 React page layout routes
 import routes from "routes";
@@ -37,8 +37,8 @@ import routes from "routes";
 // Authentication layout components
 import Footer from "../../../../examples/Footer/index";
 
-function CoverLayout({ header, image, top, children }) {
-  const classes = styles({ image });
+function CoverLayout({ children, top }) {
+  // const classes = styles({ image });
 
   return (
     <PageLayout background="light">
@@ -51,43 +51,27 @@ function CoverLayout({ header, image, top, children }) {
           color: "dark",
         }}
       />
-      {/* <Grid container justifyContent="center" className={classes.coverLayout}> */}
-      {/* <Grid item xs={11} sm={8} md={5} xl={3}> */}
-      <MDBox mt={top} display="flex" alignItems="center" justifyContent="center">
-        <MDBox pt={3} px={3}>
-          {!header ? <></> : header}
+      <MDBox mt={top} display="flex" alignItems="center" justifyContent="center" minHeight="92vh">
+        <MDBox p={3} minWidth="27.5rem">
+          {children}
         </MDBox>
-        <MDBox p={3}>{children}</MDBox>
       </MDBox>
-      {/* </Grid> */}
-      {/* <Grid item xs={12} md={5}> */}
-      <MDBox
-        display={{ xs: "none", md: "block" }}
-        position="relative"
-        right={{ md: "-12rem", xl: "-16rem" }}
-        customClass={classes.coverLayout_imageBox}
-      >
-        <MDBox customClass={classes.coverLayout_image} />
+      <MDBox mt="auto">
+        <Container>
+          <Footer />
+        </Container>
       </MDBox>
-      {/* </Grid> */}
-      {/* </Grid> */}
-      <Container>
-        <Footer />
-      </Container>
     </PageLayout>
   );
 }
 
 // Setting default values for the props of CoverLayout
 CoverLayout.defaultProps = {
-  header: "",
-  top: 20,
+  top: 0,
 };
 
 // Typechecking props for the CoverLayout
 CoverLayout.propTypes = {
-  header: PropTypes.node,
-  image: PropTypes.string.isRequired,
   top: PropTypes.number,
   children: PropTypes.node.isRequired,
 };

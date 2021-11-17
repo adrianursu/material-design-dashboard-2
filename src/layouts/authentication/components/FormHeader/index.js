@@ -7,15 +7,16 @@ import MDTypography from "components/MDTypography";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
+import Stack from "@mui/material/Stack";
 
 function FormHeader({ text, backgroundColor, boxShadow }) {
   return (
-    <MDBox px={2} mt={-2}>
+    <MDBox px={2} mt={-3} mb={2}>
       <MDBox
+        py={5}
         backgroundColor={backgroundColor}
         width="100%"
-        height="6.5rem"
-        borderRadius="md"
+        borderRadius="lg"
         display="flex"
         alignItems="center"
         justifyContent="center"
@@ -25,16 +26,16 @@ function FormHeader({ text, backgroundColor, boxShadow }) {
         backgroundGradient
         style={{ boxShadow: `${boxShadow}` }}
       >
-        <MDBox>
-          <MDTypography variant="h5" fontWeight="bold" textColor="white" textTransform="capitalize">
+        <MDBox mb={3} mt={-1}>
+          <MDTypography variant="h4" fontWeight="bold" textColor="white" textTransform="capitalize">
             {text}
           </MDTypography>
         </MDBox>
-        <MDBox justifyContent="space-between" mt={2}>
+        <Stack direction="row" spacing={5}>
           <FacebookIcon color="white" />
           <GitHubIcon color="white" />
           <GoogleIcon color="white" />
-        </MDBox>
+        </Stack>
       </MDBox>
     </MDBox>
   );

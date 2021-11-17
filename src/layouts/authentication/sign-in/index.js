@@ -39,7 +39,7 @@ function SignIn() {
 
   return (
     <CoverLayout>
-      <Card className="overflow-visible">
+      <Card className="overflow-visible" style={{ boxShadow: "none", marginTop: "3rem" }}>
         <FormHeader />
         <MDBox component="form" role="form" p={3}>
           <MDBox mb={2}>
