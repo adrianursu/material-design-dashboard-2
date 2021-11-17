@@ -60,13 +60,13 @@ function SignUp() {
         <MDBox pt={2} pb={3} px={3}>
           <MDBox component="form" role="form">
             <MDBox mb={2}>
-              <MDInput placeholder="Name" />
+              <MDInput label="Name" />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="email" placeholder="Email" />
+              <MDInput type="email" label="Email" />
             </MDBox>
             <MDBox mb={2}>
-              <MDInput type="password" placeholder="Password" />
+              <MDInput type="password" label="Password" />
             </MDBox>
             <MDBox display="flex" alignItems="center">
               <Checkbox checked={agreement} onChange={handleSetAgremment} />
