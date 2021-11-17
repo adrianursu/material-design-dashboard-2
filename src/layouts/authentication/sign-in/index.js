@@ -32,13 +32,16 @@ import MDButton from "components/MDButton";
 import CoverLayout from "layouts/authentication/components/CoverLayout";
 import FormHeader from "layouts/authentication/components/FormHeader";
 
+// Cover image
+import signInImage from "assets/images/sign-in-background.jpg";
+
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   return (
-    <CoverLayout>
+    <CoverLayout image={signInImage}>
       <Card className="overflow-visible" style={{ boxShadow: "none", marginTop: "3rem" }}>
         <FormHeader />
         <MDBox component="form" role="form" p={3}>

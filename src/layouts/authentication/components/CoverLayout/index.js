@@ -29,7 +29,7 @@ import DefaultNavbar from "examples/Navbars/DefaultNavbar";
 import PageLayout from "examples/LayoutContainers/PageLayout";
 
 // Custom styles for the Baise
-// import styles from "layouts/authentication/components/CoverLayout/styles";
+import styles from "layouts/authentication/components/CoverLayout/styles";
 
 // Material Design Dashboard 2 React page layout routes
 import routes from "routes";
@@ -37,11 +37,11 @@ import routes from "routes";
 // Authentication layout components
 import Footer from "../../../../examples/Footer/index";
 
-function CoverLayout({ children, top }) {
-  // const classes = styles({ image });
+function CoverLayout({ children, top, image }) {
+  const classes = styles({ image });
 
   return (
-    <PageLayout background="light">
+    <PageLayout className={classes.coverLayout_image}>
       <DefaultNavbar
         routes={routes}
         action={{
@@ -73,6 +73,7 @@ CoverLayout.defaultProps = {
 // Typechecking props for the CoverLayout
 CoverLayout.propTypes = {
   top: PropTypes.number,
+  image: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
 };
 

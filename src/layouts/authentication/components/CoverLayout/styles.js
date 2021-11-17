@@ -38,7 +38,7 @@ export default makeStyles(({ functions }) => {
       backgroundImage: ({ image }) => `url(${image})`,
       backgroundSize: "cover",
       // transform: "skewX(10deg)",
-      marginLeft: pxToRem(-64),
+      marginLeft: pxToRem(0),
       height: "100%",
     },
   };

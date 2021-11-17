@@ -31,7 +31,7 @@ function FormHeader({ text, backgroundColor, boxShadow }) {
             {text}
           </MDTypography>
         </MDBox>
-        <Stack direction="row" spacing={5}>
+        <Stack direction="row" spacing={6}>
           <FacebookIcon color="white" />
           <GitHubIcon color="white" />
           <GoogleIcon color="white" />
