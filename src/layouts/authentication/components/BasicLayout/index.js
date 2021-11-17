@@ -18,6 +18,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import Grid from "@mui/material/Grid";
+import Container from "@mui/material/Container";
 
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
@@ -48,8 +49,6 @@ function BasicLayout({ title, description, image, children }) {
           route: "https://www.creative-tim.com/product/soft-ui-dashboard-material-ui",
           label: "free download",
         }}
-        transparent
-        light
       />
       <MDBox customClass={classes.basicLayout}>
         <Grid container spacing={3} justifyContent="center" className="text-center">
@@ -74,7 +73,9 @@ function BasicLayout({ title, description, image, children }) {
           </Grid>
         </Grid>
       </MDBox>
-      <Footer />
+      <Container>
+        <Footer />
+      </Container>
     </PageLayout>
   );
 }
