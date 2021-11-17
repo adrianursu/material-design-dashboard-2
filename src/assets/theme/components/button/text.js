@@ -20,26 +20,26 @@ import typography from "assets/theme/base/typography";
 // Material Design 2 Dashboard PRO React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-const { transparent, info, secondary, grey } = colors;
+const { transparent, primary, secondary, grey } = colors;
 const { size } = typography;
 
 export default {
   base: {
     backgroundColor: transparent.main,
     height: "max-content",
-    color: info.main,
+    color: primary.main,
     boxShadow: "none",
     padding: `${pxToRem(6)} ${pxToRem(12)}`,
 
     "&:hover": {
       backgroundColor: transparent.main,
       boxShadow: "none",
-      color: info.focus,
+      color: primary.focus,
     },
 
     "&:focus": {
       boxShadow: "none",
-      color: info.focus,
+      color: primary.focus,
     },
 
     "&:active, &:active:focus, &:active:hover": {
@@ -74,16 +74,16 @@ export default {
   },
 
   primary: {
-    color: info.main,
+    color: primary.main,
     backgroundColor: transparent.main,
 
     "&:hover": {
-      color: info.focus,
+      color: primary.focus,
       backgroundColor: transparent.main,
     },
 
     "&:focus:not(:hover)": {
-      color: info.focus,
+      color: primary.focus,
       backgroundColor: transparent.focus,
       boxShadow: "none",
     },

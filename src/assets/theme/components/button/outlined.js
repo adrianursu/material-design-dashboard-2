@@ -21,7 +21,7 @@ import boxShadows from "assets/theme/base/boxShadows";
 // Material Design 2 Dashboard PRO React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-const { transparent, light, info, secondary } = colors;
+const { transparent, light, primary, secondary } = colors;
 const { size } = typography;
 const { buttonBoxShadow } = boxShadows;
 
@@ -68,7 +68,7 @@ export default {
 
   primary: {
     backgroundColor: transparent.main,
-    borderColor: info.main,
+    borderColor: primary.main,
 
     "&:hover": {
       backgroundColor: transparent.main,
