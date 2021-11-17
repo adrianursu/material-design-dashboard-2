@@ -109,6 +109,7 @@ export default makeStyles(({ palette, functions }) => {
 
         return background;
       },
+      padding: `${pxToRem(6)} ${pxToRem(16)}`,
       color: ({ buttonColor }) => {
         let color;
 
