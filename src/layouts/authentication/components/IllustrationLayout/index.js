@@ -45,7 +45,7 @@ function IllustrationLayout({ header, title, description, children }) {
         }}
       />
       <Grid container>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} lg={6} pl={1.5}>
           <MDBox
             display={{ xs: "none", lg: "flex" }}
             alignItems="center"
