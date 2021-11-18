@@ -67,13 +67,13 @@ function Illustration() {
           </MDButton>
         </MDBox>
         <MDBox mt={3} textAlign="center">
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
+          <MDTypography variant="button" textColor="text" fontWeight="light">
             Already have an account?&nbsp;
             <MDTypography
               component={Link}
               to="/authentication/sign-in/illustration"
               variant="button"
-              textColor="info"
+              textColor="primary"
               fontWeight="bold"
               textGradient
             >
