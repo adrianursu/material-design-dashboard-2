@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -23,13 +23,13 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Icon from "@mui/material/Icon";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
 // Custom styles for the SidenavCollapse
 import styles from "examples/Sidenav/styles/sidenavCollapse";
 
-// Material Design 2 Dashboard PRO React context
+// Material Design Dashboard 2 React context
 import { useMaterialDesignController } from "context";
 
 function SidenavCollapse({ icon, name, children, active, noCollapse, open, ...rest }) {

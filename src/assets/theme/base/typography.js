@@ -1,13 +1,13 @@
 /**
- * The base typography styles for the Material Design 2 Dashboard PRO React.
+ * The base typography styles for the Material Design Dashboard 2 React.
  * You can add new typography style using this file.
- * You can customized the typography styles for the entire Material Design 2 Dashboard PRO React using thie file.
+ * You can customized the typography styles for the entire Material Design Dashboard 2 React using thie file.
  */
 
-// Material Design 2 Dashboard PRO React Base Styles
+// Material Design Dashboard 2 React Base Styles
 import colors from "assets/theme/base/colors";
 
-// Material Design 2 Dashboard PRO React Helper Functions
+// Material Design Dashboard 2 React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
 const { dark } = colors;

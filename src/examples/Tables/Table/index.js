@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -24,12 +24,12 @@ import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDAvatar from "components/MDAvatar";
 import MDTypography from "components/MDTypography";
 
-// Material Design 2 Dashboard PRO React base styles
+// Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 import borders from "assets/theme/base/borders";

@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -19,11 +19,11 @@ import CountUp from "react-countup";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Design 2 Dashboard PRO React base styles
+// Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
 

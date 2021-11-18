@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -24,7 +24,7 @@ import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import Tooltip from "@mui/material/Tooltip";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";

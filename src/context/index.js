@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React
+* Material Design Dashboard 2 React
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/material-ui-dashboard-material-ui
@@ -23,10 +23,10 @@ import { createContext, useContext, useReducer } from "react";
 // prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// The Material Design 2 Dashboard PRO React main context
+// The Material Design Dashboard 2 React main context
 const MaterialDesign = createContext();
 
-// Material Design 2 Dashboard PRO React reducer
+// Material Design Dashboard 2 React reducer
 function reducer(state, action) {
   switch (action.type) {
     case "MINI_SIDENAV": {
@@ -62,7 +62,7 @@ function reducer(state, action) {
   }
 }
 
-// Material Design 2 Dashboard PRO React context provider
+// Material Design Dashboard 2 React context provider
 function MaterialDesignControllerProvider({ children }) {
   const initialState = {
     miniSidenav: false,
@@ -83,7 +83,7 @@ function MaterialDesignControllerProvider({ children }) {
   );
 }
 
-// Material Design 2 Dashboard PRO React custom hook for using context
+// Material Design Dashboard 2 React custom hook for using context
 function useMaterialDesignController() {
   return useContext(MaterialDesign);
 }

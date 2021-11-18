@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
   The gradientChartLine() function helps you to create a gradient color for the chart line
  */
 
-// Material Design 2 Dashboard PRO React helper functions
+// Material Design Dashboard 2 React helper functions
 import rgba from "assets/theme/functions/rgba";
 import pxToRem from "assets/theme/functions/pxToRem";
 

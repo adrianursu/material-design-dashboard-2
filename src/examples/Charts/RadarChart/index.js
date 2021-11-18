@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -24,17 +24,17 @@ import { Radar } from "react-chartjs-2";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 // RadarChart configurations
 import configs from "examples/Charts/RadarChart/configs";
 
-// Material Design 2 Dashboard PRO React base styles
+// Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 
-// Material Design 2 Dashboard PRO React helper functions
+// Material Design Dashboard 2 React helper functions
 import rgba from "assets/theme/functions/rgba";
 
 function RadarChart({ title, description, chart }) {

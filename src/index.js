@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -18,7 +18,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "App";
 
-// Material Design 2 Dashboard PRO React Context Provider
+// Material Design Dashboard 2 React Context Provider
 import { MaterialDesignControllerProvider } from "context";
 
 ReactDOM.render(

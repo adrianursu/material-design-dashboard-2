@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -24,7 +24,7 @@ import clsx from "clsx";
 // @mui material components
 import LinearProgress from "@mui/material/LinearProgress";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDTypography from "components/MDTypography";
 
 // Custom styles for MDProgress

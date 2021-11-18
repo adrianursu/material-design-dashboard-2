@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React
+* Material Design Dashboard 2 React
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui

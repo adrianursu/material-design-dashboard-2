@@ -1,7 +1,7 @@
 /**
- * The base breakpoints for the  Material Design 2 Dashboard PRO React.
+ * The base breakpoints for the  Material Design Dashboard 2 React.
  * You can add new breakpoints using this file.
- * You can customized the breakpoints for the entire  Material Design 2 Dashboard PRO React using thie file.
+ * You can customized the breakpoints for the entire  Material Design Dashboard 2 React using thie file.
  */
 
 export default {

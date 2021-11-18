@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -18,7 +18,7 @@ Coded by www.creative-tim.com
   to convert the hex code into rgb for using it inside the rgba color format.
  */
 
-// Material Design 2 Dashboard PRO React helper functions
+// Material Design Dashboard 2 React helper functions
 import hexToRgb from "assets/theme/functions/hexToRgb";
 
 function rgba(color, opacity) {

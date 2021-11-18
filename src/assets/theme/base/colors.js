@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -14,9 +14,9 @@ Coded by www.creative-tim.com
 */
 
 /**
- * The base colors for the Material Design 2 Dashboard PRO React.
+ * The base colors for the Material Design Dashboard 2 React.
  * You can add new color using this file.
- * You can customized the colors for the entire Material Design 2 Dashboard PRO React using thie file.
+ * You can customized the colors for the entire Material Design Dashboard 2 React using thie file.
  */
 
 export default {

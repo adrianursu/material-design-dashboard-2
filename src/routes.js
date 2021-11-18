@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 PRO React
+* Material Design Dashboard 2 React
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 
 /** 
-  All of the routes for the Material Design 2 PRO React are added here,
+  All of the routes for the Material Design Dashboard 2 React are added here,
   You can add a new route, customize the routes and delete the routes here.
 
   Once you add a new route on this file it will be visible automatically on
@@ -35,7 +35,7 @@ Coded by www.creative-tim.com
   10. The `component` key is used to store the component of its route.
 */
 
-// Material Design 2 PRO React layouts
+// Material Design Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
 import Tables from "layouts/tables";
 import Billing from "layouts/billing";

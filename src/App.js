@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -32,21 +32,21 @@ import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Icon from "@mui/material/Icon";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
-// Material Design 2 Dashboard PRO React example components
+// Material Design Dashboard 2 React example components
 import Sidenav from "examples/Sidenav";
 import Configurator from "examples/Configurator";
 
-// Material Design 2 Dashboard PRO React themes
+// Material Design Dashboard 2 React themes
 import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
 
-// Material Design 2 Dashboard PRO React routes
+// Material Design Dashboard 2 React routes
 import routes from "routes";
 
-// Material Design 2 Dashboard PRO React contexts
+// Material Design Dashboard 2 React contexts
 import { useMaterialDesignController } from "context";
 
 import rtlPlugin from "stylis-plugin-rtl";

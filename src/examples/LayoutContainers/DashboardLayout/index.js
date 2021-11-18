@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -21,13 +21,13 @@ import { useLocation } from "react-router-dom";
 // prop-types is a library for typechecking of props.
 import PropTypes from "prop-types";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
 // Custom styles for the LayoutContainer
 import styles from "examples/LayoutContainers/DashboardLayout/styles";
 
-// Material Design 2 Dashboard PRO React context
+// Material Design Dashboard 2 React context
 import { useMaterialDesignController } from "context";
 
 function LayoutContainer({ children }) {

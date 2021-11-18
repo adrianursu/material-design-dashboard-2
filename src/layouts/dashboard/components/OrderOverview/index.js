@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React
+* Material Design Dashboard 2 React
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
@@ -17,11 +17,11 @@ Coded by www.creative-tim.com
 import Card from "@mui/material/Card";
 import Icon from "@mui/material/Icon";
 
-// Material Design 2 Dashboard PRO components
+// Material Design Dashboard 2 components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Material Design 2 Dashboard PRO React example components
+// Material Design Dashboard 2 React example components
 import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {

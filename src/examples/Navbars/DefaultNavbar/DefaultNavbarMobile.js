@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -20,10 +20,10 @@ import PropTypes from "prop-types";
 import Menu from "@mui/material/Menu";
 // import Grid from "@mui/material/Grid";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
-// Material Design 2 Dashboard PRO React example components
+// Material Design Dashboard 2 React example components
 import DefaultNavbarLink from "examples/Navbars/DefaultNavbar/DefaultNavbarLink";
 
 function DefaultNavbarMobile({ open, close }) {

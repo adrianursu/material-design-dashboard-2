@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -13,13 +13,13 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Materialware.
 */
 
-// Material Design 2 Dashboard PRO React Base Styles
+// Material Design Dashboard 2 React Base Styles
 import typography from "assets/theme/base/typography";
 import colors from "assets/theme/base/colors";
 import borders from "assets/theme/base/borders";
 import boxShadows from "assets/theme/base/boxShadows";
 
-// Material Design 2 Dashboard PRO React helper functions
+// Material Design Dashboard 2 React helper functions
 import linearGradient from "assets/theme/functions/linearGradient";
 
 const {

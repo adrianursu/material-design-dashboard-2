@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -33,7 +33,7 @@ import Icon from "@mui/material/Icon";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
@@ -41,7 +41,7 @@ import MDButton from "components/MDButton";
 // Custom styles for the Configurator
 import styles from "examples/Configurator/styles";
 
-// Material Design 2 Dashboard PRO React context
+// Material Design Dashboard 2 React context
 import { useMaterialDesignController } from "context";
 
 function Configurator() {

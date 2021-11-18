@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-pro-material-ui
@@ -25,13 +25,13 @@ import clsx from "clsx";
 import Icon from "@mui/material/Icon";
 import TextField from "@mui/material/TextField";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
 // Custom styles for MDInput
 import styles from "components/MDInput/styles";
 
-// Material Design 2 Dashboard PRO React contexts
+// Material Design Dashboard 2 React contexts
 import { useMaterialDesignController } from "context";
 
 const MDInput = forwardRef(

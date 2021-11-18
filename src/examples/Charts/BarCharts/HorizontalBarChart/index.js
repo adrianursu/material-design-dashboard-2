@@ -1,6 +1,6 @@
 /**
 =========================================================
-* Material Design 2 Dashboard PRO React 
+* Material Design Dashboard 2 React 
 =========================================================
 
 * Product Page: https://www.creative-tim.com/product/Material-ui-dashboard-material-ui
@@ -24,14 +24,14 @@ import { Bar } from "react-chartjs-2";
 // @mui material components
 import Card from "@mui/material/Card";
 
-// Material Design 2 Dashboard PRO React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
 // HorizontalBarChart configurations
 import configs from "examples/Charts/BarCharts/HorizontalBarChart/configs";
 
-// Material Design 2 Dashboard PRO React base styles
+// Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 
 function HorizontalBarChart({ title, description, height, chart }) {
