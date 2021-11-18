@@ -32,9 +32,9 @@ export default makeStyles(({ palette, boxShadows, functions, borders }) => {
       color: ({ light }) => (light ? white.main : dark.main),
       backdropFilter: ({ transparent }) =>
         transparent ? "none" : `saturate(200%) blur(${pxToRem(30)})`,
-      borderRadius: ({ signInRadius }) => {
+      borderRadius: ({ signIn }) => {
         let radius;
-        if (signInRadius) {
+        if (signIn) {
           radius = borderRadius.xl;
         } else {
           radius = borderRadius.lg;
@@ -42,7 +42,15 @@ export default makeStyles(({ palette, boxShadows, functions, borders }) => {
         return radius;
       },
       boxShadow: regular,
-      margin: `${pxToRem(16)} ${pxToRem(24)}`,
+      margin: ({ signIn }) => {
+        let marginNavbar;
+        if (signIn) {
+          marginNavbar = `${pxToRem(16)} ${pxToRem(24)}`;
+        } else {
+          marginNavbar = `${pxToRem(24)} ${pxToRem(24)} ${pxToRem(0)}`;
+        }
+        return marginNavbar;
+      },
       width: `calc(100% - ${pxToRem(48)})`,
       position: "absolute",
       left: 0,

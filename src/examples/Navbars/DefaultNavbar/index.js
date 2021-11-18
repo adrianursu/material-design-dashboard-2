@@ -40,8 +40,8 @@ import breakpoints from "assets/theme/base/breakpoints";
 // Custom styles for DashboardNavbar
 import styles from "examples/Navbars/DefaultNavbar/styles/defaultNavbar";
 
-function DefaultNavbar({ transparent, light, signInRadius, action }) {
-  const classes = styles({ transparent, light, signInRadius });
+function DefaultNavbar({ transparent, light, signIn, action }) {
+  const classes = styles({ transparent, light, signIn });
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
 
@@ -76,12 +76,14 @@ function DefaultNavbar({ transparent, light, signInRadius, action }) {
   return (
     <Container>
       <MDBox customClass={classes.defaultNavbar} py={1} px={2}>
-        <MDBox component={Link} to="/" mr={2}>
+        <MDBox component={Link} to="/" mr={2} pl={1}>
           <MDTypography
             variant="button"
             fontWeight="bold"
             textColor={light ? "white" : "dark"}
             textTransform="capitalize"
+            py={0.81}
+            style={{ padding: "0.81rem 0 0.81rem 0" }}
           >
             material dashboard 2
           </MDTypography>
@@ -157,14 +159,14 @@ DefaultNavbar.defaultProps = {
   transparent: false,
   light: false,
   action: false,
-  signInRadius: false,
+  signIn: false,
 };
 
 // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
   transparent: PropTypes.bool,
   light: PropTypes.bool,
-  signInRadius: PropTypes.bool,
+  signIn: PropTypes.bool,
   action: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({
