@@ -51,13 +51,13 @@ function Illustration() {
     >
       <MDBox component="form" role="form">
         <MDBox mb={2}>
-          <MDInput placeholder="Name" size="large" />
+          <MDInput label="Name" size="large" />
         </MDBox>
         <MDBox mb={2}>
-          <MDInput type="email" placeholder="Email" size="large" />
+          <MDInput type="email" label="Email" size="large" />
         </MDBox>
         <MDBox mb={2}>
-          <MDInput type="password" placeholder="Password" size="large" />
+          <MDInput type="password" label="Password" size="large" />
         </MDBox>
         <MDBox display="flex" alignItems="center">
           <Checkbox checked={agreement} onChange={handleSetAgremment} />
