@@ -40,8 +40,8 @@ import breakpoints from "assets/theme/base/breakpoints";
 // Custom styles for DashboardNavbar
 import styles from "examples/Navbars/DefaultNavbar/styles/defaultNavbar";
 
-function DefaultNavbar({ transparent, light, action }) {
-  const classes = styles({ transparent, light });
+function DefaultNavbar({ transparent, light, signInRadius, action }) {
+  const classes = styles({ transparent, light, signInRadius });
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
 
@@ -157,12 +157,14 @@ DefaultNavbar.defaultProps = {
   transparent: false,
   light: false,
   action: false,
+  signInRadius: false,
 };
 
 // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
   transparent: PropTypes.bool,
   light: PropTypes.bool,
+  signInRadius: PropTypes.bool,
   action: PropTypes.oneOfType([
     PropTypes.bool,
     PropTypes.shape({

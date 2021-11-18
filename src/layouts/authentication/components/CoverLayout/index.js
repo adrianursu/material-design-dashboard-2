@@ -44,6 +44,7 @@ function CoverLayout({ children, top, image }) {
     <PageLayout className={classes.coverLayout_image}>
       <DefaultNavbar
         routes={routes}
+        signInRadius
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/soft-ui-dashboard-material-ui",

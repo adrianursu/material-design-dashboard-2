@@ -32,7 +32,15 @@ export default makeStyles(({ palette, boxShadows, functions, borders }) => {
       color: ({ light }) => (light ? white.main : dark.main),
       backdropFilter: ({ transparent }) =>
         transparent ? "none" : `saturate(200%) blur(${pxToRem(30)})`,
-      borderRadius: borderRadius.xl,
+      borderRadius: ({ signInRadius }) => {
+        let radius;
+        if (signInRadius) {
+          radius = borderRadius.xl;
+        } else {
+          radius = borderRadius.lg;
+        }
+        return radius;
+      },
       boxShadow: regular,
       margin: `${pxToRem(16)} ${pxToRem(24)}`,
       width: `calc(100% - ${pxToRem(48)})`,
