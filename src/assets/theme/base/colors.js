@@ -76,6 +76,7 @@ export default {
 
   light: {
     main: "#e9ecef",
+    focus: "#e9ecef",
   },
 
   dark: {

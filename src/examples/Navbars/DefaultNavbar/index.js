@@ -124,7 +124,7 @@ function DefaultNavbar({ transparent, light, action }) {
                 target="_blank"
                 rel="noreferrer"
                 variant="gradient"
-                buttonColor={action.color ? action.color : "black"}
+                buttonColor={action.color ? action.color : "dark"}
                 size="small"
               >
                 {action.label}

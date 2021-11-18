@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles(({ palette, functions }) => {
-  const { white, black, text, transparent, gradients } = palette;
+  const { white, dark, text, transparent, gradients } = palette;
   const { boxShadow, linearGradient, pxToRem, rgba } = functions;
 
   return {
@@ -50,7 +50,7 @@ export default makeStyles(({ palette, functions }) => {
         backgroundColor: ({ buttonColor }) =>
           buttonColor === "default" ? white.main : palette[buttonColor].main,
         color: ({ buttonColor }) => {
-          let textColor = black.main;
+          let textColor = dark.main;
 
           if (buttonColor === "default") {
             textColor = text.main;
