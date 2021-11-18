@@ -62,11 +62,10 @@ function IllustrationLayout({ header, title, description, children }) {
               component="img"
               src={image}
               alt="sign-up-image"
-              width="120rem"
               position="absolute"
-              topl={0}
+              width="100%"
+              height="100%"
               left={0}
-              opacity={1}
               style={{ backgroundSize: "cover" }}
             />
           </MDBox>
