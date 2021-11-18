@@ -35,7 +35,7 @@ import image from "assets/images/illustrations/illustration-signup.jpg";
 
 function IllustrationLayout({ header, title, description, children }) {
   return (
-    <PageLayout background="white">
+    <PageLayout>
       <DefaultNavbar
         routes={routes}
         action={{
