@@ -1,3 +1,3 @@
-# Material Design 2 Dashboar Pro React 
+# Material Design 2 Dashboard React 
 ## Updating the free version 
 
