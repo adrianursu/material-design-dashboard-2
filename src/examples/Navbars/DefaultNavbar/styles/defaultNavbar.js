@@ -16,10 +16,11 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(({ palette, functions, borders }) => {
+export default makeStyles(({ palette, boxShadows, functions, borders }) => {
   const { dark, white, transparent: transparentColor } = palette;
   const { rgba, pxToRem } = functions;
   const { borderRadius } = borders;
+  const { regular } = boxShadows;
 
   return {
     defaultNavbar: {
@@ -32,6 +33,7 @@ export default makeStyles(({ palette, functions, borders }) => {
       backdropFilter: ({ transparent }) =>
         transparent ? "none" : `saturate(200%) blur(${pxToRem(30)})`,
       borderRadius: borderRadius.xl,
+      boxShadow: regular,
       margin: `${pxToRem(16)} ${pxToRem(24)}`,
       width: `calc(100% - ${pxToRem(48)})`,
       position: "absolute",

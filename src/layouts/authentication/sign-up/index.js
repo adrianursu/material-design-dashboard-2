@@ -31,7 +31,7 @@ import MDButton from "components/MDButton";
 import IllustrationLayout from "layouts/authentication/components/IllustrationLayout";
 
 // Images
-import rocket from "assets/images/illustrations/rocket-white.png";
+import backgroundImage from "assets/images/illustrations/illustration-signup.jpg";
 
 function Illustration() {
   const [agreement, setAgreemnet] = useState(true);
@@ -43,7 +43,7 @@ function Illustration() {
       title="Sign Up"
       description="Enter your email and password to register"
       illustration={{
-        image: rocket,
+        image: backgroundImage,
         title: "Your journey starts here",
         description:
           "Just as it takes a company to sustain a product, it takes a community to sustain a protocol.",
