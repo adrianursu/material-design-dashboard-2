@@ -30,25 +30,13 @@ import MDButton from "components/MDButton";
 // Authentication layout components
 import IllustrationLayout from "layouts/authentication/components/IllustrationLayout";
 
-// Images
-import backgroundImage from "assets/images/illustrations/illustration-signup.jpg";
-
 function Illustration() {
   const [agreement, setAgreemnet] = useState(true);
 
   const handleSetAgremment = () => setAgreemnet(!agreement);
 
   return (
-    <IllustrationLayout
-      title="Sign Up"
-      description="Enter your email and password to register"
-      illustration={{
-        image: backgroundImage,
-        title: "Your journey starts here",
-        description:
-          "Just as it takes a company to sustain a product, it takes a community to sustain a protocol.",
-      }}
-    >
+    <IllustrationLayout title="Sign Up" description="Enter your email and password to register">
       <MDBox component="form" role="form">
         <MDBox mb={2}>
           <MDInput label="Name" size="large" />
@@ -60,7 +48,7 @@ function Illustration() {
           <MDInput type="password" label="Password" size="large" />
         </MDBox>
         <MDBox display="flex" alignItems="center">
-          <Checkbox checked={agreement} onChange={handleSetAgremment} />
+          <Checkbox checked={agreement} onChange={handleSetAgremment} color="primary" />
           <MDTypography
             variant="button"
             fontWeight="regular"
@@ -74,7 +62,7 @@ function Illustration() {
           </MDTypography>
         </MDBox>
         <MDBox mt={4} mb={1}>
-          <MDButton variant="gradient" buttonColor="info" size="large" fullWidth>
+          <MDButton variant="gradient" buttonColor="primary" size="large" fullWidth>
             sign up
           </MDButton>
         </MDBox>

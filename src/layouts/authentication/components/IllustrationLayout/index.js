@@ -71,9 +71,9 @@ function IllustrationLayout({ header, title, description, children }) {
             />
           </MDBox>
         </Grid>
-        <Grid item xs={11} sm={8} md={6} lg={4} xl={3} className="mx-auto">
+        <Grid item xs={12} sm={8} md={7} lg={5} xl={3} className="mx-auto">
           <MDBox display="flex" flexDirection="column" justifyContent="center" height="100vh">
-            <MDBox pt={3} px={3}>
+            <MDBox p={3}>
               {!header ? (
                 <>
                   <MDBox mb={1}>
@@ -81,7 +81,7 @@ function IllustrationLayout({ header, title, description, children }) {
                       {title}
                     </MDTypography>
                   </MDBox>
-                  <MDTypography variant="body2" fontWeight="regular" textColor="text">
+                  <MDTypography variant="body2" fontWeight="light" textColor="text">
                     {description}
                   </MDTypography>
                 </>
