@@ -102,7 +102,6 @@ IllustrationLayout.defaultProps = {
   header: "",
   title: "",
   description: "",
-  illustration: {},
 };
 
 // Typechecking props for the IllustrationLayout
@@ -111,11 +110,6 @@ IllustrationLayout.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
   children: PropTypes.node.isRequired,
-  illustration: PropTypes.shape({
-    image: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-  }),
 };
 
 export default IllustrationLayout;
