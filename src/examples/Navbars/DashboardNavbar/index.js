@@ -145,7 +145,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
               <MDInput label="Type here..." />
             </MDBox>
             <MDBox color={light ? "white" : "inherit"} customClass={classes.navbar_section_desktop}>
-              <Link to="/authentication/sign-in/basic">
+              <Link to="/authentication/sign-in">
                 <IconButton className={classes.navbar_icon_button}>
                   <Icon className={light}>person</Icon>
                   <MDTypography
