@@ -41,7 +41,8 @@ function CoverLayout({ children, top, image }) {
   const classes = styles({ image });
 
   return (
-    <PageLayout className={classes.coverLayout_image}>
+    <PageLayout>
+      <MDBox className={classes.coverLayout_image} />
       <DefaultNavbar
         routes={routes}
         signIn

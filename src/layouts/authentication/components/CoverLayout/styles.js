@@ -16,8 +16,9 @@ Coded by www.creative-tim.com
 // @mui material components
 import { makeStyles } from "@mui/styles";
 
-export default makeStyles(({ functions }) => {
-  const { pxToRem } = functions;
+export default makeStyles(({ functions, palette }) => {
+  const { linearGradient, rgba } = functions;
+  const { gradients } = palette;
 
   return {
     coverLayout: {
@@ -31,10 +32,18 @@ export default makeStyles(({ functions }) => {
     },
 
     coverLayout_image: {
-      backgroundImage: ({ image }) => `url(${image})`,
+      backgroundImage: ({ image }) =>
+        `${linearGradient(
+          rgba(gradients.dark.main, 0.6),
+          rgba(gradients.dark.state, 0.6)
+        )}, url(${image})`,
       backgroundSize: "cover",
-      marginLeft: pxToRem(0),
+      backgroundPosition: "center",
       height: "100%",
+      width: "100%",
+      position: "absolute",
+      top: 0,
+      left: 0,
     },
   };
 });
