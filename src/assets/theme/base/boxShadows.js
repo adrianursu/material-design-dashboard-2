@@ -77,43 +77,43 @@ export default {
     indicator: boxShadow([0, 1], [5, 1], tabs.indicator.boxShadow, 1),
   },
   coloredShadows: {
-    primary: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    primary: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       primary.main,
       0.4
     )}`,
-    secondary: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    secondary: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       secondary.main,
       0.4
     )}`,
-    info: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    info: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       info.main,
       0.4
     )}`,
-    success: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    success: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       success.main,
       0.4
     )}`,
-    warning: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    warning: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       warning.main,
       0.4
     )}`,
-    error: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    error: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       error.main,
       0.4
     )}`,
-    dark: `${boxShadow([0, 4], [20, 0], black.main, 0.4)}, ${boxShadow(
+    dark: `${boxShadow([0, 4], [20, 0], black.main, 0.14)}, ${boxShadow(
       [0, 7],
       [10, -5],
       dark.main,
