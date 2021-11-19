@@ -312,6 +312,14 @@ export default {
   },
 
   darkModeColors: {
-    backgroundColor: "#1a2035 !important",
+    bodyBackground: {
+      backgroundColor: "#1a2035 !important",
+      text: "#ffffff",
+    },
+
+    cardBackground: {
+      backgroundColor: "#202940 !important",
+      text: "#ffffff",
+    },
   },
 };
