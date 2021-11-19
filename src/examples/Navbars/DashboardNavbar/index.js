@@ -44,7 +44,7 @@ import styles from "examples/Navbars/DashboardNavbar/styles";
 import { useMaterialDesignController } from "context";
 
 // Images
-import team2 from "assets/images/team-2.jpg";
+import team2 from "assets/images/team/team-2.jpg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 
 function DashboardNavbar({ absolute, light, isMini }) {

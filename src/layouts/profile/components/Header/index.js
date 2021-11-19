@@ -41,7 +41,7 @@ import breakpoints from "assets/theme/base/breakpoints";
 import styles from "layouts/profile/components/Header/styles";
 
 // Images
-import burceMars from "assets/images/bruce-mars.jpg";
+import burceMars from "assets/images/team/bruce-mars.jpg";
 
 function Header(props) {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");

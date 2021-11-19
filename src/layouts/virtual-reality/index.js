@@ -41,8 +41,8 @@ import Messages from "layouts/virtual-reality/components/Messages";
 import styles from "layouts/virtual-reality/styles";
 
 // Images
-import team1 from "assets/images/team-1.jpg";
-import sunCloud from "assets/images/small-logos/icon-sun-cloud.png";
+import team1 from "assets/images/team/team-1.jpg";
+import sunCloud from "assets/images/vr-images/icon-sun-cloud.png";
 
 function VirtualReality() {
   const { d1, h2, fontWeightMedium } = typography;

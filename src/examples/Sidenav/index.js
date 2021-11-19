@@ -43,8 +43,8 @@ import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import styles from "examples/Sidenav/styles/sidenav";
 
 // Images
-import logoDark from "assets/images/logo-ct.png";
-import logoWhite from "assets/images/logo-ct-white.png";
+import logoDark from "assets/images/site-logos/logo-ct.png";
+import logoWhite from "assets/images/site-logos/logo-ct-white.png";
 
 // Material Design Dashboard 2 React context
 import { useMaterialDesignController } from "context";

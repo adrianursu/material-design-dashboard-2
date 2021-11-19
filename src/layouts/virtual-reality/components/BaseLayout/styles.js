@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 // Images
-import vrBg from "assets/images/vr-bg.jpg";
+import vrBg from "assets/images/vr-images/vr-bg.jpg";
 
 export default makeStyles(({ functions, borders, breakpoints }) => {
   const { pxToRem } = functions;

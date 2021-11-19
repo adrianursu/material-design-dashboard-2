@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 // Images
-import playerBackground from "assets/images/curved-images/player.jpg";
+import playerBackground from "assets/images/vr-images/player.jpg";
 
 export default makeStyles(({ palette, functions }) => {
   const { linearGradient, rgba, pxToRem } = functions;
