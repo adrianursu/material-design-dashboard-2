@@ -50,6 +50,8 @@ function ReportsLineChart({ title, description, chart, bgColor, boxShadow, subti
               mt={-3}
               mx={2}
               mb={0}
+              py={2}
+              pr={0.5}
               height="12.5rem"
               backgroundGradient
               style={{ boxShadow: `${boxShadow}` }}

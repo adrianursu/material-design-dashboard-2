@@ -30,7 +30,6 @@ import ReportsBarChart from "examples/Charts/BarCharts/ReportsBarChart";
 // Dashboard layout components
 import Projects from "layouts/dashboard/components/Projects";
 import OrderOverview from "layouts/dashboard/components/OrderOverview";
-import SalesTable from "examples/Tables/SalesTable";
 
 import boxShadows from "assets/theme/base/boxShadows";
 
@@ -38,7 +37,6 @@ import boxShadows from "assets/theme/base/boxShadows";
 import reportsBarChartData from "layouts/dashboard/data/reportsBarChartData";
 import reportsLineChartData from "layouts/dashboard/data/reportsLineChartData";
 import ReportsLineChart from "examples/Charts/LineCharts/ReportsLineChart";
-import salesTableData from "./data/salesTableData";
 
 function Dashboard() {
   const { chart } = reportsBarChartData;
@@ -157,29 +155,16 @@ function Dashboard() {
             </Grid>
           </Grid>
         </MDBox>
-        <Grid container spacing={3}>
-          <Grid item xs={12} md={6} lg={8}>
-            <MDBox mb={5}>
+        <MDBox mb={5}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={6} lg={8}>
               <Projects />
-            </MDBox>
-          </Grid>
-          <Grid item xs={12} md={6} lg={4}>
-            <MDBox mb={5}>
+            </Grid>
+            <Grid item xs={12} md={6} lg={4}>
               <OrderOverview />
-            </MDBox>
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid container>
-          <Grid item xs={12}>
-            <MDBox mb={3} position="relative">
-              <SalesTable
-                title="Sales by Country"
-                rows={salesTableData}
-                icon={{ color: "success", component: "language" }}
-              />
-            </MDBox>
-          </Grid>
-        </Grid>
+        </MDBox>
       </MDBox>
       <Footer />
     </DashboardLayout>

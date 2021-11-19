@@ -15,45 +15,47 @@ Coded by www.creative-tim.com
 
 // Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
-import borders from "assets/theme/base/borders";
 import boxShadows from "assets/theme/base/boxShadows";
 
 // Material Design Dashboard 2 React helper functions
-import rgba from "assets/theme/functions/rgba";
 import pxToRem from "assets/theme/functions/pxToRem";
 import linearGradient from "assets/theme/functions/linearGradient";
 
-const { white, light, gradients } = colors;
-const { borderWidth } = borders;
+const { white, gradients, grey } = colors;
 const { regular } = boxShadows;
 
 export default {
   defaultProps: {
     disableRipple: true,
   },
-
   styleOverrides: {
     root: {
-      width: pxToRem(40),
-      height: pxToRem(20),
+      width: pxToRem(30),
+      height: pxToRem(15),
       margin: `${pxToRem(4)} 0`,
       padding: 0,
       borderRadius: pxToRem(160),
+      overflow: "visible",
+      cursor: "pointer",
       transition: "transform 250ms ease-in",
     },
 
     switchBase: {
       padding: 0,
       top: "50%",
-      transform: `translate(${pxToRem(2)}, -50%)`,
+      transform: `translate(0, -50%)`,
       transition: `transform 250ms ease-in-out`,
 
       "&.Mui-checked": {
         transform: `translate(${pxToRem(22)}, -50%)`,
 
+        "& .MuiSwitch-thumb": {
+          borderColor: `${gradients.dark.main} !important`,
+        },
+
         "& + .MuiSwitch-track": {
-          backgroundColor: `${rgba(gradients.dark.state, 0.95)} !important`,
-          borderColor: `${rgba(gradients.dark.state, 0.95)} !important`,
+          backgroundColor: `${gradients.dark.main} !important`,
+          borderColor: `${gradients.dark.main} !important`,
           opacity: 1,
         },
       },
@@ -68,16 +70,17 @@ export default {
     },
 
     thumb: {
-      width: pxToRem(16),
-      height: pxToRem(16),
+      width: pxToRem(20),
+      height: pxToRem(20),
       backgroundColor: white.main,
+      border: `1px solid ${grey[400]}`,
       boxShadow: regular,
-      top: "50%",
+      transform: "translate(-5px, -0.5px)",
     },
 
     track: {
-      backgroundColor: rgba(gradients.dark.state, 0.1),
-      border: `${borderWidth[1]} solid ${light.main}`,
+      backgroundColor: grey[400],
+      border: "none",
       borderRadius: pxToRem(160),
       opacity: 1,
       transition: `background-color 250ms ease, border-color 200ms ease`,
