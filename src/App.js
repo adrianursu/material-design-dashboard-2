@@ -121,7 +121,7 @@ export default function App() {
       customClass="cursor-pointer"
       onClick={handleConfiguratorOpen}
     >
-      <Icon className=" text-dark" fontSize="default">
+      <Icon className=" text-dark" fontSize="small">
         settings
       </Icon>
     </MDBox>
