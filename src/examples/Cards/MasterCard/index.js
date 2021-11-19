@@ -29,6 +29,7 @@ import styles from "examples/Cards/MasterCard/styles";
 
 // Images
 import masterCardLogo from "assets/images/logos/mastercard.png";
+import patternTree from "assets/images/illustrations/pattern-tree.svg";
 
 function MasterCard({ color, number, holder, expires }) {
   const classes = styles({ color });
@@ -47,7 +48,17 @@ function MasterCard({ color, number, holder, expires }) {
 
   return (
     <Card className={classes.masterCard}>
-      <MDBox p={2}>
+      <MDBox
+        component="img"
+        src={patternTree}
+        width="100%"
+        height="100%"
+        position="absolute"
+        top={0}
+        opacity={0.2}
+        zIndex={1}
+      />
+      <MDBox p={2} position="relative" zIndex={2}>
         <MDBox color="white" p={1} lineHeight={0} display="inline-block">
           <Icon className={classes.masterCard_icon} fontSize="medium">
             wifi

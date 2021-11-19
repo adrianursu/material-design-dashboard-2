@@ -17,7 +17,6 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 // Images
-import patternTree from "assets/images/illustrations/pattern-tree.svg";
 import pxToRem from "assets/theme/functions/pxToRem";
 
 export default makeStyles(({ functions, palette, boxShadows }) => {
@@ -27,19 +26,16 @@ export default makeStyles(({ functions, palette, boxShadows }) => {
 
   return {
     masterCard: {
-      background: ({ color }) =>
-        `${linearGradient(
-          gradients[color].main,
-          gradients[color].state,
-          195
-        )}, url(${patternTree})`,
+      backgroundImage: ({ color }) =>
+        linearGradient(gradients[color].main, gradients[color].state, 195),
+      backgroundSize: "cover",
       boxShadow: sm,
+      height: "100%",
     },
 
     masterCard_number: {
       marginTop: pxToRem(24),
       marginBottom: pxToRem(40),
-      paddingBottom: pxToRem(8),
     },
   };
 });
