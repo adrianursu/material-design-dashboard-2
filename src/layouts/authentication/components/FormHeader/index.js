@@ -8,6 +8,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
 import Stack from "@mui/material/Stack";
+import Link from "@mui/material/Link";
 
 function FormHeader({ text, backgroundColor, boxShadow }) {
   return (
@@ -32,9 +33,17 @@ function FormHeader({ text, backgroundColor, boxShadow }) {
           </MDTypography>
         </MDBox>
         <Stack direction="row" spacing={6}>
-          <FacebookIcon color="white" />
-          <GitHubIcon color="white" />
-          <GoogleIcon color="white" />
+          <Link href="/">
+            <FacebookIcon color="white" />{" "}
+          </Link>
+
+          <Link href="/">
+            <GitHubIcon color="white" />
+          </Link>
+
+          <Link href="/">
+            <GoogleIcon color="white" />
+          </Link>
         </Stack>
       </MDBox>
     </MDBox>
