@@ -17,12 +17,10 @@ Coded by www.creative-tim.com
 import PropTypes from "prop-types";
 
 // @mui material components
-// import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
-// import MDTypography from "components/MDTypography";
 
 // Material Design Dashboard 2 React example components
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";

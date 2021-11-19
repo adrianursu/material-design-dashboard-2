@@ -66,7 +66,6 @@ function IllustrationLayout({ header, title, description, children }) {
               width="100%"
               height="100%"
               left={0}
-              style={{ backgroundSize: "cover" }}
             />
           </MDBox>
         </Grid>
