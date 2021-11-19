@@ -310,4 +310,8 @@ export default {
   tabs: {
     indicator: { boxShadow: "#ddd" },
   },
+
+  darkModeColors: {
+    backgroundColor: "#1a2035 !important",
+  },
 };

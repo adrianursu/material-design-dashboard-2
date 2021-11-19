@@ -46,7 +46,7 @@ import { useMaterialDesignController } from "context";
 
 function Configurator() {
   const [controller, dispatch] = useMaterialDesignController();
-  const { openConfigurator, transparentSidenav, fixedNavbar, sidenavColor, darkSidenav } =
+  const { openConfigurator, transparentSidenav, fixedNavbar, sidenavColor, darkSidenav, darkMode } =
     controller;
   const [disabled, setDisabled] = useState(false);
   const classes = styles({ sidenavColor });
@@ -85,6 +85,10 @@ function Configurator() {
 
   const handleFixedNavbar = () => {
     dispatch({ type: "FIXED_NAVBAR", value: !fixedNavbar });
+  };
+
+  const handleDarkMode = () => {
+    dispatch({ type: "DARK_MODE", value: !darkMode });
   };
 
   const handleDarkSidenav = () => {
@@ -192,7 +196,7 @@ function Configurator() {
 
         <MDBox mt={0} mb={2} display="flex" justifyContent="space-between">
           <MDTypography variant="h6">Light / Dark</MDTypography>
-          <Switch unchecked={fixedNavbar} onChange={handleFixedNavbar} />
+          <Switch unchecked={darkMode} onChange={handleDarkMode} />
         </MDBox>
 
         <MDBox mt={3} mb={2}>
