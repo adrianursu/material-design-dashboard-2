@@ -1,12 +1,34 @@
-import MDBox from "components/MDBox";
+/**
+=========================================================
+* Material Design Dashboard 2 React - v2.0.0
+=========================================================
 
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
+// Material Design Dashboard 2 boxShadows
 import boxShadows from "assets/theme/base/boxShadows";
 
+// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
+
+// Material Design Dashboard 2 React components
 import MDTypography from "components/MDTypography";
+import MDBox from "components/MDBox";
+
+// @mui material icons
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
+
+// @mui material components
 import Stack from "@mui/material/Stack";
 import Link from "@mui/material/Link";
 
