@@ -58,7 +58,7 @@ function CoverLayout({ children, top, image }) {
       </MDBox>
       <MDBox mt="auto">
         <Container>
-          <Footer />
+          <Footer textColor="white" />
         </Container>
       </MDBox>
     </PageLayout>

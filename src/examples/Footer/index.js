@@ -30,7 +30,7 @@ import typography from "assets/theme/base/typography";
 // Custom styles for the Footer
 import styles from "examples/Footer/styles";
 
-function Footer({ company, links }) {
+function Footer({ company, links, textColor }) {
   const { href, name } = company;
   const { size } = typography;
   const classes = styles();
@@ -39,7 +39,7 @@ function Footer({ company, links }) {
     links.map((link) => (
       <MDBox key={link.name} component="li" px={2}>
         <Link href={link.href} target="_blank">
-          <MDTypography variant="button" fontWeight="regular" textColor="text">
+          <MDTypography variant="button" fontWeight="regular" textColor={textColor}>
             {link.name}
           </MDTypography>
         </Link>
@@ -60,19 +60,19 @@ function Footer({ company, links }) {
         justifyContent="center"
         alignItems="center"
         flexWrap="wrap"
-        color="text"
+        color={textColor}
         fontSize={size.sm}
         px={1.5}
       >
         &copy; {new Date().getFullYear()}, made with
-        <MDBox fontSize={size.regular} color="text" mb={-0.5} mx={0.25}>
+        <MDBox fontSize={size.regular} color={textColor} mb={-0.5} mx={0.25}>
           <Icon color="inherit" fontSize="inherit">
             favorite
           </Icon>
         </MDBox>
         by
         <Link href={href} target="_blank">
-          <MDTypography variant="button" fontWeight="medium">
+          <MDTypography variant="button" fontWeight="medium" textColor={textColor}>
             &nbsp;{name}&nbsp;
           </MDTypography>
         </Link>
@@ -94,12 +94,14 @@ Footer.defaultProps = {
     { href: "https://www.creative-tim.com/blog", name: "Blog" },
     { href: "https://www.creative-tim.com/license", name: "License" },
   ],
+  textColor: "text",
 };
 
 // Typechecking props for the Footer
 Footer.propTypes = {
   company: PropTypes.objectOf(PropTypes.string),
   links: PropTypes.arrayOf(PropTypes.object),
+  textColor: PropTypes.string,
 };
 
 export default Footer;
