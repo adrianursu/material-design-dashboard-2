@@ -42,6 +42,7 @@ import Configurator from "examples/Configurator";
 // Material Design Dashboard 2 React themes
 import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
+import themeDark from "assets/theme/theme-dark";
 
 // Material Design Dashboard 2 React routes
 import routes from "routes";
@@ -55,7 +56,7 @@ import createCache from "@emotion/cache";
 
 export default function App() {
   const [controller, dispatch] = useMaterialDesignController();
-  const { direction, layout, openConfigurator } = controller;
+  const { direction, layout, openConfigurator, darkMode } = controller;
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
 
@@ -150,7 +151,7 @@ export default function App() {
   ) : (
     // </CacheProvider>
     <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={darkMode ? themeDark : theme}>
         <CssBaseline />
         {layout === "dashboard" && (
           <>
