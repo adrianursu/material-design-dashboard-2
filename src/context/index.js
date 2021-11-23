@@ -56,6 +56,9 @@ function reducer(state, action) {
     case "LAYOUT": {
       return { ...state, layout: action.value };
     }
+    case "DARK_MODE": {
+      return { ...state, darkMode: action.value };
+    }
     default: {
       throw new Error(`Unhandled action type: ${action.type}`);
     }
@@ -74,6 +77,7 @@ function MaterialDesignControllerProvider({ children }) {
     openConfigurator: false,
     direction: "ltr",
     layout: "dashboard",
+    darkMode: false,
   };
 
   const [controller, dispatch] = useReducer(reducer, initialState);
