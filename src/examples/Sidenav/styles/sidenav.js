@@ -28,7 +28,6 @@ export default makeStyles(
       sidenav: {
         boxShadow: xxl,
         border: "none",
-        background: linearGradient(gradients.dark.main, gradients.dark.state),
         [breakpoints.up("xl")]: {
           background: ({ transparentSidenav, darkSidenav }) => {
             let finalValue;
