@@ -19,7 +19,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(({ palette, typography, borders, functions, transitions }) => {
   const { white, alertColors } = palette;
   const { size, fontSizeRegular, fontWeightMedium } = typography;
-  const { borderWidth, borderRadius } = borders;
+  const { borderRadius } = borders;
   const { pxToRem, linearGradient } = functions;
 
   return {
@@ -34,7 +34,6 @@ export default makeStyles(({ palette, typography, borders, functions, transition
       position: "relative",
       padding: pxToRem(16),
       marginBottom: pxToRem(16),
-      border: ({ color }) => `${borderWidth[1]} solid ${alertColors[color].border}`,
       borderRadius: borderRadius.md,
       fontSize: fontSizeRegular,
       fontWeight: fontWeightMedium,
