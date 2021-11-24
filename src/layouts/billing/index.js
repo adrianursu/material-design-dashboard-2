@@ -16,16 +16,17 @@ Coded by www.creative-tim.com
 // @mui material components
 import Grid from "@mui/material/Grid";
 
-// Soft UI Dashboard React components
+// Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
 
-// Soft UI Dashboard React components
+// Material Design Dashboard 2 React components
 import MasterCard from "examples/Cards/MasterCard";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 
-// Soft UI Dashboard React example components
+// Material Design Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
+import Footer from "examples/Footer";
 
 // Billing page components
 import PaymentMethod from "layouts/billing/components/PaymentMethod";
@@ -82,6 +83,7 @@ function Billing() {
           </Grid>
         </MDBox>
       </MDBox>
+      <Footer />
     </DashboardLayout>
   );
 }
