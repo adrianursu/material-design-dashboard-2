@@ -17,13 +17,23 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles(({ palette, typography, functions }) => {
-  const { gradients, transparent } = palette;
+  const { gradients, transparent, white } = palette;
   const { fontWeightLight, fontWeightRegular, fontWeightMedium, fontWeightBold } = typography;
   const { linearGradient } = functions;
 
   return {
     mdTypography: {
-      color: ({ textColor }) => (textColor === "inherit" ? "inherit" : palette[textColor].main),
+      color: ({ textColor, darkMode }) => {
+        let colorValue;
+        if (darkMode) {
+          colorValue = white.main;
+        } else if (textColor === "inherit") {
+          colorValue = "inherit";
+        } else {
+          colorValue = palette[textColor].main;
+        }
+        return colorValue;
+      },
       opacity: ({ opacity }) => opacity,
       textDecoration: "none",
     },

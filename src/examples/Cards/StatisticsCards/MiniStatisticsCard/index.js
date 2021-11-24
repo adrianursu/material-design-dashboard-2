@@ -29,6 +29,10 @@ import MDTypography from "components/MDTypography";
 import boxShadows from "assets/theme/base/boxShadows";
 import { Divider } from "@mui/material";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+import darkModeColors from "assets/theme/base/darkModeColors";
+
 function MiniStatisticsCard({
   backgroundColor,
   title,
@@ -38,9 +42,18 @@ function MiniStatisticsCard({
   boxShadow,
   description,
 }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+  const { background } = darkModeColors;
   return (
     <Card className="overflow-visible">
-      <MDBox backgroundColor={backgroundColor} backgroundGradient borderRadius="xl">
+      <MDBox
+        backgroundColor={
+          darkMode && backgroundColor === "white" ? background.state : backgroundColor
+        }
+        backgroundGradient
+        borderRadius="xl"
+      >
         <MDBox>
           <Grid
             container

@@ -19,7 +19,7 @@ import { createTheme } from "@mui/material/styles";
 // Material Design Dashboard 2 React base styles
 import darkModeColors from "assets/theme/base/darkModeColors";
 import breakpoints from "assets/theme/base/breakpoints";
-import typography from "assets/theme/base/typography";
+import darkTypography from "assets/theme/base/darkModeTypography";
 import boxShadows from "assets/theme/base/boxShadows";
 import borders from "assets/theme/base/borders";
 import globals from "assets/theme/base/globals";
@@ -79,7 +79,7 @@ import link from "assets/theme/components/link";
 export default createTheme({
   breakpoints: { ...breakpoints },
   palette: { ...darkModeColors },
-  typography: { ...typography },
+  typography: { ...darkTypography },
   boxShadows: { ...boxShadows },
   borders: { ...borders },
   functions: {
