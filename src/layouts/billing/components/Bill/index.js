@@ -24,14 +24,21 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+import darkModeColors from "assets/theme/base/darkModeColors";
+
 function Bill({ name, company, email, vat, noGutter }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+  const { background } = darkModeColors;
   return (
     <MDBox
       component="li"
       display="flex"
       justifyContent="space-between"
       alignItems="flex-start"
-      backgroundColor="grey-100"
+      backgroundColor={darkMode ? background.state : "grey-100"}
       borderRadius="lg"
       p={3}
       mb={noGutter ? 0 : 1}
