@@ -133,8 +133,8 @@ export default {
     },
 
     dark: {
-      main: "#42424a",
-      state: "#191919",
+      main: "#323a54",
+      state: "#1a2035",
     },
   },
 
