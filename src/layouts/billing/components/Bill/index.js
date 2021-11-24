@@ -58,7 +58,7 @@ function Bill({ name, company, email, vat, noGutter }) {
 
           <MDBox display="flex" alignItems="center" mt={{ xs: 2, sm: 0 }} ml={{ xs: -1.5, sm: 0 }}>
             <MDBox mr={1}>
-              <MDButton variant="text" buttonColor="primary">
+              <MDButton variant="text" buttonColor="error">
                 <Icon className="material-icons-round">delete</Icon>&nbsp;delete
               </MDButton>
             </MDBox>

@@ -63,7 +63,7 @@ function Transactions() {
           customClass="no-list-style"
         >
           <Transaction
-            color="primary"
+            color="error"
             icon="arrow_downward"
             name="Netflix"
             description="27 March 2020, at 12:30 PM"
