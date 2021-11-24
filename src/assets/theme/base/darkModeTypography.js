@@ -10,7 +10,7 @@ import darkModeColors from "assets/theme/base/darkModeColors";
 // Material Design Dashboard 2 React Helper Functions
 import pxToRem from "assets/theme/functions/pxToRem";
 
-const { white } = darkModeColors;
+const { dark } = darkModeColors;
 
 const baseProperties = {
   fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
@@ -28,13 +28,13 @@ const baseProperties = {
 
 const baseHeadingProperties = {
   fontFamily: baseProperties.fontFamily,
-  color: white.main,
+  color: dark.main,
   fontWeight: baseProperties.fontWeightMedium,
 };
 
 const baseDisplayProperties = {
   fontFamily: baseProperties.fontFamily,
-  color: white.main,
+  color: dark.main,
   fontWeight: baseProperties.fontWeightLight,
   lineHeight: 1.2,
 };

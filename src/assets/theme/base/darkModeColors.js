@@ -26,7 +26,7 @@ export default {
   },
 
   text: {
-    main: "#ffffff",
+    main: "#67748e",
   },
 
   transparent: {
