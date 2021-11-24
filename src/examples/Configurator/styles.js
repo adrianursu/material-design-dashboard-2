@@ -12,9 +12,10 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Materialware.
 */
-
 // @mui material components
 import { makeStyles } from "@mui/styles";
+
+// import darkModeColors from "../../assets/theme/base/darkModeColors";
 
 export default makeStyles(
   ({ palette, borders, boxShadows, functions, transitions, typography }) => {
@@ -24,6 +25,7 @@ export default makeStyles(
     const { lg, buttonBoxShadow } = boxShadows;
     const { pxToRem, linearGradient } = functions;
     const { size } = typography;
+    // const { background } = darkModeColors;
 
     return {
       configurator: {
@@ -33,7 +35,16 @@ export default makeStyles(
         borderRadius: 0,
         boxShadow: lg,
         overflowY: "auto",
-        backgroundColor: "white",
+        // backgroundColor: "white",
+        backgroundColor: ({ darkMode }) => {
+          let colorValue;
+          if (darkMode) {
+            colorValue = dark.main;
+          } else {
+            colorValue = white.main;
+          }
+          return colorValue;
+        },
       },
 
       configurator_close_icon: {
