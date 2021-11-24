@@ -36,7 +36,7 @@ import sidenav from "assets/theme/components/sidenav";
 import list from "assets/theme/components/list";
 import listItem from "assets/theme/components/list/listItem";
 import listItemText from "assets/theme/components/list/listItemText";
-import card from "assets/theme/components/card";
+import cardDark from "assets/theme/components/card-dark";
 import cardMedia from "assets/theme/components/card/cardMedia";
 import cardContent from "assets/theme/components/card/cardContent";
 import button from "assets/theme/components/button";
@@ -100,7 +100,7 @@ export default createTheme({
     MuiList: { ...list },
     MuiListItem: { ...listItem },
     MuiListItemText: { ...listItemText },
-    MuiCard: { ...card },
+    MuiCard: { ...cardDark },
     MuiCardMedia: { ...cardMedia },
     MuiCardContent: { ...cardContent },
     MuiButton: { ...button },
