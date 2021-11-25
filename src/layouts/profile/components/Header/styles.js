@@ -19,11 +19,10 @@ import { makeStyles } from "@mui/styles";
 // Images
 import profileOverview from "assets/images/profile-overview.jpg";
 
-export default makeStyles(({ palette, functions, borders, boxShadows }) => {
-  const { gradients, white } = palette;
+export default makeStyles(({ palette, functions, borders }) => {
+  const { gradients } = palette;
   const { linearGradient, rgba, pxToRem } = functions;
   const { borderRadius } = borders;
-  const { navbarBoxShadow } = boxShadows;
 
   return {
     profileHeader_background: {
@@ -43,8 +42,6 @@ export default makeStyles(({ palette, functions, borders, boxShadows }) => {
 
     profileHeader_profile: {
       backdropFilter: `saturate(200%) blur(${pxToRem(30)})`,
-      backgroundColor: rgba(white.main, 1),
-      boxShadow: navbarBoxShadow,
       margin: `${pxToRem(-64)} ${pxToRem(24)} 0`,
       padding: pxToRem(16),
       position: "relative",
