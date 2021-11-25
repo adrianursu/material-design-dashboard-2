@@ -29,6 +29,7 @@ export default {
     root: {
       borderRadius: "6px",
       fontSize: "14px",
+      color: "white",
       width: "100%",
       "&:hover": {
         "& .MuiOutlinedInput-notchedOutline": {
