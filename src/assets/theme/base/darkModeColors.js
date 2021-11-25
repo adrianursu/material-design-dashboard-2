@@ -23,6 +23,7 @@ export default {
   background: {
     default: "#1a2035 !important",
     state: "#202940",
+    sidenav: "#1f283e !important",
   },
 
   text: {

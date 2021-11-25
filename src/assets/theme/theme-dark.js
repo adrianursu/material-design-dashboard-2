@@ -32,7 +32,7 @@ import pxToRem from "assets/theme/functions/pxToRem";
 import rgba from "assets/theme/functions/rgba";
 
 // Material Design Dashboard 2 React components base styles for @mui material components
-import sidenav from "assets/theme/components/sidenav";
+import darkModeSidenav from "assets/theme/components/darkModeSidenav";
 import list from "assets/theme/components/list";
 import listItem from "assets/theme/components/list/listItem";
 import listItemText from "assets/theme/components/list/listItemText";
@@ -96,7 +96,7 @@ export default createTheme({
         ...container,
       },
     },
-    MuiDrawer: { ...sidenav },
+    MuiDrawer: { ...darkModeSidenav },
     MuiList: { ...list },
     MuiListItem: { ...listItem },
     MuiListItemText: { ...listItemText },
