@@ -67,8 +67,8 @@ import formLabel from "assets/theme/components/form/formLabel";
 import checkbox from "assets/theme/components/form/checkbox";
 import radio from "assets/theme/components/form/radio";
 import autocomplete from "assets/theme/components/form/autocomplete";
-import input from "assets/theme/components/form/input";
-import inputLabel from "assets/theme/components/form/inputLabel";
+import darkModeInput from "assets/theme/components/form/darkModeInput";
+import darkModeInputLabel from "assets/theme/components/form/darkModeInputLabel";
 import container from "assets/theme/components/container";
 import popover from "assets/theme/components/popover";
 import buttonBase from "assets/theme/components/buttonBase";
@@ -131,10 +131,10 @@ export default createTheme({
     MuiCheckbox: { ...checkbox },
     MuiRadio: { ...radio },
     MuiAutocomplete: { ...autocomplete },
-    MuiInput: { ...input },
-    MuiOutlinedInput: { ...input },
-    MuiFilledInput: { ...input },
-    MuiInputLabel: { ...inputLabel },
+    MuiInput: { ...darkModeInput },
+    MuiOutlinedInput: { ...darkModeInput },
+    MuiFilledInput: { ...darkModeInput },
+    MuiInputLabel: { ...darkModeInputLabel },
     MuiPopover: { ...popover },
     MuiButtonBase: { ...buttonBase },
     MuiIcon: { ...icon },
