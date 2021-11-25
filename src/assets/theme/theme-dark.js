@@ -44,7 +44,7 @@ import iconButton from "assets/theme/components/iconButton";
 import menu from "assets/theme/components/menu";
 import menuItem from "assets/theme/components/menu/menuItem";
 import switchButton from "assets/theme/components/form/switchButton";
-import divider from "assets/theme/components/divider";
+import darkModeDivider from "assets/theme/components/darkModeDivider";
 import tableContainer from "assets/theme/components/table/tableContainer";
 import tableHead from "assets/theme/components/table/tableHead";
 import tableCell from "assets/theme/components/table/tableCell";
@@ -108,7 +108,7 @@ export default createTheme({
     MuiMenu: { ...menu },
     MuiMenuItem: { ...menuItem },
     MuiSwitch: { ...switchButton },
-    MuiDivider: { ...divider },
+    MuiDivider: { ...darkModeDivider },
     MuiTableContainer: { ...tableContainer },
     MuiTableHead: { ...tableHead },
     MuiTableCell: { ...tableCell },
