@@ -24,11 +24,16 @@ import MDButton from "components/MDButton";
 // Billing page components
 import Invoice from "layouts/billing/components/Invoice";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Invoices() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card id="delete-account">
       <MDBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
-        <MDTypography variant="h6" fontWeight="medium">
+        <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
           Invoices
         </MDTypography>
         <MDButton variant="outlined" buttonColor="primary" size="small">
