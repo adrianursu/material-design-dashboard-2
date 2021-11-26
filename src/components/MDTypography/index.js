@@ -27,9 +27,6 @@ import Typography from "@mui/material/Typography";
 // Custom styles for MDTypography
 import styles from "components/MDTypography/styles";
 
-// Material Design Dashboard 2 React context
-import { useMaterialDesignController } from "context";
-
 const MDTypography = forwardRef(
   (
     {
@@ -45,9 +42,7 @@ const MDTypography = forwardRef(
     },
     ref
   ) => {
-    const [controller] = useMaterialDesignController();
-    const { darkMode } = controller;
-    const classes = styles({ textColor, textTransform, verticalAlign, opacity, darkMode });
+    const classes = styles({ textColor, textTransform, verticalAlign, opacity });
 
     return (
       <Typography

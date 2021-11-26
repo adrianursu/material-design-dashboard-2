@@ -20,12 +20,11 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(
   ({ palette, borders, boxShadows, functions, transitions, typography }) => {
     const configuratorWidth = 360;
-    const { dark, white, gradients } = palette;
+    const { dark, white, gradients, background, transparent } = palette;
     const { borderWidth } = borders;
     const { lg, buttonBoxShadow } = boxShadows;
     const { pxToRem, linearGradient } = functions;
     const { size } = typography;
-    // const { background } = darkModeColors;
 
     return {
       configurator: {
@@ -35,15 +34,11 @@ export default makeStyles(
         borderRadius: 0,
         boxShadow: lg,
         overflowY: "auto",
-        // backgroundColor: "white",
-        backgroundColor: ({ darkMode }) => {
-          let colorValue;
-          if (darkMode) {
-            colorValue = dark.main;
-          } else {
-            colorValue = white.main;
-          }
-          return colorValue;
+        background: ({ darkMode }) => (darkMode ? background.state : white.main),
+
+        "& *": {
+          color: ({ darkMode }) => darkMode && `${white.main} !important`,
+          borderColor: ({ darkMode }) => darkMode && `${white.main} !important`,
         },
       },
 
@@ -53,6 +48,7 @@ export default makeStyles(
         strokeWidth: pxToRem(2),
         marginTop: pxToRem(16),
         cursor: "pointer",
+        color: ({ darkMode }) => (darkMode ? white.main : dark.main),
       },
 
       configurator_sidenav_color: {
@@ -83,9 +79,20 @@ export default makeStyles(
         "& .MuiButton-root": {
           height: pxToRem(42),
           boxShadow: buttonBoxShadow.main,
+          background: transparent.main,
 
           "&:hover, &:focus": {
             opacity: 1,
+          },
+        },
+
+        "& .MuiButton-contained": {
+          background: white.main,
+          color: `${dark.main} !important`,
+
+          "&:hover, &:focus": {
+            background: white.main,
+            color: `${dark.main} !important`,
           },
         },
       },
