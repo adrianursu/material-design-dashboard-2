@@ -20,14 +20,19 @@ import Card from "@mui/material/Card";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Billing page components
 import Bill from "layouts/billing/components/Bill";
 
 function BillingInformation() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card id="delete-account">
       <MDBox pt={3} px={2}>
-        <MDTypography variant="h6" fontWeight="medium">
+        <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
           Billing Information
         </MDTypography>
       </MDBox>

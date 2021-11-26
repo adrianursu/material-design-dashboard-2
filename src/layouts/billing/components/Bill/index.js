@@ -26,6 +26,7 @@ import MDButton from "components/MDButton";
 
 // Material Design Dashboard 2 React context
 import { useMaterialDesignController } from "context";
+
 import darkModeColors from "assets/theme/base/darkModeColors";
 
 function Bill({ name, company, email, vat, noGutter }) {
@@ -56,7 +57,7 @@ function Bill({ name, company, email, vat, noGutter }) {
             variant="button"
             fontWeight="medium"
             textTransform="capitalize"
-            textColor={darkMode ? "white" : "text"}
+            textColor={darkMode ? "white" : "dark"}
           >
             {name}
           </MDTypography>
@@ -79,7 +80,7 @@ function Bill({ name, company, email, vat, noGutter }) {
               variant="caption"
               fontWeight="medium"
               textTransform="capitalize"
-              textColor={darkMode ? "white" : "text"}
+              textColor={darkMode ? "white" : "dark"}
             >
               {company}
             </MDTypography>
@@ -91,7 +92,7 @@ function Bill({ name, company, email, vat, noGutter }) {
             <MDTypography
               variant="caption"
               fontWeight="medium"
-              textColor={darkMode ? "white" : "text"}
+              textColor={darkMode ? "white" : "dark"}
             >
               {email}
             </MDTypography>
@@ -102,7 +103,7 @@ function Bill({ name, company, email, vat, noGutter }) {
           <MDTypography
             variant="caption"
             fontWeight="medium"
-            textColor={darkMode ? "white" : "text"}
+            textColor={darkMode ? "white" : "dark"}
           >
             {vat}
           </MDTypography>
