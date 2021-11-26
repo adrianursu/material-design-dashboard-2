@@ -77,7 +77,7 @@ function ReportsBarChart({ title, description, chart, bgColor, boxShadow, subtit
             variant="button"
             textColor={darkMode ? "white" : "text"}
             opacity={darkMode ? 0.7 : 1}
-            fontWeight="regular"
+            fontWeight="light"
           >
             {description}
           </MDTypography>

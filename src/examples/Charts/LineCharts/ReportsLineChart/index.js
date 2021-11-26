@@ -29,6 +29,9 @@ import TimeIcon from "@mui/icons-material/AccessTime";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // ReportsBarChart configurations
 import configs from "examples/Charts/LineCharts/ReportsLineChart/configs";
 
@@ -36,9 +39,10 @@ import configs from "examples/Charts/LineCharts/ReportsLineChart/configs";
 import boxShadows from "assets/theme/base/boxShadows";
 import { Divider } from "@mui/material";
 
-function ReportsLineChart({ title, description, chart, bgColor, boxShadow, subtitle }) {
+function ReportsLineChart({ title, description, chart, bgColor, boxShadow, subtitle, percentage }) {
   const { data, options } = configs(chart.labels, chart.datasets);
-
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card className="overflow-visible">
       <MDBox>
@@ -62,16 +66,38 @@ function ReportsLineChart({ title, description, chart, bgColor, boxShadow, subti
           [chart]
         )}
         <MDBox p={3} lineHeight={0}>
-          <MDTypography variant="h6" textTransform="capitalize">
+          <MDTypography
+            variant="h6"
+            textTransform="capitalize"
+            textColor={darkMode ? "white" : "text"}
+          >
             {title}
           </MDTypography>
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
+          <MDTypography
+            variant="button"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.6 : 1}
+            fontWeight="bold"
+          >
+            {percentage}
+          </MDTypography>
+          <MDTypography
+            variant="button"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.6 : 1}
+            fontWeight="light"
+          >
             {description}
           </MDTypography>
           <Divider />
           <MDBox display="flex" alignItems="center">
             <TimeIcon fontSize="small" color="secondary" />
-            <MDTypography variant="caption" fontWeight="light">
+            <MDTypography
+              variant="caption"
+              fontWeight="light"
+              textColor={darkMode ? "white" : "text"}
+              opacity={darkMode ? 0.6 : 1}
+            >
               &nbsp;{subtitle}
             </MDTypography>
           </MDBox>
@@ -87,6 +113,7 @@ ReportsLineChart.defaultProps = {
   bgColor: "dark",
   boxShadow: boxShadows.coloredShadows.primary,
   subtitle: "",
+  percentage: "",
 };
 
 // Typechecking props for the ReportsBarChart
@@ -97,6 +124,7 @@ ReportsLineChart.propTypes = {
   bgColor: PropTypes.oneOfType([PropTypes.string]),
   boxShadow: PropTypes.node,
   subtitle: PropTypes.string,
+  percentage: PropTypes.string,
 };
 
 export default ReportsLineChart;

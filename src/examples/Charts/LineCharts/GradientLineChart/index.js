@@ -37,6 +37,9 @@ import configs from "examples/Charts/LineCharts/GradientLineChart/configs";
 // Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Import boxShadows theme
 import boxShadows from "assets/theme/base/boxShadows";
 
@@ -60,6 +63,8 @@ function GradientLineChart({ title, description, height, chart, bgColor, boxShad
     setChartData(configs(chart.labels, chartDatasets));
   }, [chart]);
 
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   const renderChart = (
     <MDBox padding="1rem" mt={-5}>
       {useMemo(
@@ -83,10 +88,19 @@ function GradientLineChart({ title, description, height, chart, bgColor, boxShad
       )}
 
       <MDBox px={1}>
-        <MDTypography variant="h6" textTransform="capitalize">
+        <MDTypography
+          variant="h6"
+          textTransform="capitalize"
+          textColor={darkMode ? "white" : "text"}
+        >
           {title}
         </MDTypography>
-        <MDTypography variant="button" textColor="text" fontWeight="regular">
+        <MDTypography
+          variant="button"
+          textColor={darkMode ? "white" : "text"}
+          opacity={darkMode ? 0.7 : 1}
+          fontWeight="regular"
+        >
           {description}
         </MDTypography>
       </MDBox>

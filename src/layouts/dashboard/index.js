@@ -18,7 +18,6 @@ import Grid from "@mui/material/Grid";
 
 // Material Design Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 
 // Material Design Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
@@ -106,11 +105,7 @@ function Dashboard() {
               <MDBox mb={1}>
                 <ReportsBarChart
                   title="website views"
-                  description={
-                    <MDTypography variant="subtitle3" fontWeight="light">
-                      Last Campaign Performance
-                    </MDTypography>
-                  }
+                  description="Last Campaign Performance"
                   chart={chart}
                   bgColor="primary"
                   boxShadow={boxShadows.coloredShadows.primary}
@@ -123,14 +118,8 @@ function Dashboard() {
                 <ReportsLineChart
                   title="Daily Sales"
                   bgColor="success"
-                  description={
-                    <MDTypography variant="subtitle3" fontWeight="light">
-                      <MDTypography variant="button" textColor="secondary" fontWeight="bold">
-                        (+15%)
-                      </MDTypography>
-                      &nbsp;increase in today sales.
-                    </MDTypography>
-                  }
+                  percentage="(+15%)"
+                  description=" increase in today sales."
                   chart={lineChart}
                   boxShadow={boxShadows.coloredShadows.success}
                   subtitle="updated 4 min ago"
@@ -142,11 +131,7 @@ function Dashboard() {
                 <ReportsLineChart
                   title="completed tasks"
                   bgColor="dark"
-                  description={
-                    <MDTypography variant="subtitle3" fontWeight="light">
-                      Last Campaign Performance
-                    </MDTypography>
-                  }
+                  description="Last Campaign Performance"
                   chart={lineChart}
                   boxShadow={boxShadows.coloredShadows.dark}
                   subtitle="just updated"
