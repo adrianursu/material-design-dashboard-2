@@ -93,8 +93,8 @@ function MiniStatisticsCard({
               >
                 <MDTypography
                   variant="button"
-                  textColor={backgroundColor === "white" ? "text" : "white"}
-                  opacity={backgroundColor === "white" ? 1 : 0.7}
+                  textColor={backgroundColor === "white" && !darkMode ? "text" : "white"}
+                  opacity={backgroundColor === "white" && !darkMode ? 1 : 0.7}
                   textTransform="capitalize"
                   fontWeight="light"
                 >
@@ -103,7 +103,7 @@ function MiniStatisticsCard({
                 <MDTypography
                   variant="h4"
                   fontWeight="bold"
-                  textColor={backgroundColor === "white" ? "dark" : "white"}
+                  textColor={backgroundColor === "white" && !darkMode ? "dark" : "white"}
                 >
                   {count}{" "}
                 </MDTypography>
@@ -112,7 +112,12 @@ function MiniStatisticsCard({
           </Grid>
           <Divider style={{ margin: "0" }} />
           <MDBox p={2}>
-            <MDTypography variant="body2" fontWeight="light" textColor="text">
+            <MDTypography
+              variant="body2"
+              fontWeight="light"
+              textColor={backgroundColor === "white" && !darkMode ? "dark" : "white"}
+              opacity={backgroundColor === "white" && !darkMode ? 1 : 0.7}
+            >
               <MDTypography variant="button" textColor={percentage.color} fontWeight="bold">
                 {percentage.text}
               </MDTypography>

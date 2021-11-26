@@ -35,10 +35,13 @@ export default makeStyles(
         boxShadow: lg,
         overflowY: "auto",
         background: ({ darkMode }) => (darkMode ? background.state : white.main),
-
         "& *": {
           color: ({ darkMode }) => darkMode && `${white.main} !important`,
           borderColor: ({ darkMode }) => darkMode && `${white.main} !important`,
+        },
+
+        "& .MuiTypography-body2, & .MuiTypography-button": {
+          opacity: ({ darkMode }) => darkMode && 0.6,
         },
       },
 
@@ -87,12 +90,16 @@ export default makeStyles(
         },
 
         "& .MuiButton-contained": {
-          background: white.main,
-          color: `${dark.main} !important`,
+          background: ({ darkMode }) =>
+            darkMode ? white.main : linearGradient(gradients.dark.main, gradients.dark.state),
+          // background: white.main,
+          color: ({ darkMode }) => (darkMode ? background.main : white.main),
+          // color: `${dark.main} !important`,
 
           "&:hover, &:focus": {
-            background: white.main,
-            color: `${dark.main} !important`,
+            background: ({ darkMode }) =>
+              darkMode ? white.main : linearGradient(gradients.dark.main, gradients.dark.state),
+            color: ({ darkMode }) => (darkMode ? `${dark.main} !important` : white.main),
           },
         },
       },

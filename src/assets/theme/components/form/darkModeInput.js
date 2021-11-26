@@ -31,14 +31,14 @@ export default {
       fontSize: "14px",
       color: "white",
       width: "100%",
-      "&:hover": {
-        "& .MuiOutlinedInput-notchedOutline": {
-          borderColor: "hsla(0,0%,100%,.4)!important",
+      "& .MuiOutlinedInput-notchedOutline": {
+        borderColor: "hsla(0,0%,100%,.4)!important",
+      },
+
+      "&.Mui-focused:hover .MuiOutlinedInput-notchedOutline, &.Mui-focused:focus .MuiOutlinedInput-notchedOutline, &.Mui-focused:focused-within .MuiOutlinedInput-notchedOutline ":
+        {
+          borderColor: `${primary.main} !important`,
         },
-      },
-      "&.Mui-focused:hover .MuiOutlinedInput-notchedOutline": {
-        borderColor: `${primary.main} !important`,
-      },
     },
 
     input: {

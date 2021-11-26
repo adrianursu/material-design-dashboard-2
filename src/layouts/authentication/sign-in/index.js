@@ -13,7 +13,9 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { useMaterialDesignController } from "context";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
@@ -39,7 +41,10 @@ function SignIn() {
   const [rememberMe, setRememberMe] = useState(false);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
-
+  const [, dispatch] = useMaterialDesignController();
+  useEffect(() => {
+    dispatch({ type: "DARK_MODE", value: false });
+  }, []);
   return (
     <CoverLayout image={signInImage}>
       <Card className="overflow-visible" style={{ boxShadow: "none", marginTop: "3rem" }}>
