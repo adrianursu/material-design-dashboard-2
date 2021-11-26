@@ -24,7 +24,12 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Transaction({ color, icon, name, description, value }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <MDBox key={name} component="li" py={1} pr={2} mb={1}>
       <MDBox display="flex" justifyContent="space-between" alignItems="center">
@@ -35,10 +40,15 @@ function Transaction({ color, icon, name, description, value }) {
             </MDButton>
           </MDBox>
           <MDBox display="flex" flexDirection="column">
-            <MDTypography variant="button" fontWeight="medium" gutterBottom>
+            <MDTypography
+              variant="button"
+              fontWeight="medium"
+              gutterBottom
+              textColor={darkMode ? "white" : "dark"}
+            >
               {name}
             </MDTypography>
-            <MDTypography variant="caption" textColor="text">
+            <MDTypography variant="caption" textColor={darkMode ? "white" : "text"}>
               {description}
             </MDTypography>
           </MDBox>
