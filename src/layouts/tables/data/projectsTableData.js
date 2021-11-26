@@ -29,9 +29,11 @@ function Completion({ value, color }) {
 }
 
 const action = (
-  <Icon className="font-bold text-secondary cursor-pointer" fontSize="small">
-    more_vert
-  </Icon>
+  <MDTypography variant="body2" textColor="text" display="inline">
+    <Icon className="font-bold text-secondary cursor-pointer" fontSize="small">
+      more_vert
+    </Icon>
+  </MDTypography>
 );
 
 export default {
@@ -47,7 +49,7 @@ export default {
     {
       project: [logoSpotify, "Spotify"],
       budget: (
-        <MDTypography variant="button" textColor="text" fontWeight="medium">
+        <MDTypography variant="button" fontWeight="medium" textColor="text">
           $2,500
         </MDTypography>
       ),
