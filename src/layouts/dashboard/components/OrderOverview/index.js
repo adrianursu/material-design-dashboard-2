@@ -21,23 +21,38 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Material Design Dashboard 2 React example components
 import TimelineItem from "examples/Timeline/TimelineItem";
 
 function OrdersOverview() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card className="h-100">
       <MDBox pt={3} px={3}>
-        <MDTypography variant="h6" fontWeight="medium">
+        <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
           Orders overview
         </MDTypography>
         <MDBox mb={2}>
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
+          <MDTypography
+            variant="button"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.6 : 1}
+            fontWeight="regular"
+          >
             <MDTypography display="inline" variant="body2" verticalAlign="middle">
               <Icon className="font-bold text-success">arrow_upward</Icon>
             </MDTypography>
             &nbsp;
-            <MDTypography variant="button" textColor="text" fontWeight="medium">
+            <MDTypography
+              variant="button"
+              textColor={darkMode ? "white" : "text"}
+              opacity={darkMode ? 0.6 : 1}
+              fontWeight="bold"
+            >
               24%
             </MDTypography>{" "}
             this month
