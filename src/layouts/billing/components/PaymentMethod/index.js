@@ -31,13 +31,18 @@ import borders from "assets/theme/base/borders";
 import masterCardLogo from "assets/images/logos/mastercard.png";
 import visaLogo from "assets/images/logos/visa.png";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function PaymentMethod() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   const { borderWidth, borderColor } = borders;
 
   return (
     <Card id="delete-account">
       <MDBox pt={2} px={2} display="flex" justifyContent="space-between" alignItems="center">
-        <MDTypography variant="h6" fontWeight="medium">
+        <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
           Payment Method
         </MDTypography>
         <MDButton variant="gradient" buttonColor="dark">
@@ -49,7 +54,11 @@ function PaymentMethod() {
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
             <MDBox
-              border={`${borderWidth[1]} solid ${borderColor}`}
+              border={
+                darkMode
+                  ? `${borderWidth[1]} solid #344767`
+                  : `${borderWidth[1]} solid ${borderColor}`
+              }
               borderRadius="lg"
               display="flex"
               justifyContent="space-between"
@@ -57,10 +66,14 @@ function PaymentMethod() {
               p={3}
             >
               <MDBox component="img" src={masterCardLogo} alt="master card" width="10%" mr={2} />
-              <MDTypography variant="h6" fontWeight="medium">
+              <MDTypography
+                variant="h6"
+                fontWeight="medium"
+                textColor={darkMode ? "white" : "dark"}
+              >
                 ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;7852
               </MDTypography>
-              <MDBox ml="auto" lineHeight={0}>
+              <MDBox ml="auto" lineHeight={0} color={darkMode ? "white" : "dark"}>
                 <Tooltip title="Edit Card" placement="top">
                   <Icon className="cursor-pointer" fontSize="small">
                     edit
@@ -71,7 +84,11 @@ function PaymentMethod() {
           </Grid>
           <Grid item xs={12} md={6}>
             <MDBox
-              border={`${borderWidth[1]} solid ${borderColor}`}
+              border={
+                darkMode
+                  ? `${borderWidth[1]} solid #344767`
+                  : `${borderWidth[1]} solid ${borderColor}`
+              }
               borderRadius="lg"
               display="flex"
               justifyContent="space-between"
@@ -79,10 +96,14 @@ function PaymentMethod() {
               p={3}
             >
               <MDBox component="img" src={visaLogo} alt="master card" width="10%" mr={2} />
-              <MDTypography variant="h6" fontWeight="medium">
+              <MDTypography
+                variant="h6"
+                fontWeight="medium"
+                textColor={darkMode ? "white" : "dark"}
+              >
                 ****&nbsp;&nbsp;****&nbsp;&nbsp;****&nbsp;&nbsp;5248
               </MDTypography>
-              <MDBox ml="auto" lineHeight={0}>
+              <MDBox ml="auto" lineHeight={0} color={darkMode ? "white" : "dark"}>
                 <Tooltip title="Edit Card" placement="top">
                   <Icon className="cursor-pointer" fontSize="small">
                     edit
