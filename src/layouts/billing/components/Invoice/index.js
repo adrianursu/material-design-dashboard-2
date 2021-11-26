@@ -23,7 +23,12 @@ import Icon from "@mui/material/Icon";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Invoice({ date, id, price, noGutter }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <MDBox
       component="li"
@@ -35,15 +40,24 @@ function Invoice({ date, id, price, noGutter }) {
       mb={noGutter ? 0 : 1}
     >
       <MDBox lineHeight={1}>
-        <MDTypography display="block" variant="button" fontWeight="medium">
+        <MDTypography
+          display="block"
+          variant="button"
+          fontWeight="bold"
+          textColor={darkMode ? "white" : "dark"}
+        >
           {date}
         </MDTypography>
-        <MDTypography variant="caption" fontWeight="regular" textColor="text">
+        <MDTypography
+          variant="caption"
+          fontWeight="regular"
+          textColor={darkMode ? "white" : "text"}
+        >
           {id}
         </MDTypography>
       </MDBox>
       <MDBox display="flex" alignItems="center">
-        <MDTypography variant="button" fontWeight="regular" textColor="text">
+        <MDTypography variant="button" fontWeight="regular" textColor={darkMode ? "white" : "text"}>
           {price}
         </MDTypography>
         <MDBox
@@ -52,9 +66,12 @@ function Invoice({ date, id, price, noGutter }) {
           lineHeight={0}
           ml={3}
           customClass="cursor-pointer"
+          color={darkMode ? "white" : "dark"}
         >
-          <Icon fontSize="small">picture_as_pdf</Icon>
-          <MDTypography variant="button" fontWeight="bold">
+          <Icon fontSize="small" color="red">
+            picture_as_pdf
+          </Icon>
+          <MDTypography variant="button" fontWeight="bold" textColor={darkMode ? "white" : "dark"}>
             &nbsp;PDF
           </MDTypography>
         </MDBox>
