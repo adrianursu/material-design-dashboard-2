@@ -51,8 +51,8 @@ import { useMaterialDesignController } from "context";
 
 function Sidenav({ routes, ...rest }) {
   const [controller, dispatch] = useMaterialDesignController();
-  const { miniSidenav, transparentSidenav, darkSidenav } = controller;
-  const classes = styles({ miniSidenav, transparentSidenav, darkSidenav });
+  const { miniSidenav, transparentSidenav, darkSidenav, darkMode } = controller;
+  const classes = styles({ miniSidenav, transparentSidenav, darkSidenav, darkMode });
   const location = useLocation();
   const { pathname } = location;
   const collapseName = pathname.split("/").slice(1)[0];

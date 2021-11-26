@@ -21,9 +21,9 @@ Coded by www.creative-tim.com
 
 export default {
   background: {
-    default: "#1a2035 !important",
+    default: "#1a2035",
     state: "#202940",
-    sidenav: "#1f283e !important",
+    sidenav: "#1f283e",
   },
 
   text: {

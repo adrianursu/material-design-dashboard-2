@@ -19,7 +19,7 @@ import { makeStyles } from "@mui/styles";
 export default makeStyles(
   ({ palette, typography, boxShadows, transitions, breakpoints, functions }) => {
     const sidebarWidth = 250;
-    const { white, dark, gradients, transparent } = palette;
+    const { white, dark, gradients, transparent, background } = palette;
     const { fontWeightMedium } = typography;
     const { xxl } = boxShadows;
     const { pxToRem, linearGradient } = functions;
@@ -29,13 +29,15 @@ export default makeStyles(
         boxShadow: xxl,
         border: "none",
         [breakpoints.up("xl")]: {
-          background: ({ transparentSidenav, darkSidenav }) => {
+          background: ({ transparentSidenav, darkSidenav, darkMode }) => {
             let finalValue;
 
             if (transparentSidenav) {
               finalValue = transparent.main;
             } else if (darkSidenav) {
-              finalValue = linearGradient(gradients.dark.main, gradients.dark.state);
+              finalValue = darkMode
+                ? background.sidenav
+                : linearGradient(gradients.dark.main, gradients.dark.state);
             } else {
               finalValue = white.main;
             }
@@ -45,6 +47,8 @@ export default makeStyles(
 
           boxShadow: ({ transparentSidenav }) => (transparentSidenav ? "none" : xxl),
           marginBottom: ({ transparentSidenav }) => (transparentSidenav ? 0 : "inherit"),
+          backdropFilter: ({ darkMode }) =>
+            darkMode ? "none" : `saturate(200%) blur(${pxToRem(30)})`,
           left: "0",
         },
       },
