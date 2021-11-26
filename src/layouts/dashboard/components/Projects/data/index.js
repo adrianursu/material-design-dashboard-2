@@ -10,6 +10,9 @@ import MDProgress from "components/MDProgress";
 // Custom styles for the Projects
 import styles from "layouts/dashboard/components/Projects/styles";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Images
 import logoXD from "assets/images/small-logos/logo-xd.svg";
 import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
@@ -24,6 +27,8 @@ import team4 from "assets/images/team/team-4.jpg";
 
 export default function data() {
   const classes = styles();
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
 
   const avatars = (members) =>
     members.map(([image, name]) => (
@@ -53,8 +58,14 @@ export default function data() {
             ])}
           </MDBox>
         ),
+
         budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="medium"
+          >
             $14,000
           </MDTypography>
         ),
@@ -75,7 +86,12 @@ export default function data() {
           </MDBox>
         ),
         budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="medium"
+          >
             $3,000
           </MDTypography>
         ),
@@ -96,7 +112,12 @@ export default function data() {
           </MDBox>
         ),
         budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="medium"
+          >
             Not set
           </MDTypography>
         ),
@@ -119,7 +140,12 @@ export default function data() {
           </MDBox>
         ),
         budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="medium"
+          >
             $20,500
           </MDTypography>
         ),
@@ -140,7 +166,12 @@ export default function data() {
           </MDBox>
         ),
         budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="medium"
+          >
             $2,000
           </MDTypography>
         ),
@@ -158,7 +189,12 @@ export default function data() {
           </MDBox>
         ),
         budget: (
-          <MDTypography variant="caption" textColor="text" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="medium"
+          >
             $500
           </MDTypography>
         ),

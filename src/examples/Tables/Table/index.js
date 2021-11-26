@@ -34,10 +34,15 @@ import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 import borders from "assets/theme/base/borders";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Table({ columns, rows }) {
   const { light } = colors;
   const { size, fontWeightBold } = typography;
   const { borderWidth } = borders;
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
 
   const renderColumns = columns.map(({ name, align }, key) => {
     let pl;
@@ -65,7 +70,7 @@ function Table({ columns, rows }) {
         textAlign={align}
         fontSize={size.xxs}
         fontWeight={fontWeightBold}
-        color="secondary"
+        color={darkMode ? "white" : "text"}
         opacity={0.7}
         borderBottom={`${borderWidth[1]} solid ${light.main}`}
       >
@@ -87,7 +92,12 @@ function Table({ columns, rows }) {
               <MDBox mr={2}>
                 <MDAvatar src={row[name][0]} name={row[name][1]} variant="rounded" size="sm" />
               </MDBox>
-              <MDTypography variant="button" fontWeight="medium" customClass="w-max">
+              <MDTypography
+                variant="button"
+                fontWeight="medium"
+                customClass="w-max"
+                textColor={darkMode ? "white" : "text"}
+              >
                 {row[name][1]}
               </MDTypography>
             </MDBox>
@@ -99,8 +109,8 @@ function Table({ columns, rows }) {
             <MDTypography
               variant="button"
               fontWeight="regular"
-              textColor="secondary"
               customClass="d-inline-block w-max"
+              textColor={darkMode ? "white" : "text"}
             >
               {row[name]}
             </MDTypography>

@@ -30,13 +30,23 @@ import MDTypography from "components/MDTypography";
 // Custom styles for MDProgress
 import styles from "components/MDProgress/styles";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 const MDProgress = forwardRef(({ color, value, gradient, noLabel, ...rest }, ref) => {
   const classes = styles({ color, value });
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
 
   return (
     <>
       {!noLabel && (
-        <MDTypography variant="caption" fontWeight="regular" textColor="text">
+        <MDTypography
+          variant="caption"
+          fontWeight="regular"
+          textColor={darkMode ? "white" : "text"}
+          opacity={darkMode ? 0.7 : 1}
+        >
           {value}%
         </MDTypography>
       )}

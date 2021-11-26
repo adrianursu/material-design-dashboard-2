@@ -27,6 +27,9 @@ import MDBox from "components/MDBox";
 // Material Design 2 Dashboard Material-UI example components
 import Table from "examples/Tables/Table";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Custom styles for the Projects
 import styles from "layouts/dashboard/components/Projects/styles";
 
@@ -63,25 +66,45 @@ function Projects() {
       <MenuItem onClick={closeMenu}>Something else</MenuItem>
     </Menu>
   );
-
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <MDBox>
-          <MDTypography variant="h6" gutterBottom>
+          <MDTypography variant="h6" gutterBottom textColor={darkMode ? "white" : "text"}>
             Projects
           </MDTypography>
           <MDBox display="flex" alignItems="center" lineHeight={0}>
-            <Icon className="font-bold text-info">done</Icon>
-            <MDTypography variant="button" fontWeight="regular" textColor="text">
+            <MDTypography
+              display="inline"
+              variant="body2"
+              verticalAlign="middle"
+              textColor={darkMode ? "white" : "text"}
+              opacity={darkMode ? 0.7 : 1}
+            >
+              <Icon className="font-bold text-info">done</Icon>
+            </MDTypography>
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              textColor={darkMode ? "white" : "text"}
+              opacity={darkMode ? 0.7 : 1}
+            >
               &nbsp;<strong>30 done</strong> this month
             </MDTypography>
           </MDBox>
         </MDBox>
         <MDBox color="text" px={2}>
-          <Icon className="cursor-pointer font-bold" fontSize="small" onClick={openMenu}>
-            more_vert
-          </Icon>
+          <MDTypography
+            variant="body2"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+          >
+            <Icon className="cursor-pointer font-bold" fontSize="medium" onClick={openMenu}>
+              more_vert
+            </Icon>
+          </MDTypography>
         </MDBox>
         {renderMenu}
       </MDBox>
