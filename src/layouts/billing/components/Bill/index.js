@@ -52,7 +52,12 @@ function Bill({ name, company, email, vat, noGutter }) {
           flexDirection={{ xs: "column", sm: "row" }}
           mb={2}
         >
-          <MDTypography variant="button" fontWeight="medium" textTransform="capitalize">
+          <MDTypography
+            variant="button"
+            fontWeight="medium"
+            textTransform="capitalize"
+            textColor={darkMode ? "white" : "text"}
+          >
             {name}
           </MDTypography>
 
@@ -62,30 +67,43 @@ function Bill({ name, company, email, vat, noGutter }) {
                 <Icon className="material-icons-round">delete</Icon>&nbsp;delete
               </MDButton>
             </MDBox>
-            <MDButton variant="text" buttonColor="dark">
+            <MDButton variant="text" buttonColor={darkMode ? "white" : "dark"}>
               <Icon className="material-icons-round">edit</Icon>&nbsp;edit
             </MDButton>
           </MDBox>
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
-          <MDTypography variant="caption" textColor="text">
+          <MDTypography variant="caption" textColor={darkMode ? "white" : "text"}>
             Company Name:&nbsp;&nbsp;&nbsp;
-            <MDTypography variant="caption" fontWeight="medium" textTransform="capitalize">
+            <MDTypography
+              variant="caption"
+              fontWeight="medium"
+              textTransform="capitalize"
+              textColor={darkMode ? "white" : "text"}
+            >
               {company}
             </MDTypography>
           </MDTypography>
         </MDBox>
         <MDBox mb={1} lineHeight={0}>
-          <MDTypography variant="caption" textColor="text">
+          <MDTypography variant="caption" textColor={darkMode ? "white" : "text"}>
             Email Address:&nbsp;&nbsp;&nbsp;
-            <MDTypography variant="caption" fontWeight="medium">
+            <MDTypography
+              variant="caption"
+              fontWeight="medium"
+              textColor={darkMode ? "white" : "text"}
+            >
               {email}
             </MDTypography>
           </MDTypography>
         </MDBox>
-        <MDTypography variant="caption" textColor="text">
+        <MDTypography variant="caption" textColor={darkMode ? "white" : "text"}>
           VAT Number:&nbsp;&nbsp;&nbsp;
-          <MDTypography variant="caption" fontWeight="medium">
+          <MDTypography
+            variant="caption"
+            fontWeight="medium"
+            textColor={darkMode ? "white" : "text"}
+          >
             {vat}
           </MDTypography>
         </MDTypography>
