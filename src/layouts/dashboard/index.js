@@ -76,7 +76,7 @@ function Dashboard() {
                 <MiniStatisticsCard
                   title={{ text: "New Clients" }}
                   count="3,462"
-                  percentage={{ color: "success", text: "+1%" }}
+                  percentage={{ color: "error", text: "-2%" }}
                   icon={{ color: "success", component: "store" }}
                   boxShadow={boxShadows.coloredShadows.success}
                   description=" than yesterday"
@@ -88,12 +88,13 @@ function Dashboard() {
                 <MiniStatisticsCard
                   title={{ text: "Sales" }}
                   count="$103,430"
+                  percentage={{ color: "success", text: "+5%" }}
                   icon={{
                     color: "info",
                     component: "person_add",
                   }}
                   boxShadow={boxShadows.coloredShadows.info}
-                  description="Just updated"
+                  description=" than yesterday"
                 />
               </MDBox>
             </Grid>
