@@ -13,7 +13,9 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+import { useMaterialDesignController } from "context";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
@@ -34,6 +36,10 @@ function Illustration() {
   const [agreement, setAgreemnet] = useState(true);
 
   const handleSetAgremment = () => setAgreemnet(!agreement);
+  const [, dispatch] = useMaterialDesignController();
+  useEffect(() => {
+    dispatch({ type: "DARK_MODE", value: false });
+  }, []);
 
   return (
     <IllustrationLayout title="Sign Up" description="Enter your email and password to register">
