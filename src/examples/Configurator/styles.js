@@ -92,9 +92,7 @@ export default makeStyles(
         "& .MuiButton-contained": {
           background: ({ darkMode }) =>
             darkMode ? white.main : linearGradient(gradients.dark.main, gradients.dark.state),
-          // background: white.main,
           color: ({ darkMode }) => (darkMode ? background.main : white.main),
-          // color: `${dark.main} !important`,
 
           "&:hover, &:focus": {
             background: ({ darkMode }) =>
