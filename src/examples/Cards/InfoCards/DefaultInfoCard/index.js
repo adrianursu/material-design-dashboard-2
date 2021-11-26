@@ -27,7 +27,12 @@ import MDTypography from "components/MDTypography";
 
 import boxShadows from "assets/theme/base/boxShadows";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function DefaultInfoCard({ color, icon, title, description, value }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card>
       <MDBox p={2} mx={3} display="flex" justifyContent="center">
@@ -47,17 +52,27 @@ function DefaultInfoCard({ color, icon, title, description, value }) {
         </MDBox>
       </MDBox>
       <MDBox pb={2} px={2} textAlign="center" lineHeight={1}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <MDTypography
+          variant="h6"
+          fontWeight="medium"
+          textTransform="capitalize"
+          textColor={darkMode ? "white" : "dark"}
+        >
           {title}
         </MDTypography>
         {description && (
-          <MDTypography variant="caption" textColor="text" fontWeight="regular">
+          <MDTypography
+            variant="caption"
+            textColor={darkMode ? "white" : "text"}
+            fontWeight="regular"
+            opacity={darkMode ? 0.8 : 1}
+          >
             {description}
           </MDTypography>
         )}
         {description && !value ? null : <Divider />}
         {value && (
-          <MDTypography variant="h5" fontWeight="medium">
+          <MDTypography variant="h5" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
             {value}
           </MDTypography>
         )}
