@@ -25,20 +25,40 @@ import MDTypography from "components/MDTypography";
 // Billing page components
 import Transaction from "layouts/billing/components/Transaction";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Transactions() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card className="h-100">
       <MDBox display="flex" justifyContent="space-between" alignItems="center" pt={3} px={2}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <MDTypography
+          variant="h6"
+          fontWeight="medium"
+          textTransform="capitalize"
+          textColor={darkMode ? "white" : "dark"}
+        >
           Your Transaction&apos;s
         </MDTypography>
         <MDBox display="flex" alignItems="flex-start">
-          <MDBox color="text" mr={0.5} lineHeight={0}>
+          <MDBox
+            mr={0.5}
+            lineHeight={0}
+            color={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+          >
             <Icon color="inherit" fontSize="small">
               date_range
             </Icon>
           </MDBox>
-          <MDTypography variant="button" textColor="text" fontWeight="regular">
+          <MDTypography
+            variant="button"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.7 : 1}
+            fontWeight="regular"
+          >
             23 - 30 March 2020
           </MDTypography>
         </MDBox>
@@ -47,7 +67,7 @@ function Transactions() {
         <MDBox mb={2}>
           <MDTypography
             variant="caption"
-            textColor="text"
+            textColor={darkMode ? "white" : "text"}
             fontWeight="bold"
             textTransform="uppercase"
           >
@@ -80,7 +100,7 @@ function Transactions() {
         <MDBox mt={1} mb={2}>
           <MDTypography
             variant="caption"
-            textColor="text"
+            textColor={darkMode ? "white" : "text"}
             fontWeight="bold"
             textTransform="uppercase"
           >
