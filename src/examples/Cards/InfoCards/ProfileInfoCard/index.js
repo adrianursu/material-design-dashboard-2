@@ -33,7 +33,13 @@ import MDTypography from "components/MDTypography";
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function ProfileInfoCard({ title, description, info, social, action }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   const labels = [];
   const values = [];
   const { socialMediaColors } = colors;
@@ -57,10 +63,15 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   // Render the card info items
   const renderItems = labels.map((label, key) => (
     <MDBox key={label} display="flex" py={1} pr={2}>
-      <MDTypography variant="button" fontWeight="bold" textTransform="capitalize">
+      <MDTypography
+        variant="button"
+        fontWeight="bold"
+        textTransform="capitalize"
+        textColor={darkMode ? "white" : "dark"}
+      >
         {label}: &nbsp;
       </MDTypography>
-      <MDTypography variant="button" fontWeight="light" textColor="text">
+      <MDTypography variant="button" fontWeight="regular" textColor={darkMode ? "white" : "text"}>
         &nbsp;{values[key]}
       </MDTypography>
     </MDBox>
@@ -85,12 +96,23 @@ function ProfileInfoCard({ title, description, info, social, action }) {
   ));
 
   return (
-    <Card className="h-100" style={{ boxShadow: "none" }}>
+    <Card className="h-100" style={{ boxShadow: !darkMode && "none" }}>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" pt={2} px={2}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <MDTypography
+          variant="h6"
+          fontWeight="medium"
+          textTransform="capitalize"
+          textColor={darkMode ? "white" : "dark"}
+        >
           {title}
         </MDTypography>
-        <MDTypography component={Link} to={action.route} variant="body2" textColor="secondary">
+        <MDTypography
+          component={Link}
+          to={action.route}
+          variant="body2"
+          textColor={darkMode ? "white" : "secondary"}
+          opacity={darkMode ? 0.6 : 1}
+        >
           <Tooltip title={action.tooltip} placement="top">
             <Icon>edit</Icon>
           </Tooltip>
@@ -98,7 +120,12 @@ function ProfileInfoCard({ title, description, info, social, action }) {
       </MDBox>
       <MDBox p={2}>
         <MDBox mb={2} lineHeight={1.25}>
-          <MDTypography variant="button" textColor="text" fontWeight="light">
+          <MDTypography
+            variant="button"
+            textColor={darkMode ? "white" : "text"}
+            fontWeight="light"
+            opacity={darkMode ? 0.6 : 1}
+          >
             {description}
           </MDTypography>
         </MDBox>
@@ -108,7 +135,12 @@ function ProfileInfoCard({ title, description, info, social, action }) {
         <MDBox>
           {renderItems}
           <MDBox display="flex" py={1} pr={2}>
-            <MDTypography variant="button" fontWeight="bold" textTransform="capitalize">
+            <MDTypography
+              variant="button"
+              fontWeight="bold"
+              textTransform="capitalize"
+              textColor={darkMode ? "white" : "dark"}
+            >
               social: &nbsp;
             </MDTypography>
             {renderSocial}
