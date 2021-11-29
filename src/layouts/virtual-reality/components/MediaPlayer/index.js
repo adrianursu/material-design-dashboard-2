@@ -26,7 +26,12 @@ import MDButton from "components/MDButton";
 // Custom styles for the MediaPlayer
 import styles from "layouts/virtual-reality/components/MediaPlayer/styles";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function MediaPlayer() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   const classes = styles();
 
   return (
@@ -35,7 +40,12 @@ function MediaPlayer() {
         <MDTypography variant="h5" textColor="white" fontWeight="medium">
           Night Jazz
         </MDTypography>
-        <MDTypography variant="button" textColor="white" fontWeight="regular">
+        <MDTypography
+          variant="button"
+          textColor="white"
+          fontWeight="regular"
+          opacity={darkMode ? 0.6 : 1}
+        >
           Gary Coleman
         </MDTypography>
         <MDBox display="flex" mt={6} pt={1}>
