@@ -41,7 +41,7 @@ function Tables() {
   return (
     <DashboardLayout>
       <DashboardNavbar />
-      <MDBox py={3}>
+      <MDBox py={3} pt={6}>
         <MDBox mb={6}>
           <Card className="overflow-visible">
             <MDBox display="flex" justifyContent="space-between" alignItems="center" p={2}>
