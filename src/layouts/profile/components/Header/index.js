@@ -43,7 +43,13 @@ import styles from "layouts/profile/components/Header/styles";
 // Images
 import burceMars from "assets/images/team/bruce-mars.jpg";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Header(props) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
   const [tabValue, setTabValue] = useState(0);
   const classes = styles();
@@ -86,10 +92,19 @@ function Header(props) {
           </Grid>
           <Grid item>
             <MDBox height="100%" mt={0.5} lineHeight={1}>
-              <MDTypography variant="h5" fontWeight="medium">
+              <MDTypography
+                variant="h5"
+                fontWeight="medium"
+                textColor={darkMode ? "white" : "dark"}
+              >
                 Richard Davis
               </MDTypography>
-              <MDTypography variant="button" textColor="text" fontWeight="regular">
+              <MDTypography
+                variant="button"
+                textColor={darkMode ? "white" : "text"}
+                fontWeight="regular"
+                opacity={darkMode ? 0.6 : 1}
+              >
                 CEO / Co-Founder
               </MDTypography>
             </MDBox>
