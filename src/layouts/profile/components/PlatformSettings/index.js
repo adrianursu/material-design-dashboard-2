@@ -38,7 +38,7 @@ function PlatformSettings() {
   const [newsletter, setNewsletter] = useState(true);
 
   return (
-    <Card style={{ boxShadow: "none" }}>
+    <Card style={{ boxShadow: !darkMode && "none" }}>
       <MDBox pt={2} px={2}>
         <MDTypography
           variant="h6"
