@@ -26,22 +26,24 @@ import { Breadcrumbs as MuiBreadcrumbs } from "@mui/material";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
-// Custom styles for Breadcrumbs
-import styles from "examples/Breadcrumbs/styles";
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
 
-function Breadcrumbs({ text, title, route, light }) {
-  const classes = styles({ light });
+function Breadcrumbs({ text, title, route }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   const routes = route.slice(0, -1);
 
   return (
     <MDBox mr={{ xs: 0, xl: 8 }}>
-      <MuiBreadcrumbs className={classes.breadcrumbs}>
+      <MuiBreadcrumbs>
         <Link to="/">
           <MDTypography
             component="span"
             variant="button"
-            textColor={light ? "white" : "dark"}
-            opacity={light ? 0.8 : 0.5}
+            textColor={darkMode ? "white" : "dark"}
+            opacity={darkMode ? 0.6 : 0.5}
             customClass="line-height-0"
             fontWeight="regular"
           >
@@ -55,8 +57,8 @@ function Breadcrumbs({ text, title, route, light }) {
               variant="button"
               fontWeight="regular"
               textTransform="capitalize"
-              textColor={light ? "white" : "dark"}
-              opacity={light ? 0.8 : 0.5}
+              textColor={darkMode ? "white" : "dark"}
+              opacity={darkMode ? 1 : 0.5}
               customClass="line-height-0"
             >
               {el}
@@ -67,7 +69,7 @@ function Breadcrumbs({ text, title, route, light }) {
           variant="button"
           fontWeight="regular"
           textTransform="capitalize"
-          textColor={light ? "white" : "dark"}
+          textColor={darkMode ? "white" : "dark"}
           customClass="line-height-0"
         >
           {title.replace("-", " ")}
@@ -77,7 +79,7 @@ function Breadcrumbs({ text, title, route, light }) {
         fontWeight="bold"
         textTransform="capitalize"
         variant="h6"
-        textColor={light ? "white" : "dark"}
+        textColor={darkMode ? "white" : "dark"}
         noWrap
       >
         {title.replace("-", " ")}
@@ -88,7 +90,6 @@ function Breadcrumbs({ text, title, route, light }) {
 
 // Setting default values for the props of Breadcrumbs
 Breadcrumbs.defaultProps = {
-  light: false,
   text: "Pages",
 };
 
@@ -96,7 +97,6 @@ Breadcrumbs.defaultProps = {
 Breadcrumbs.propTypes = {
   title: PropTypes.string.isRequired,
   route: PropTypes.oneOfType([PropTypes.string, PropTypes.array]).isRequired,
-  light: PropTypes.bool,
   text: PropTypes.string,
 };
 
