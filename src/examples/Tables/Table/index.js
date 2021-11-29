@@ -71,7 +71,7 @@ function Table({ columns, rows }) {
         fontSize={size.xxs}
         fontWeight={fontWeightBold}
         color={darkMode ? "white" : "text"}
-        opacity={0.7}
+        opacity={0.8}
         borderBottom={`${borderWidth[1]} solid ${light.main}`}
       >
         {name.toUpperCase()}
