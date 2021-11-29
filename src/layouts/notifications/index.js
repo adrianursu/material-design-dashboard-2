@@ -33,7 +33,13 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import Footer from "examples/Footer";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Notifications() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   const [successSB, setSuccessSB] = useState(false);
   const [infoSB, setInfoSB] = useState(false);
   const [warningSB, setWarningSB] = useState(false);
@@ -117,7 +123,9 @@ function Notifications() {
           <Grid item xs={12} lg={8}>
             <Card>
               <MDBox p={2}>
-                <MDTypography variant="h5">Alerts</MDTypography>
+                <MDTypography variant="h5" textColor={darkMode ? "white" : "dark"}>
+                  Alerts
+                </MDTypography>
               </MDBox>
               <MDBox pt={2} px={2}>
                 <MDAlert color="primary" dismissible>
@@ -151,8 +159,15 @@ function Notifications() {
           <Grid item xs={12} lg={8}>
             <Card>
               <MDBox p={2} lineHeight={0}>
-                <MDTypography variant="h5">Notifications</MDTypography>
-                <MDTypography variant="button" textColor="text" fontWeight="light">
+                <MDTypography variant="h5" textColor={darkMode ? "white" : "dark"}>
+                  Notifications
+                </MDTypography>
+                <MDTypography
+                  variant="button"
+                  fontWeight="light"
+                  textColor={darkMode ? "white" : "text"}
+                  opacity={darkMode ? 0.7 : 1}
+                >
                   Notifications on this page use Toasts from Bootstrap. Read more details here.
                 </MDTypography>
               </MDBox>
