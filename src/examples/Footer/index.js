@@ -30,7 +30,13 @@ import typography from "assets/theme/base/typography";
 // Custom styles for the Footer
 import styles from "examples/Footer/styles";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Footer({ company, links, textColor }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   const { href, name } = company;
   const { size } = typography;
   const classes = styles();
@@ -73,7 +79,11 @@ function Footer({ company, links, textColor }) {
         </MDBox>
         by
         <Link href={href} target="_blank">
-          <MDTypography variant="button" fontWeight="medium" textColor={textColor}>
+          <MDTypography
+            variant="button"
+            fontWeight="medium"
+            textColor={darkMode ? "white" : textColor}
+          >
             &nbsp;{name}&nbsp;
           </MDTypography>
         </Link>
