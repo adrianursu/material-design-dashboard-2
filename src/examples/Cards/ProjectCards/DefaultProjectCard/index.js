@@ -30,11 +30,17 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 import MDAvatar from "components/MDAvatar";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Custom styles for the DefaultProjectCard
 import styles from "examples/Cards/ProjectCards/DefaultProjectCard/styles";
 
 function DefaultProjectCard({ image, label, title, description, action, authors }) {
   const classes = styles();
+
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
 
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
@@ -43,7 +49,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
   ));
 
   return (
-    <Card className={classes.projectCard}>
+    <Card className={classes.projectCard} style={{ boxShadow: !darkMode && "none" }}>
       <MDBox customClass={classes.projectCard_imageContainer}>
         <CardMedia
           src={image}
@@ -58,7 +64,8 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             variant="button"
             fontWeight="regular"
             textTransform="capitalize"
-            textGradient
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.6 : 1}
           >
             {label}
           </MDTypography>
@@ -70,6 +77,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
               to={action.route}
               variant="h5"
               textTransform="capitalize"
+              textColor={darkMode ? "white" : "dark"}
             >
               {title}
             </MDTypography>
@@ -81,13 +89,19 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
               rel="noreferrer"
               variant="h5"
               textTransform="capitalize"
+              textColor={darkMode ? "white" : "dark"}
             >
               {title}
             </MDTypography>
           )}
         </MDBox>
         <MDBox mb={3} lineHeight={0}>
-          <MDTypography variant="button" fontWeight="light" textColor="text">
+          <MDTypography
+            variant="button"
+            fontWeight="light"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.6 : 1}
+          >
             {description}
           </MDTypography>
         </MDBox>

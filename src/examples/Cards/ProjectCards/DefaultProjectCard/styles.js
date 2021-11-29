@@ -27,7 +27,7 @@ export default makeStyles(({ palette, boxShadows, functions, borders }) => {
       display: "flex",
       flexDirection: "column",
       backgroundColor: transparent.main,
-      boxShadow: "none",
+      // boxShadow: "none",
       overflow: "visible",
     },
 

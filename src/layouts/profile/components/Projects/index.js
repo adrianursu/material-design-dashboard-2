@@ -23,30 +23,43 @@ import team2 from "assets/images/team/team-2.jpg";
 import team3 from "assets/images/team/team-3.jpg";
 import team4 from "assets/images/team/team-4.jpg";
 
+// Material Design Dashboard 2 React components
 import MDTypography from "components/MDTypography";
 import MDBox from "components/MDBox";
 
+// Material Design Dashboard 2 React examples
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
+// @mui material components
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Projects() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card style={{ boxShadow: "none" }}>
       <MDBox px={2}>
         <MDBox mb={0.5}>
-          <MDTypography variant="h6" fontWeight="medium">
+          <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
             Projects
           </MDTypography>
         </MDBox>
         <MDBox mb={1}>
-          <MDTypography variant="button" fontWeight="light" textColor="text">
+          <MDTypography
+            variant="button"
+            fontWeight="light"
+            textColor={darkMode ? "white" : "text"}
+            opacity={darkMode ? 0.6 : 1}
+          >
             Architects design houses
           </MDTypography>
         </MDBox>
       </MDBox>
-      <MDBox p={2}>
+      <MDBox p={2} py={0}>
         <Grid container spacing={4}>
           <Grid item xs={12} md={6} xl={3}>
             <DefaultProjectCard
