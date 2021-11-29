@@ -22,7 +22,12 @@ import Tooltip from "@mui/material/Tooltip";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function TodoCard() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card>
       <MDBox backgroundColor="dark" backgroundGradient>
@@ -35,15 +40,30 @@ function TodoCard() {
               <MDTypography variant="h1" textColor="white" fontWeight="bold">
                 7
               </MDTypography>
-              <MDTypography variant="button" textColor="white" fontWeight="regular">
+              <MDTypography
+                variant="button"
+                textColor="white"
+                fontWeight="regular"
+                opacity={darkMode ? 0.6 : 1}
+              >
                 items
               </MDTypography>
             </MDBox>
           </MDBox>
-          <MDTypography variant="body2" textColor="white" fontWeight="regular">
+          <MDTypography
+            variant="body2"
+            textColor="white"
+            fontWeight="regular"
+            opacity={darkMode ? 0.6 : 1}
+          >
             Shopping
           </MDTypography>
-          <MDTypography variant="body2" textColor="white" fontWeight="regular">
+          <MDTypography
+            variant="body2"
+            textColor="white"
+            fontWeight="regular"
+            opacity={darkMode ? 0.6 : 1}
+          >
             Meeting
           </MDTypography>
         </MDBox>
