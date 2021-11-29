@@ -12,17 +12,28 @@ import team3 from "assets/images/team/team-3.jpg";
 import team4 from "assets/images/team/team-4.jpg";
 import team5 from "assets/images/team/team-5.jpg";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Author({ image, name, email }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   return (
     <MDBox display="flex" alignItems="center" px={1} py={0.5}>
       <MDBox mr={2}>
         <MDAvatar src={image} alt={name} size="sm" variant="rounded" />
       </MDBox>
       <MDBox display="flex" flexDirection="column">
-        <MDTypography variant="button" fontWeight="medium">
+        <MDTypography variant="button" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
           {name}
         </MDTypography>
-        <MDTypography variant="caption" textColor="secondary" fontWeight="light">
+        <MDTypography
+          variant="caption"
+          fontWeight="light"
+          textColor={darkMode ? "white" : "secondary"}
+          opacity={darkMode ? 0.7 : 1}
+        >
           {email}
         </MDTypography>
       </MDBox>
@@ -31,15 +42,61 @@ function Author({ image, name, email }) {
 }
 
 function Function({ job, org }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <MDBox display="flex" flexDirection="column">
-      <MDTypography variant="caption" fontWeight="medium" textColor="text">
+      <MDTypography
+        variant="caption"
+        fontWeight="medium"
+        textColor={darkMode ? "white" : "text"}
+        opacity={darkMode ? 0.6 : 1}
+      >
         {job}
       </MDTypography>
-      <MDTypography variant="caption" textColor="secondary" fontWeight="light">
+      <MDTypography
+        variant="caption"
+        fontWeight="light"
+        textColor={darkMode ? "white" : "secondary"}
+        opacity={darkMode ? 0.8 : 1}
+      >
         {org}
       </MDTypography>
     </MDBox>
+  );
+}
+
+function Employed({ date }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
+  return (
+    <MDTypography
+      variant="caption"
+      fontWeight="medium"
+      textColor={darkMode ? "white" : "secondary"}
+      opacity={darkMode ? 0.8 : 1}
+    >
+      {date}
+    </MDTypography>
+  );
+}
+
+function Action() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
+  return (
+    <MDTypography
+      component="a"
+      href="#"
+      variant="caption"
+      textColor={darkMode ? "white" : "secondary"}
+      opacity={darkMode ? 0.8 : 1}
+      fontWeight="medium"
+    >
+      Edit
+    </MDTypography>
   );
 }
 
@@ -59,22 +116,8 @@ export default {
       status: (
         <MDBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
       ),
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          23/04/18
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </MDTypography>
-      ),
+      employed: <Employed date="23/04/18" />,
+      action: <Action />,
     },
     {
       author: <Author image={team3} name="Alexa Liras" email="alexa@creative-tim.com" />,
@@ -82,22 +125,8 @@ export default {
       status: (
         <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
       ),
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          11/01/19
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </MDTypography>
-      ),
+      employed: <Employed date="11/01/19" />,
+      action: <Action />,
     },
     {
       author: <Author image={team4} name="Laurent Perrier" email="laurent@creative-tim.com" />,
@@ -105,22 +134,8 @@ export default {
       status: (
         <MDBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
       ),
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          19/09/17
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </MDTypography>
-      ),
+      employed: <Employed date="19/09/17" />,
+      action: <Action />,
     },
     {
       author: <Author image={team1} name="Michael Levi" email="michael@creative-tim.com" />,
@@ -128,22 +143,8 @@ export default {
       status: (
         <MDBadge variant="gradient" badgeContent="online" color="success" size="extra-small" />
       ),
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          24/12/08
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </MDTypography>
-      ),
+      employed: <Employed date="24/12/08" />,
+      action: <Action />,
     },
     {
       author: <Author image={team5} name="Richard Gran" email="richard@creative-tim.com" />,
@@ -151,22 +152,8 @@ export default {
       status: (
         <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
       ),
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          04/10/21
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </MDTypography>
-      ),
+      employed: <Employed date="04/10/21" />,
+      action: <Action />,
     },
     {
       author: <Author image={team4} name="Miriam Eric" email="miriam@creative-tim.com" />,
@@ -174,22 +161,8 @@ export default {
       status: (
         <MDBadge variant="gradient" badgeContent="offline" color="secondary" size="extra-small" />
       ),
-      employed: (
-        <MDTypography variant="caption" textColor="secondary" fontWeight="medium">
-          14/09/20
-        </MDTypography>
-      ),
-      action: (
-        <MDTypography
-          component="a"
-          href="#"
-          variant="caption"
-          textColor="secondary"
-          fontWeight="medium"
-        >
-          Edit
-        </MDTypography>
-      ),
+      employed: <Employed date="14/09/20" />,
+      action: <Action />,
     },
   ],
 };
