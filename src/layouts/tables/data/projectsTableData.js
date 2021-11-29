@@ -15,10 +15,20 @@ import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoWebDev from "assets/images/small-logos/logo-webdev.svg";
 import logoXD from "assets/images/small-logos/logo-xd.svg";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Completion({ value, color }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <MDBox display="flex" alignItems="center">
-      <MDTypography variant="caption" textColor="text" fontWeight="medium">
+      <MDTypography
+        variant="caption"
+        textColor={darkMode ? "white" : "text"}
+        opacity={darkMode ? 0.6 : 1}
+        fontWeight="medium"
+      >
         {value}%&nbsp;
       </MDTypography>
       <MDBox width="8rem">
@@ -28,13 +38,46 @@ function Completion({ value, color }) {
   );
 }
 
-const action = (
-  <MDTypography variant="body2" textColor="text" display="inline">
-    <Icon className="font-bold text-secondary cursor-pointer" fontSize="small">
-      more_vert
-    </Icon>
-  </MDTypography>
-);
+function Action() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+  return (
+    <MDTypography variant="body2" textColor={darkMode ? "white" : "text"} display="inline">
+      <Icon fontSize="small">more_vert</Icon>
+    </MDTypography>
+  );
+}
+
+function Budget({ amount }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+  return (
+    <MDTypography
+      variant="button"
+      fontWeight="medium"
+      textColor={darkMode ? "white" : "text"}
+      opacity={darkMode ? 0.6 : 1}
+    >
+      {amount}
+    </MDTypography>
+  );
+}
+
+function Status({ status }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+  return (
+    <MDTypography
+      variant="caption"
+      textColor={darkMode ? "white" : "text"}
+      opacity={darkMode ? 0.6 : 1}
+      fontWeight="medium"
+      textTransform="capitalize"
+    >
+      {status}
+    </MDTypography>
+  );
+}
 
 export default {
   columns: [
@@ -48,123 +91,45 @@ export default {
   rows: [
     {
       project: [logoSpotify, "Spotify"],
-      budget: (
-        <MDTypography variant="button" fontWeight="medium" textColor="text">
-          $2,500
-        </MDTypography>
-      ),
-      status: (
-        <MDTypography
-          variant="caption"
-          textColor="text"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
-          working
-        </MDTypography>
-      ),
+      budget: <Budget amount="$2,500" />,
+      status: <Status status="working" />,
       completion: <Completion value={60} color="primary" />,
-      action,
+      action: <Action />,
     },
     {
       project: [logoInvesion, "Invesion"],
-      budget: (
-        <MDTypography variant="button" textColor="text" fontWeight="medium">
-          $5,000
-        </MDTypography>
-      ),
-      status: (
-        <MDTypography
-          variant="caption"
-          textColor="text"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
-          done
-        </MDTypography>
-      ),
+      budget: <Budget amount="$5,000" />,
+      status: <Status status="Done" />,
       completion: <Completion value={100} color="success" />,
-      action,
+      action: <Action />,
     },
     {
       project: [logoJira, "Jira"],
-      budget: (
-        <MDTypography variant="button" textColor="text" fontWeight="medium">
-          $3,400
-        </MDTypography>
-      ),
-      status: (
-        <MDTypography
-          variant="caption"
-          textColor="text"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
-          cancelled
-        </MDTypography>
-      ),
+      budget: <Budget amount="$3,400" />,
+      status: <Status status="cancelled" />,
       completion: <Completion value={30} color="error" />,
-      action,
+      action: <Action />,
     },
     {
       project: [logoSlack, "Slack"],
-      budget: (
-        <MDTypography variant="button" textColor="text" fontWeight="medium">
-          $1,400
-        </MDTypography>
-      ),
-      status: (
-        <MDTypography
-          variant="caption"
-          textColor="text"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
-          cancelled
-        </MDTypography>
-      ),
+      budget: <Budget amount="$1,400" />,
+      status: <Status status="cancelled" />,
       completion: <Completion value={0} color="error" />,
-      action,
+      action: <Action />,
     },
     {
       project: [logoWebDev, "Webdev"],
-      budget: (
-        <MDTypography variant="button" textColor="text" fontWeight="medium">
-          $14,000
-        </MDTypography>
-      ),
-      status: (
-        <MDTypography
-          variant="caption"
-          textColor="text"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
-          working
-        </MDTypography>
-      ),
+      budget: <Budget amount="$14,000" />,
+      status: <Status status="working" />,
       completion: <Completion value={80} color="info" />,
-      action,
+      action: <Action />,
     },
     {
       project: [logoXD, "Adobe XD"],
-      budget: (
-        <MDTypography variant="button" textColor="text" fontWeight="medium">
-          $2,300
-        </MDTypography>
-      ),
-      status: (
-        <MDTypography
-          variant="caption"
-          textColor="text"
-          fontWeight="medium"
-          textTransform="capitalize"
-        >
-          done
-        </MDTypography>
-      ),
+      budget: <Budget amount="$2,300" />,
+      status: <Status status="done" />,
       completion: <Completion value={100} color="success" />,
-      action,
+      action: <Action />,
     },
   ],
 };
