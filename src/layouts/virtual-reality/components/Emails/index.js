@@ -21,7 +21,12 @@ import Tooltip from "@mui/material/Tooltip";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function Emails() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3} lineHeight={1}>
@@ -34,7 +39,7 @@ function Emails() {
             href="#"
             variant="body2"
             fontWeight="regular"
-            customClass="link"
+            textColor={darkMode ? "white" : "dark"}
           >
             Check
           </MDTypography>
