@@ -16,7 +16,6 @@ Coded by www.creative-tim.com
 // Material Design Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Footer from "examples/Footer";
-
 import ProfilesList from "examples/ProfilesList";
 
 // Overview page components

@@ -28,17 +28,27 @@ import MDTypography from "components/MDTypography";
 import MDAvatar from "components/MDAvatar";
 import MDButton from "components/MDButton";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function ProfilesList({ title, profiles }) {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
   const renderProfiles = profiles.map(({ image, name, description, action }) => (
     <MDBox key={name} component="li" display="flex" alignItems="center" py={1} mb={1}>
       <MDBox mr={2}>
         <MDAvatar src={image} alt="something here" variant="rounded" boxShadow="regular" />
       </MDBox>
       <MDBox display="flex" flexDirection="column" alignItems="flex-start" justifyContent="center">
-        <MDTypography variant="button" fontWeight="medium">
+        <MDTypography variant="button" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
           {name}
         </MDTypography>
-        <MDTypography variant="caption" textColor="text">
+        <MDTypography
+          variant="caption"
+          textColor={darkMode ? "white" : "text"}
+          opacity={darkMode ? 0.6 : 1}
+        >
           {description}
         </MDTypography>
       </MDBox>
@@ -64,9 +74,14 @@ function ProfilesList({ title, profiles }) {
   ));
 
   return (
-    <Card className="h-100" style={{ boxShadow: "none" }}>
+    <Card className="h-100" style={{ boxShadow: !darkMode && "none" }}>
       <MDBox pt={2} px={2}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
+        <MDTypography
+          variant="h6"
+          fontWeight="medium"
+          textTransform="capitalize"
+          textColor={darkMode ? "white" : "dark"}
+        >
           {title}
         </MDTypography>
       </MDBox>
