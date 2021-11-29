@@ -57,14 +57,14 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
         <Icon className={classes.timelineItem_icon}>{icon}</Icon>
       </MDBox>
       <MDBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
-        <MDTypography variant="button" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
+        <MDTypography variant="button" fontWeight="bold" textColor={darkMode ? "white" : "dark"}>
           {title}
         </MDTypography>
         <MDBox mt={0.5}>
           <MDTypography
             variant="caption"
             fontWeight="medium"
-            textColor={darkMode ? "white" : "dark"}
+            textColor={darkMode ? "white" : "text"}
             opacity={darkMode ? 0.8 : 1}
           >
             {dateTime}
