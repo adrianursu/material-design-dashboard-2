@@ -1,9 +1,27 @@
-import MDBox from "components/MDBox";
+/**
+=========================================================
+* Material Design Dashboard 2 React - v2.0.0
+=========================================================
 
+* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard-material-ui
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+*/
+
+// Material Design Dashboard 2 React components
+import MDBox from "components/MDBox";
+import MDTypography from "components/MDTypography";
+
+// Material Design Dashboard 2 boxShadows
 import boxShadows from "assets/theme/base/boxShadows";
 
+// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
-import MDTypography from "components/MDTypography";
 
 function TableHeader({ text, backgroundColor, boxShadow }) {
   return (
@@ -11,10 +29,9 @@ function TableHeader({ text, backgroundColor, boxShadow }) {
       backgroundColor={backgroundColor}
       width="100%"
       height="4.5rem"
-      borderRadius="md"
+      borderRadius="lg"
       display="flex"
       alignItems="center"
-      color={backgroundColor === "white" || backgroundColor === "light" ? "dark" : "white"}
       boxShadow="md"
       backgroundGradient
       mt={-5.5}
