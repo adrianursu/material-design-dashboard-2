@@ -23,21 +23,31 @@ import Tooltip from "@mui/material/Tooltip";
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 function TodoList() {
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
   return (
     <Card className="h-100">
       <MDBox p={3}>
         <MDBox display="flex">
           <MDBox mr={2}>
-            <MDTypography variant="h6" fontWeight="medium">
+            <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
               08:00
             </MDTypography>
           </MDBox>
           <MDBox lineHeight={1}>
-            <MDTypography variant="h6" fontWeight="medium">
+            <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
               Synk up with Mark
             </MDTypography>
-            <MDTypography variant="button" fontWeight="regular" textColor="secondary">
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              textColor={darkMode ? "white" : "secondary"}
+              opacity={darkMode ? 0.6 : 1}
+            >
               Hangouts
             </MDTypography>
           </MDBox>
@@ -45,15 +55,20 @@ function TodoList() {
         <Divider />
         <MDBox display="flex">
           <MDBox mr={2}>
-            <MDTypography variant="h6" fontWeight="medium">
+            <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
               09:30
             </MDTypography>
           </MDBox>
           <MDBox lineHeight={1}>
-            <MDTypography variant="h6" fontWeight="medium">
+            <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
               Gym
             </MDTypography>
-            <MDTypography variant="button" fontWeight="regular" textColor="secondary">
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              textColor={darkMode ? "white" : "secondary"}
+              opacity={darkMode ? 0.6 : 1}
+            >
               World Class
             </MDTypography>
           </MDBox>
@@ -61,21 +76,26 @@ function TodoList() {
         <Divider />
         <MDBox display="flex">
           <MDBox mr={2}>
-            <MDTypography variant="h6" fontWeight="medium">
+            <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
               11:00
             </MDTypography>
           </MDBox>
           <MDBox lineHeight={1}>
-            <MDTypography variant="h6" fontWeight="medium">
+            <MDTypography variant="h6" fontWeight="medium" textColor={darkMode ? "white" : "dark"}>
               Design Review
             </MDTypography>
-            <MDTypography variant="button" fontWeight="regular" textColor="secondary">
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              textColor={darkMode ? "white" : "secondary"}
+              opacity={darkMode ? 0.6 : 1}
+            >
               Zoom
             </MDTypography>
           </MDBox>
         </MDBox>
       </MDBox>
-      <MDBox backgroundColor="grey-100" mt="auto">
+      <MDBox backgroundColor={darkMode ? "grey-600" : "grey-100"} mt="auto">
         <Tooltip title="Show More" placement="top" className="cursor-pointer">
           <MDBox textAlign="center" py={0.5} lineHeight={0}>
             <Icon className="font-bold text-primary" fontSize="medium">
