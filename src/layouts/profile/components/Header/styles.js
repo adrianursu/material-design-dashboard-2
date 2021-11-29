@@ -37,7 +37,7 @@ export default makeStyles(({ palette, functions, borders }) => {
       position: "relative",
       overflow: "hidden",
       minHeight: pxToRem(300),
-      borderRadius: borderRadius.lg,
+      borderRadius: borderRadius.xl,
     },
 
     profileHeader_profile: {
@@ -45,7 +45,7 @@ export default makeStyles(({ palette, functions, borders }) => {
       margin: `${pxToRem(-64)} ${pxToRem(24)} 0`,
       padding: pxToRem(16),
       position: "relative",
-      borderRadius: borderRadius.lg,
+      borderRadius: borderRadius.xl,
     },
   };
 });
