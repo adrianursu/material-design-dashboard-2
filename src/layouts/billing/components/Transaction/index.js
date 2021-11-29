@@ -53,7 +53,7 @@ function Transaction({ color, icon, name, description, value }) {
             </MDTypography>
           </MDBox>
         </MDBox>
-        <MDTypography variant="button" textColor={color} fontWeight="medium" textGradient>
+        <MDTypography variant="button" textColor={color} fontWeight="medium">
           {value}
         </MDTypography>
       </MDBox>
