@@ -16,6 +16,12 @@ Coded by www.creative-tim.com
 // @mui material components
 import { createTheme } from "@mui/material/styles";
 
+// import darkModeColors from "assets/theme/base/darkModeColors";
+// import darkTypography from "assets/theme/base/darkModeTypography";
+// import cardDark from "assets/theme/components/card-dark";
+// import darkModeInput from "assets/theme/components/form/darkModeInput";
+// import darkModeInputLabel from "assets/theme/components/form/darkModeInputLabel";
+
 // Material Design Dashboard 2 React base styles
 import colors from "assets/theme/base/colors";
 import breakpoints from "assets/theme/base/breakpoints";
