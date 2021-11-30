@@ -167,7 +167,7 @@ function Sidenav({ routes, ...rest }) {
               component="h6"
               variant="button"
               fontWeight="medium"
-              textColor={darkSidenav ? "white" : "dark"}
+              textColor={darkSidenav || (darkMode && transparentSidenav) ? "white" : "dark"}
               style={{ marginLeft: "4px" }}
             >
               Material Dashboard 2
