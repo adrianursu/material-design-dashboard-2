@@ -28,6 +28,7 @@ export default makeStyles(
       sidenav: {
         boxShadow: xxl,
         border: "none",
+        background: linearGradient(gradients.dark.main, gradients.dark.state),
         [breakpoints.up("xl")]: {
           background: ({ transparentSidenav, darkSidenav, darkMode }) => {
             let finalValue;
@@ -81,15 +82,6 @@ export default makeStyles(
           easing: transitions.easing.easeInOut,
           duration: transitions.duration.standard,
         }),
-        // color: ({ darkSidenav }) => {
-        //   let titleColor;
-        //   if (darkSidenav) {
-        //     titleColor = white.main;
-        //   } else {
-        //     titleColor = dark.main;
-        //   }
-        //   return titleColor;
-        // },
 
         [breakpoints.up("xl")]: {
           opacity: ({ miniSidenav }) => (miniSidenav ? 0 : 1),
