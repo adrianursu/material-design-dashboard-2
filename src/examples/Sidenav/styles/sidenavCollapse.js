@@ -81,7 +81,8 @@ export default makeStyles(
 
       collapse_text: {
         marginLeft: pxToRem(6),
-        color: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
+        color: ({ active, darkSidenav, darkMode, transparentSidenav }) =>
+          active || darkSidenav || (darkMode && transparentSidenav) ? white.main : dark.main,
 
         [breakpoints.up("xl")]: {
           opacity: ({ miniSidenav, transparentSidenav }) =>
