@@ -42,6 +42,8 @@ function Projects() {
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
   const classes = styles();
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
 
   const openMenu = ({ currentTarget }) => setMenu(currentTarget);
   const closeMenu = () => setMenu(null);
@@ -66,8 +68,6 @@ function Projects() {
       <MenuItem onClick={closeMenu}>Something else</MenuItem>
     </Menu>
   );
-  const [controller] = useMaterialDesignController();
-  const { darkMode } = controller;
   return (
     <Card>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
