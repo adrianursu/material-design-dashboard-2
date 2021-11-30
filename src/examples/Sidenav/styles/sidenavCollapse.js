@@ -18,7 +18,7 @@ import { makeStyles } from "@mui/styles";
 
 export default makeStyles(
   ({ palette, transitions, breakpoints, typography, boxShadows, borders, functions }) => {
-    const { dark, white } = palette;
+    const { dark, white, grey } = palette;
     const { fontWeightLight, fontWeightMedium, size } = typography;
     const { xxl } = boxShadows;
     const { borderRadius } = borders;
@@ -52,7 +52,10 @@ export default makeStyles(
           }),
         },
         "&:hover": {
-          backgroundColor: rgba(white.main, 0.1),
+          backgroundColor: ({ darkMode, darkSidenav, transparentSidenav }) =>
+            (darkMode && transparentSidenav) || darkSidenav
+              ? rgba(white.main, 0.1)
+              : rgba(grey[300], 0.6),
         },
       },
 
