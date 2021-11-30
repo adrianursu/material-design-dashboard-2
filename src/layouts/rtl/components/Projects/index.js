@@ -30,6 +30,9 @@ import Table from "examples/Tables/Table";
 // Custom styles for the Projects
 import styles from "layouts/rtl/components/Projects/styles";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 // Data
 import data from "layouts/rtl/components/Projects/data";
 
@@ -39,6 +42,8 @@ function Projects() {
   const { columns, rows } = data();
   const [menu, setMenu] = useState(null);
   const classes = styles();
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
 
   const openMenu = ({ currentTarget }) => setMenu(currentTarget);
   const closeMenu = () => setMenu(null);
@@ -68,12 +73,25 @@ function Projects() {
     <Card>
       <MDBox display="flex" justifyContent="space-between" alignItems="center" p={3}>
         <MDBox>
-          <MDTypography variant="h6" gutterBottom>
+          <MDTypography variant="h6" gutterBottom textColor={darkMode ? "white" : "text"}>
             المشاريع
           </MDTypography>
           <MDBox display="flex" alignItems="center" lineHeight={0}>
-            <Icon className="font-bold text-info">done</Icon>
-            <MDTypography variant="button" fontWeight="regular" textColor="text">
+            <MDTypography
+              display="inline"
+              variant="body2"
+              verticalAlign="middle"
+              textColor={darkMode ? "white" : "text"}
+              opacity={darkMode ? 0.7 : 1}
+            >
+              <Icon className="font-bold text-info">done</Icon>
+            </MDTypography>
+            <MDTypography
+              variant="button"
+              fontWeight="regular"
+              textColor={darkMode ? "white" : "text"}
+              opacity={darkMode ? 0.7 : 1}
+            >
               &nbsp;<strong>30 انتهى</strong>هذا الشهر
             </MDTypography>
           </MDBox>
