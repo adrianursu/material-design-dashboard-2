@@ -69,7 +69,8 @@ export default makeStyles(
         }),
 
         "& svg, svg g": {
-          fill: ({ active, darkSidenav }) => (active || darkSidenav ? white.main : dark.main),
+          fill: ({ active, darkSidenav, darkMode, transparentSidenav }) =>
+            active || darkSidenav || (darkMode && transparentSidenav) ? white.main : dark.main,
           marginRight: pxToRem(8),
         },
       },

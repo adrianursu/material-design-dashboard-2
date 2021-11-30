@@ -118,7 +118,7 @@ function Sidenav({ routes, ...rest }) {
           fontWeight="bold"
           textTransform="uppercase"
           customClass={classes.sidenav_title}
-          textColor={darkSidenav ? "white" : "dark"}
+          textColor={darkSidenav || (darkMode && transparentSidenav) ? "white" : "dark"}
         >
           {title}
         </MDTypography>
