@@ -158,7 +158,7 @@ function Sidenav({ routes, ...rest }) {
         <NavLink to="/">
           <MDBox
             component="img"
-            src={darkSidenav ? logoWhite : logoDark}
+            src={darkSidenav || (darkMode && transparentSidenav) ? logoWhite : logoDark}
             alt="Material UI Logo"
             customClass={classes.sidenav_logo}
           />
