@@ -102,7 +102,7 @@ function Dashboard() {
         </MDBox>
         <MDBox mb={3} pt={1.5}>
           <Grid container spacing={3}>
-            <Grid item xs={6} lg={4}>
+            <Grid item xs={12} lg={4} md={6}>
               <MDBox mb={1}>
                 <ReportsBarChart
                   title="website views"
@@ -114,7 +114,7 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={6} lg={4}>
+            <Grid item xs={12} lg={4} md={6}>
               <MDBox mb={1}>
                 <ReportsLineChart
                   title="Daily Sales"
@@ -127,7 +127,7 @@ function Dashboard() {
                 />
               </MDBox>
             </Grid>
-            <Grid item xs={12} lg={4}>
+            <Grid item xs={12} lg={4} md={12}>
               <MDBox>
                 <ReportsLineChart
                   title="completed tasks"
