@@ -42,6 +42,7 @@ import Configurator from "examples/Configurator";
 // Material Design Dashboard 2 React themes
 import theme from "assets/theme";
 import themeRTL from "assets/theme/theme-rtl";
+import darkThemeRTL from "assets/theme/theme-rtl-dark";
 import themeDark from "assets/theme/theme-dark";
 
 // Material Design Dashboard 2 React routes
@@ -131,7 +132,7 @@ export default function App() {
   return direction === "rtl" ? (
     <CacheProvider value={rtlCache}>
       <StylesProvider jss={jss}>
-        <ThemeProvider theme={themeRTL}>
+        <ThemeProvider theme={darkMode ? darkThemeRTL : themeRTL}>
           <CssBaseline />
           {layout === "dashboard" && (
             <>
