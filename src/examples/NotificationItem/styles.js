@@ -17,7 +17,7 @@ Coded by www.creative-tim.com
 import { makeStyles } from "@mui/styles";
 
 export default makeStyles(({ palette, borders, transitions, functions }) => {
-  const { light, secondary, gradients } = palette;
+  const { light, secondary, gradients, grey } = palette;
   const { borderRadius } = borders;
   const { pxToRem, linearGradient } = functions;
 
@@ -27,7 +27,7 @@ export default makeStyles(({ palette, borders, transitions, functions }) => {
       alignItems: "center",
       width: "100%",
       color: secondary.main,
-      padding: `${pxToRem(8)} ${pxToRem(16)}`,
+      padding: `${pxToRem(6)} ${pxToRem(16)}`,
       borderRadius: borderRadius.md,
       transition: transitions.create("background-color", {
         easing: transitions.easing.easeInOut,
@@ -39,7 +39,7 @@ export default makeStyles(({ palette, borders, transitions, functions }) => {
       },
 
       "&:hover": {
-        backgroundColor: light.main,
+        backgroundColor: ({ darkMode }) => (darkMode ? grey[700] : light.main),
       },
     },
 

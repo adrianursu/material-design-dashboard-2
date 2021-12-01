@@ -29,22 +29,33 @@ import MDTypography from "components/MDTypography";
 // Custom styles for the NotificationItem
 import styles from "examples/NotificationItem/styles";
 
+// Material Design Dashboard 2 React context
+import { useMaterialDesignController } from "context";
+
 const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref) => {
-  const classes = styles({ color });
+  const [controller] = useMaterialDesignController();
+  const { darkMode } = controller;
+
+  const classes = styles({ color, darkMode });
 
   return (
     <MenuItem {...rest} ref={ref} className={classes.notificationItem}>
       <MDBox customClass={classes.notificationItem_img}>{image}</MDBox>
       <MDBox>
-        <MDTypography variant="button" textTransform="capitalize" fontWeight="regular">
+        <MDTypography
+          variant="button"
+          textTransform="capitalize"
+          fontWeight="regular"
+          textColor={darkMode ? "white" : "dark"}
+        >
           <strong>{title[0]}</strong> {title[1]}
         </MDTypography>
         <MDTypography
           variant="caption"
-          textColor="secondary"
+          textColor={darkMode ? "white" : "secondary"}
           customClass={classes.notificationItem_date}
         >
-          <MDTypography variant="button" textColor="secondary">
+          <MDTypography variant="button" textColor={darkMode ? "white" : "secondary"}>
             <Icon className={classes.notificationItem_icon}>watch_later</Icon>
           </MDTypography>
           {date}
