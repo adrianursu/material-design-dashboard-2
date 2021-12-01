@@ -32,13 +32,16 @@ export default {
       color: "white",
       width: "100%",
       "& .MuiOutlinedInput-notchedOutline": {
-        borderColor: "hsla(0,0%,100%,.4)!important",
+        borderColor: "hsla(0,0%,100%,.4)",
       },
-
-      "&.Mui-focused:hover .MuiOutlinedInput-notchedOutline, &.Mui-focused:focus .MuiOutlinedInput-notchedOutline, &.Mui-focused:focused-within .MuiOutlinedInput-notchedOutline ":
-        {
-          borderColor: `${primary.main} !important`,
+      "&:hover": {
+        "& .MuiOutlinedInput-notchedOutline": {
+          borderColor: "hsla(0,0%,100%,.4)!important",
         },
+      },
+      "&.Mui-focused:hover .MuiOutlinedInput-notchedOutline": {
+        borderColor: `${primary.main} !important`,
+      },
     },
 
     input: {
