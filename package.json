@@ -5,13 +5,12 @@
   "author": "Creative Tim",
   "license": "See license in https://www.creative-tim.com/license",
   "description": "Material UI version of Material UI Dashboard by Creative Tim",
-  "homepage": "https://demos.creative-tim.com/material-design-2-dashboard-react/#/dashboard",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/material-ui-dashboard-react/issues"
+    "url": "https://github.com/adrianursu/material-design-dashboard-2/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/material-ui-dashboard-react.git"
+    "url": "git+https://github.com/adrianursu/material-design-dashboard-2.git"
   },
   "dependencies": {
     "@emotion/cache": "^11.4.0",
